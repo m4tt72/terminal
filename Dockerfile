@@ -1,4 +1,4 @@
-FROM node:lts-alpine
+FROM node
 LABEL author='Yassine Fathi <hi@m4tt72.com>'
 WORKDIR /data
 COPY ./package.json .
