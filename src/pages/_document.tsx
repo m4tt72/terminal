@@ -90,6 +90,7 @@ class MyDocument extends Document {
           <meta name="msapplication-TileColor" content="#262626" />
           <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
           <meta name="theme-color" content="#262626" />
+          <meta name="description" content="Yassine Fathi | Personal website" />
 
           <title>M4TT72 | HOME</title>
         </Head>
