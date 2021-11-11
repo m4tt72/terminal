@@ -1,66 +1,69 @@
 import React from 'react';
 import { History } from '../interfaces/history';
+import axios from 'axios';
+import { getBio, getProjects } from '../api';
 
-export const interpreter = (
+export const interpreter = async (
   history: Array<History>,
   command: string,
-  setHistory: React.Dispatch<React.SetStateAction<History[]>>,
+  setHistory: (value: string) => void,
+  clearHistory: () => void,
   setCommand: React.Dispatch<React.SetStateAction<string>>,
 ) => {
   switch (command) {
     case 'clear':
-      setHistory([]);
+      clearHistory();
+
       break;
     case 'help':
-      setHistory([
-        ...history,
-        {
-          command,
-          output: `list of available commands:
+      setHistory(
+        `list of available commands:
 
-about   - print information about the author
-whoami  - print effective userid
-date    - print the system date and time
+about     - print information about the author
+projects  - print the list of the author's projects
+whoami    - print effective userid
+date      - print the system date and time
 
 `,
-        },
-      ]);
+      );
+
       break;
     case 'date':
-      setHistory([
-        ...history,
-        {
-          command,
-          output: new Date().toString(),
-        },
-      ]);
+      setHistory(new Date().toString());
+
       break;
     case 'whoami':
-      setHistory([
-        ...history,
-        {
-          command,
-          output: 'guest',
-        },
-      ]);
+      setHistory('guest');
+
       break;
     case 'about':
-      setHistory([
-        ...history,
-        {
-          command,
-          output: `I'm Yassine Fathi, Software Developer and Linux enthusiast. Try: 'projects' to see the list of projects I made`,
-        },
-      ]);
+      const bio = await getBio();
+
+      setHistory(bio);
+      break;
+    case 'projects':
+      const projects = await getProjects();
+
+      setHistory(projects.join('\n'));
+      break;
+    case 'vi':
+    case 'vim':
+      setHistory(`${command} is not that good, try 'emacs'.`);
+
+      break;
+    case 'emacs':
+      setHistory(`${command} is not that good, try 'vim'.`);
+
+      break;
+    case '':
+      setHistory('');
+
       break;
     default:
-      setHistory([
-        ...history,
-        {
-          command,
-          output: `shell: command not found: ${command}. Try 'help' to get started`,
-        },
-      ]);
+      setHistory(
+        `shell: command not found: ${command}. Try 'help' to get started.`,
+      );
+
       break;
   }
 

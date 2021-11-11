@@ -3,7 +3,7 @@ import '../styles/global.css';
 const App = ({ Component, pageProps }) => {
   return (
     <div className="text-gruvbox-foreground">
-      <main className="bg-gruvbox-background w-full h-screen p-8">
+      <main className="bg-gruvbox-background w-full h-full">
         <Component {...pageProps} />
       </main>
     </div>
