@@ -62,14 +62,11 @@ Type 'help' to see list of available commands.
   };
 
   return (
-    <div className="p-8 overflow-hidden h-full">
+    <div className="p-8 overflow-hidden h-full border-4 border-gruvbox-yellow">
       <div ref={containerRef} className="overflow-hidden h-full">
         {history.map((entry, index) => (
-          <>
-            <div
-              className="flex flex-row space-x-2"
-              key={entry.command + index}
-            >
+          <div key={entry.command + index}>
+            <div className="flex flex-row space-x-2">
               <div className="flex-shrink">
                 <Ps1 />
               </div>
@@ -78,7 +75,7 @@ Type 'help' to see list of available commands.
             </div>
 
             <div className="whitespace-pre-wrap">{entry.output}</div>
-          </>
+          </div>
         ))}
 
         <div className="flex flex-row space-x-2">
