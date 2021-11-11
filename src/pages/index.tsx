@@ -13,11 +13,13 @@ const IndexPage: React.FC = () => {
   const init = () => {
     setHistory(
       `
-  __  __ _  _ _____ _____ _____ ____
- |  \\/  | || |_   _|_   _|___  |___ \\
- | |\\/| | || |_| |   | |    / /  __) |
- | |  | |__   _| |   | |   / /  / __/
- |_|  |_|  |_| |_|   |_|  /_/  |_____|
+███╗   ███╗██╗  ██╗████████╗████████╗███████╗██████╗
+████╗ ████║██║  ██║╚══██╔══╝╚══██╔══╝╚════██║╚════██╗
+██╔████╔██║███████║   ██║      ██║       ██╔╝ █████╔╝
+██║╚██╔╝██║╚════██║   ██║      ██║      ██╔╝ ██╔═══╝
+██║ ╚═╝ ██║     ██║   ██║      ██║      ██║  ███████╗
+╚═╝     ╚═╝     ╚═╝   ╚═╝      ╚═╝      ╚═╝  ╚══════╝
+
 
 This website is currently under development, only few commands are available atm.
 Type 'help' to see list of available commands.
@@ -72,8 +74,9 @@ Type 'help' to see list of available commands.
               <div className="flex-grow">{entry.command}</div>
             </div>
 
-            <div
-              className="whitespace-pre-wrap"
+            <p
+              className="whitespace-pre-wrap mb-2"
+              style={{ lineHeight: 'normal' }}
               dangerouslySetInnerHTML={{ __html: entry.output }}
             />
           </div>
