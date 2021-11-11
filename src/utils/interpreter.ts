@@ -24,6 +24,8 @@ export const interpreter = async (
 about     - print information about the author
 projects  - print the list of the author's projects
 email     - send me an email
+instagram - open my instagram page
+instagram - open my github page
 whoami    - print effective userid
 date      - print the system date and time
 
@@ -51,9 +53,19 @@ date      - print the system date and time
       break;
     case 'email':
       window.open('mailto:hi@nm4tt72.com');
+
       setHistory('Opening mailto:hi@m4tt72.com');
       break;
+    case 'instagram':
+      window.open('https://www.instagram.com/m4tt72/');
 
+      setHistory('Opening mailto:hi@m4tt72.com');
+      break;
+    case 'github':
+      window.open('https://github.com/m4tt72/');
+
+      setHistory('Opening mailto:hi@m4tt72.com');
+      break;
     case 'vi':
     case 'vim':
       setHistory(`${args[0]} is not that good, try 'emacs'.`);
