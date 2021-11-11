@@ -17,6 +17,13 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <meta charSet="utf-8" />
+          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+          <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+          />
+
           <link
             rel="apple-touch-icon"
             sizes="57x57"
@@ -89,8 +96,8 @@ class MyDocument extends Document {
           <link rel="manifest" href="/manifest.json" />
           <meta name="msapplication-TileColor" content="#262626" />
           <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-          <meta name="theme-color" content="#262626" />
-          <meta name="description" content="Yassine Fathi | Personal website" />
+          <meta name="theme-color" content="#D79921" />
+          <meta name="description" content="M4TT72 | Yassine Fathi" />
 
           <title>M4TT72 | HOME</title>
         </Head>
