@@ -1,0 +1,17 @@
+version: '3'
+
+networks:
+  default:
+    external:
+      name: main
+
+services:
+  terminal:
+    build: .
+    container_name: terminal
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3015/readiness"]
+      interval: 200s
+      timeout: 200s
+      retries: 5
