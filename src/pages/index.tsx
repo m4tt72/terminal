@@ -13,8 +13,15 @@ const IndexPage: React.FC = () => {
     setHistory([
       {
         command: '',
-        output:
-          'This website is currently under development, only few commands are available atm.',
+        output: `
+  __  __ _  _ _____ _____ _____ ____
+ |  \\/  | || |_   _|_   _|___  |___ \\
+ | |\\/| | || |_| |   | |    / /  __) |
+ | |  | |__   _| |   | |   / /  / __/
+ |_|  |_|  |_| |_|   |_|  /_/  |_____|
+
+This website is currently under development, only few commands are available atm.
+`,
       },
     ]);
   };
