@@ -10,7 +10,9 @@ export const interpreter = async (
   clearHistory: () => void,
   setCommand: React.Dispatch<React.SetStateAction<string>>,
 ) => {
-  switch (command) {
+  const args = command.split(' ');
+
+  switch (args[0]) {
     case 'clear':
       clearHistory();
 
@@ -48,11 +50,11 @@ date      - print the system date and time
       break;
     case 'vi':
     case 'vim':
-      setHistory(`${command} is not that good, try 'emacs'.`);
+      setHistory(`${args[0]} is not that good, try 'emacs'.`);
 
       break;
     case 'emacs':
-      setHistory(`${command} is not that good, try 'vim'.`);
+      setHistory(`${args[0]} is not that good, try 'vim'.`);
 
       break;
     case '':
@@ -61,7 +63,7 @@ date      - print the system date and time
       break;
     default:
       setHistory(
-        `shell: command not found: ${command}. Try 'help' to get started.`,
+        `shell: command not found: ${args[0]}. Try 'help' to get started.`,
       );
 
       break;
