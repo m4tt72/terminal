@@ -2,8 +2,8 @@ FROM node
 LABEL author='Yassine Fathi <hi@m4tt72.com>'
 WORKDIR /data
 COPY ./package.json .
-RUN npm install
+RUN yarn
 COPY . .
-RUN npm run build
+RUN yarn build
 EXPOSE 3000
-CMD npm start
+CMD yarn start

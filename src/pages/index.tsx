@@ -1,8 +1,6 @@
 import React from 'react';
 import Ps1 from '../components/ps1';
 import { interpreter } from '../utils/interpreter';
-
-import { History } from '../interfaces/history';
 import { useHistory } from '../hooks/history';
 
 const IndexPage: React.FC = () => {
@@ -38,7 +36,7 @@ Type 'help' to see list of available commands.
   }, [history]);
 
   const onSubmit = async (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === 'Enter' || event.keyCode === 13) {
+    if (event.key === 'Enter' || event.code === '13') {
       try {
         await interpreter(
           history,
@@ -74,7 +72,10 @@ Type 'help' to see list of available commands.
               <div className="flex-grow">{entry.command}</div>
             </div>
 
-            <div className="whitespace-pre-wrap">{entry.output}</div>
+            <div
+              className="whitespace-pre-wrap"
+              dangerouslySetInnerHTML={{ __html: entry.output }}
+            />
           </div>
         ))}
 

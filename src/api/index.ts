@@ -5,7 +5,10 @@ export const getProjects = async () => {
 
   const projects = data
     .filter((repo) => !repo.fork)
-    .map((repo) => repo.html_url);
+    .map(
+      (repo) =>
+        `<a href="${repo.html_url}" target="_blank">${repo.html_url}</a>`,
+    );
   return projects;
 };
 
