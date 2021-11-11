@@ -2,7 +2,7 @@ FROM node:lts-alpine
 LABEL author='Yassine Fathi <hi@m4tt72.com>'
 WORKDIR /data
 COPY ./package.json .
-RUN yarn
+RUN npm install
 COPY . .
-RUN yarn build
-CMD yarn start
+RUN npm run build
+CMD npm start
