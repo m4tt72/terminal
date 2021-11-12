@@ -1,6 +1,5 @@
 import React from 'react';
 import { History } from '../interfaces/history';
-import axios from 'axios';
 import { getBio, getProjects } from '../api';
 
 export const interpreter = async (

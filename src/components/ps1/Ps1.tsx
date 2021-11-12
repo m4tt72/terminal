@@ -1,7 +1,9 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 
 export const Ps1 = () => {
-  const ps1 = 'root@m4tt72.com: $ ';
+  const router = useRouter();
+  console.log(router.pathname);
   return (
     <div>
       <span className="text-gruvbox-yellow">guest</span>
@@ -11,3 +13,5 @@ export const Ps1 = () => {
     </div>
   );
 };
+
+export default Ps1;

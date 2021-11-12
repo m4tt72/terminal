@@ -1,7 +1,9 @@
 import React from 'react';
-import Ps1 from '../components/ps1';
+import Head from 'next/head';
+import { Input } from '../components/input';
 import { interpreter } from '../utils/interpreter';
 import { useHistory } from '../hooks/history';
+import { History } from '../components/history';
 
 const IndexPage: React.FC = () => {
   const inputRef = React.useRef(null);
@@ -62,43 +64,24 @@ Type 'help' to see list of available commands.
   };
 
   return (
-    <div className="p-8 overflow-hidden h-full border-2 rounded border-gruvbox-yellow">
-      <div ref={containerRef} className="overflow-hidden h-full">
-        {history.map((entry, index) => (
-          <div key={entry.command + index}>
-            <div className="flex flex-row space-x-2">
-              <div className="flex-shrink">
-                <Ps1 />
-              </div>
+    <>
+      <Head>
+        <title>M4TT72 | Home</title>
+      </Head>
 
-              <div className="flex-grow">{entry.command}</div>
-            </div>
+      <div className="p-8 overflow-hidden h-full border-2 rounded border-gruvbox-yellow">
+        <div ref={containerRef} className="overflow-hidden h-full">
+          <History history={history} />
 
-            <p
-              className="whitespace-pre-wrap mb-2"
-              style={{ lineHeight: 'normal' }}
-              dangerouslySetInnerHTML={{ __html: entry.output }}
-            />
-          </div>
-        ))}
-
-        <div className="flex flex-row space-x-2">
-          <div className="flex-shrink">
-            <Ps1 />
-          </div>
-
-          <input
-            ref={inputRef}
-            type="text"
-            className="bg-gruvbox-background focus:outline-none flex-grow"
-            value={command}
+          <Input
+            inputRef={inputRef}
+            command={command}
             onChange={onChange}
-            autoFocus
-            onKeyDown={onSubmit}
+            onSubmit={onSubmit}
           />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

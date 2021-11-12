@@ -19,11 +19,6 @@ class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-          <meta
-            name="viewport"
-            content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
-          />
-
           <link
             rel="apple-touch-icon"
             sizes="57x57"
@@ -98,9 +93,8 @@ class MyDocument extends Document {
           <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
           <meta name="theme-color" content="#D79921" />
           <meta name="description" content="M4TT72 | Yassine Fathi" />
-
-          <title>M4TT72 | HOME</title>
         </Head>
+
         <body>
           <Main />
           <NextScript />
