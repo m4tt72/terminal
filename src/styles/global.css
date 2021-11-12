@@ -5,6 +5,7 @@
 @font-face {
   font-family: 'CascadiaCode';
   src: url(/assets/fonts/CascadiaCode.ttf);
+  display: swap;
 }
 
 * {
