@@ -4,15 +4,17 @@ import { Input } from '../components/input';
 import { interpreter } from '../utils/interpreter';
 import { useHistory } from '../hooks/history';
 import { History } from '../components/history';
+import { NextPageContext } from 'next';
+import packageJson from '../../package.json';
 
-const IndexPage: React.FC = () => {
+const IndexPage: React.FC<{ version: string }> = ({ version }) => {
   const inputRef = React.useRef(null);
   const containerRef = React.useRef(null);
   const { history, command, setCommand, setHistory, clearHistory } = useHistory(
     [],
   );
 
-  const init = () => {
+  const init = React.useCallback(() => {
     setHistory(
       `
 ███╗   ███╗██╗  ██╗████████╗████████╗███████╗██████╗
@@ -20,18 +22,16 @@ const IndexPage: React.FC = () => {
 ██╔████╔██║███████║   ██║      ██║       ██╔╝ █████╔╝
 ██║╚██╔╝██║╚════██║   ██║      ██║      ██╔╝ ██╔═══╝
 ██║ ╚═╝ ██║     ██║   ██║      ██║      ██║  ███████╗
-╚═╝     ╚═╝     ╚═╝   ╚═╝      ╚═╝      ╚═╝  ╚══════╝
+╚═╝     ╚═╝     ╚═╝   ╚═╝      ╚═╝      ╚═╝  ╚══════╝ v${version}
 
-
-This website is currently under development, only few commands are available atm.
 Type 'help' to see list of available commands.
 `,
     );
-  };
+  }, []);
 
   React.useEffect(() => {
     init();
-  }, []);
+  }, [init]);
 
   React.useEffect(() => {
     if (inputRef.current) {
@@ -84,5 +84,13 @@ Type 'help' to see list of available commands.
     </>
   );
 };
+
+export async function getStaticProps(context: NextPageContext) {
+  return {
+    props: {
+      version: packageJson.version,
+    }, // will be passed to the page component as props
+  };
+}
 
 export default IndexPage;
