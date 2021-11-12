@@ -6,17 +6,22 @@ import { useHistory } from '../hooks/history';
 import { History } from '../components/history';
 import { NextPageContext } from 'next';
 import packageJson from '../../package.json';
+import { getQuote } from '../api';
 
-const IndexPage: React.FC<{ version: string }> = ({ version }) => {
+const IndexPage: React.FC<{ version: string; quote: string }> = ({
+  version,
+  quote,
+}) => {
   const inputRef = React.useRef(null);
   const containerRef = React.useRef(null);
   const { history, command, setCommand, setHistory, clearHistory } = useHistory(
     [],
   );
 
-  const init = React.useCallback(() => {
-    setHistory(
-      `
+  const init = React.useCallback(
+    () =>
+      setHistory(
+        `
 ███╗   ███╗██╗  ██╗████████╗████████╗███████╗██████╗
 ████╗ ████║██║  ██║╚══██╔══╝╚══██╔══╝╚════██║╚════██╗
 ██╔████╔██║███████║   ██║      ██║       ██╔╝ █████╔╝
@@ -25,9 +30,14 @@ const IndexPage: React.FC<{ version: string }> = ({ version }) => {
 ╚═╝     ╚═╝     ╚═╝   ╚═╝      ╚═╝      ╚═╝  ╚══════╝ v${version}
 
 Type 'help' to see list of available commands.
+--
+For a simplified version, click <a class="text-gruvbox-blue underline" href="/gui">Here</a>.
+--
+${quote}
 `,
-    );
-  }, []);
+      ),
+    [quote, version],
+  );
 
   React.useEffect(() => {
     init();
@@ -70,7 +80,7 @@ Type 'help' to see list of available commands.
       </Head>
 
       <div className="p-8 overflow-hidden h-full border-2 rounded border-gruvbox-yellow">
-        <div ref={containerRef} className="overflow-hidden h-full">
+        <div ref={containerRef} className="overflow-y-auto h-full">
           <History history={history} />
 
           <Input
@@ -86,10 +96,13 @@ Type 'help' to see list of available commands.
 };
 
 export async function getStaticProps(context: NextPageContext) {
+  const { quote } = await getQuote();
   return {
     props: {
       version: packageJson.version,
-    }, // will be passed to the page component as props
+      quote,
+    },
+    revalidate: true,
   };
 }
 

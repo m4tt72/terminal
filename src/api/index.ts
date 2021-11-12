@@ -7,7 +7,7 @@ export const getProjects = async () => {
     .filter((repo) => !repo.fork)
     .map(
       (repo) =>
-        `<a href="${repo.html_url}" target="_blank">${repo.html_url}</a>`,
+        `${repo.name} - <a class="text-gruvbox-blue underline" href="${repo.html_url}" target="_blank">${repo.html_url}</a>`,
     );
   return projects;
 };
@@ -18,4 +18,18 @@ export const getBio = async () => {
   );
 
   return data;
+};
+
+export const getWeather = async () => {
+  const { data } = await axios.get('/api/weather');
+
+  return data;
+};
+
+export const getQuote = async () => {
+  const { data } = await axios.get('http://api.quotable.io/random');
+
+  return {
+    quote: `“${data.content}” — ${data.author}`,
+  };
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import { History } from '../interfaces/history';
-import { getBio, getProjects } from '../api';
+import { getBio, getProjects, getWeather } from '../api';
 
 export const interpreter = async (
   history: Array<History>,
@@ -19,17 +19,21 @@ export const interpreter = async (
     case 'help':
       setHistory(
         `list of available commands:
-
+gui       - open simplified version of this website
 about     - print information about the author
 projects  - print the list of the author's projects
 email     - send me an email
 instagram - open my instagram page
 github    - open my github page
+weather   - get current weather
 whoami    - print effective userid
 date      - print the system date and time
-
 `,
       );
+
+      break;
+    case 'gui':
+      window.open('/gui', '_self');
 
       break;
     case 'date':
@@ -64,6 +68,11 @@ date      - print the system date and time
       window.open('https://github.com/m4tt72/');
 
       setHistory('Opening mailto:hi@m4tt72.com');
+      break;
+    case 'weather':
+      const weather = await getWeather();
+
+      setHistory(weather);
       break;
     case 'vi':
     case 'vim':

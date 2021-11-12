@@ -14,6 +14,8 @@
     "next": "^12.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
+    "react-markdown": "^7.1.0",
     "react-query": "^3.29.0"
   },
   "devDependencies": {
