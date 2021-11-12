@@ -25,7 +25,7 @@ about     - print information about the author
 projects  - print the list of the author's projects
 email     - send me an email
 instagram - open my instagram page
-instagram - open my github page
+github    - open my github page
 whoami    - print effective userid
 date      - print the system date and time
 
