@@ -57,7 +57,12 @@ const GuiPage: React.FC<{ bio: string }> = ({ bio }) => {
         <ReactMarkdown
           components={{
             a: ({ children, ...props }) => (
-              <a className="text-gruvbox-blue underline" {...props}>
+              <a
+                className="text-gruvbox-blue underline"
+                {...props}
+                target="_blank"
+                rel="noreferrer"
+              >
                 {children}
               </a>
             ),
