@@ -3,13 +3,7 @@ import axios from 'axios';
 export const getProjects = async () => {
   const { data } = await axios.get('https://api.github.com/users/m4tt72/repos');
 
-  const projects = data
-    .filter((repo) => !repo.fork)
-    .map(
-      (repo) =>
-        `${repo.name} - <a class="text-gruvbox-blue underline" href="${repo.html_url}" target="_blank">${repo.html_url}</a>`,
-    );
-  return projects;
+  return data;
 };
 
 export const getBio = async () => {
@@ -20,8 +14,8 @@ export const getBio = async () => {
   return data;
 };
 
-export const getWeather = async () => {
-  const { data } = await axios.get('/api/weather');
+export const getWeather = async (city: string) => {
+  const { data } = await axios.get(`/api/weather/${city}`);
 
   return data;
 };

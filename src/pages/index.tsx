@@ -1,12 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
 import { Input } from '../components/input';
-import { interpreter } from '../utils/interpreter';
 import { useHistory } from '../hooks/history';
 import { History } from '../components/history';
 import { NextPageContext } from 'next';
 import packageJson from '../../package.json';
 import { getQuote } from '../api';
+import { shell } from '../utils/shell';
 
 const IndexPage: React.FC<{ version: string; quote: string }> = ({
   version,
@@ -52,13 +52,7 @@ ${quote}
   const onSubmit = async (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter' || event.code === '13') {
       try {
-        await interpreter(
-          history,
-          command,
-          setHistory,
-          clearHistory,
-          setCommand,
-        );
+        await shell(history, command, setHistory, clearHistory, setCommand);
       } catch (error) {
         console.log({ error });
       }
