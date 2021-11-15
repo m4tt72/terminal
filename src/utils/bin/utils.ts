@@ -1,4 +1,5 @@
 import * as bin from './index';
+import packageJson from '../../../package.json';
 
 export const help = async (args: string[]): Promise<string> => {
   const commands = Object.keys(bin).sort().join('\n');
@@ -38,10 +39,35 @@ export const vim = async (args: string[]): Promise<string> => {
   return `why use vim? try 'emacs'.`;
 };
 
-export const emacs = async (args: string[]): Promise<string> => {
+export const emacs = async (args?: string[]): Promise<string> => {
   return `really? emacs? you should be using 'vim'`;
 };
 
-export const sudo = async (args: string[]): Promise<string> => {
+export const sudo = async (args?: string[]): Promise<string> => {
   return `Permission denied: unable to run the command '${args[0]}' as root.`;
+};
+
+export const repo = async (args?: string[]): Promise<string> => {
+  window.open('https://github.com/m4tt72/terminal', '_blank');
+
+  return 'Opening repository...';
+};
+
+export const banner = (args?: string[]): string => {
+  return `
+███╗   ███╗██╗  ██╗████████╗████████╗███████╗██████╗
+████╗ ████║██║  ██║╚══██╔══╝╚══██╔══╝╚════██║╚════██╗
+██╔████╔██║███████║   ██║      ██║       ██╔╝ █████╔╝
+██║╚██╔╝██║╚════██║   ██║      ██║      ██╔╝ ██╔═══╝
+██║ ╚═╝ ██║     ██║   ██║      ██║      ██║  ███████╗
+╚═╝     ╚═╝     ╚═╝   ╚═╝      ╚═╝      ╚═╝  ╚══════╝ v${packageJson.version}
+
+Type 'help' to see list of available commands.
+
+--
+Now the project is open-source 🎉 type 'repo' to check out the repository.
+--
+For a simplified version, click <a class="text-gruvboxlight-blue dark:text-gruvboxdark-blue underline" href="/gui">Here</a>.
+--
+`;
 };

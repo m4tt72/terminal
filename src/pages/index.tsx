@@ -7,6 +7,7 @@ import { NextPageContext } from 'next';
 import packageJson from '../../package.json';
 import { getQuote } from '../api';
 import { shell } from '../utils/shell';
+import { banner } from '../utils/bin';
 
 const IndexPage: React.FC<{ version: string; quote: string }> = ({
   version,
@@ -18,26 +19,7 @@ const IndexPage: React.FC<{ version: string; quote: string }> = ({
     [],
   );
 
-  const init = React.useCallback(
-    () =>
-      setHistory(
-        `
-███╗   ███╗██╗  ██╗████████╗████████╗███████╗██████╗
-████╗ ████║██║  ██║╚══██╔══╝╚══██╔══╝╚════██║╚════██╗
-██╔████╔██║███████║   ██║      ██║       ██╔╝ █████╔╝
-██║╚██╔╝██║╚════██║   ██║      ██║      ██╔╝ ██╔═══╝
-██║ ╚═╝ ██║     ██║   ██║      ██║      ██║  ███████╗
-╚═╝     ╚═╝     ╚═╝   ╚═╝      ╚═╝      ╚═╝  ╚══════╝ v${version}
-
-Type 'help' to see list of available commands.
---
-For a simplified version, click <a class="text-gruvboxlight-blue dark:text-gruvboxdark-blue underline" href="/gui">Here</a>.
---
-${quote}
-`,
-      ),
-    [quote, version],
-  );
+  const init = React.useCallback(() => setHistory(banner()), []);
 
   React.useEffect(() => {
     init();
@@ -50,6 +32,10 @@ ${quote}
   }, [history]);
 
   const onSubmit = async (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'l' && event.ctrlKey) {
+      clearHistory();
+    }
+
     if (event.key === 'Enter' || event.code === '13') {
       await shell(history, command, setHistory, clearHistory, setCommand);
 
@@ -87,6 +73,7 @@ ${quote}
 
 export async function getStaticProps(context: NextPageContext) {
   const { quote } = await getQuote();
+
   return {
     props: {
       version: packageJson.version,
