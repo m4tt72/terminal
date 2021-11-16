@@ -6,7 +6,6 @@ import { History } from '../components/history';
 import { NextPageContext } from 'next';
 import packageJson from '../../package.json';
 import { getQuote } from '../api';
-import { shell } from '../utils/shell';
 import { banner } from '../utils/bin';
 
 const IndexPage: React.FC<{ version: string; quote: string }> = ({
@@ -31,24 +30,6 @@ const IndexPage: React.FC<{ version: string; quote: string }> = ({
     }
   }, [history]);
 
-  const onSubmit = async (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === 'l' && event.ctrlKey) {
-      clearHistory();
-    }
-
-    if (event.key === 'Enter' || event.code === '13') {
-      await shell(history, command, setHistory, clearHistory, setCommand);
-
-      containerRef.current.scrollTo(0, containerRef.current.scrollHeight);
-    }
-  };
-
-  const onChange = ({
-    target: { value },
-  }: React.ChangeEvent<HTMLInputElement>) => {
-    setCommand(value);
-  };
-
   return (
     <>
       <Head>
@@ -61,9 +42,12 @@ const IndexPage: React.FC<{ version: string; quote: string }> = ({
 
           <Input
             inputRef={inputRef}
+            containerRef={containerRef}
             command={command}
-            onChange={onChange}
-            onSubmit={onSubmit}
+            history={history}
+            setCommand={setCommand}
+            setHistory={setHistory}
+            clearHistory={clearHistory}
           />
         </div>
       </div>

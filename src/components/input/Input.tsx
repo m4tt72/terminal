@@ -1,7 +1,53 @@
 import React from 'react';
+import { shell } from '../../utils/shell';
+import { handleTabCompletion } from '../../utils/tabCompletion';
 import { Ps1 } from '../ps1';
 
-export const Input = ({ inputRef, command, onChange, onSubmit }) => {
+export const Input = ({
+  inputRef,
+  containerRef,
+  command,
+  history,
+  setCommand,
+  setHistory,
+  clearHistory,
+}) => {
+  const onSubmit = async (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'c' && event.ctrlKey) {
+      event.preventDefault();
+
+      setCommand('');
+
+      setHistory('');
+    }
+
+    if (event.key === 'l' && event.ctrlKey) {
+      event.preventDefault();
+
+      clearHistory();
+    }
+
+    if (event.key === 'Tab') {
+      event.preventDefault();
+
+      handleTabCompletion(command, setCommand);
+    }
+
+    if (event.key === 'Enter' || event.code === '13') {
+      event.preventDefault();
+
+      await shell(history, command, setHistory, clearHistory, setCommand);
+
+      containerRef.current.scrollTo(0, containerRef.current.scrollHeight);
+    }
+  };
+
+  const onChange = ({
+    target: { value },
+  }: React.ChangeEvent<HTMLInputElement>) => {
+    setCommand(value);
+  };
+
   return (
     <div className="flex flex-row space-x-2">
       <label htmlFor="prompt" className="flex-shrink">
