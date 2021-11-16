@@ -10,16 +10,16 @@
       "background": "#FBF1C9",
       "foreground": "#3C3836",
       "yellow": "#D79921",
-      "green": "#98971a",
+      "green": "#98971A",
       "gray": "#7C6F64",
       "blue": "#458588"
     },
     "dark": {
       "background": "#262626",
-      "foreground": "#ebdbb2",
+      "foreground": "#EBDBB2",
       "yellow": "#D79921",
-      "green": "#98971a",
-      "gray": "#a89984",
+      "green": "#98971A",
+      "gray": "#A89984",
       "blue": "#458588"
     }
   }
