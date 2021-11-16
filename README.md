@@ -15,7 +15,7 @@ I'm a Linux enthusiast, and I tried creating something that will allow 'normal' 
 ### Using docker (recommended)
 
 ```bash
-docker run -d --name terminal -p 3000:3000 docker.m4tt72.com/terminal
+docker run -d --name terminal -p 3000:3000 m4tt72/terminal
 ```
 
 If you want to run with custom configuration, make sure you have a copy of `config.json` then mount in the container:
@@ -25,7 +25,7 @@ docker run -d \
   --name terminal \
   -p 3000:3000 \
   -v `pwd`/config.json:/data/config.json \
-  docker.m4tt72.com/terminal
+  m4tt72/terminal
 ```
 
 ### Using npm/yarn
@@ -88,4 +88,3 @@ Feel free to change it as you see fit
 Please feel free to pull requests or log issues.
 
 Thanks!
-
