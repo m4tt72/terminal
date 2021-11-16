@@ -24,7 +24,7 @@ const GuiPage: React.FC<{ bio: string }> = ({ bio }) => {
   ];
 
   return (
-    <div className="p-8 overflow-hidden h-full border-2 rounded border-gruvboxlight-yellow dark:border-gruvboxdark-yellow">
+    <div className="p-8 overflow-hidden h-full border-2 rounded border-light-yellow dark:border-dark-yellow">
       <div className="flex">
         <div className="flex-grow text-2xl">
           <Link href="/" passHref>
@@ -39,14 +39,14 @@ const GuiPage: React.FC<{ bio: string }> = ({ bio }) => {
               href={socialLink.href}
               target="_blank"
               rel="noreferrer"
-              className="text-gruvboxlight-blue dark:text-gruvboxdark-blue underline"
+              className="text-light-blue dark:text-dark-blue underline"
             >
               {socialLink.icon}
             </a>
           ))}
 
           <Link href="/" passHref>
-            <a className="text-gruvboxlight-blue dark:text-gruvboxdark-blue underline">
+            <a className="text-light-blue dark:text-dark-blue underline">
               <BsTerminal className="text-2xl" />
             </a>
           </Link>
@@ -58,7 +58,7 @@ const GuiPage: React.FC<{ bio: string }> = ({ bio }) => {
           components={{
             a: ({ children, ...props }) => (
               <a
-                className="text-gruvboxlight-blue dark:text-gruvboxdark-blue underline"
+                className="text-light-blue dark:text-dark-blue underline"
                 {...props}
                 target="_blank"
                 rel="noreferrer"

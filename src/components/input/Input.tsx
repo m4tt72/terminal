@@ -12,7 +12,7 @@ export const Input = ({ inputRef, command, onChange, onSubmit }) => {
         ref={inputRef}
         id="prompt"
         type="text"
-        className="bg-gruvboxlight-background dark:bg-gruvboxdark-background focus:outline-none flex-grow"
+        className="bg-light-background dark:bg-dark-background focus:outline-none flex-grow"
         value={command}
         onChange={onChange}
         autoFocus

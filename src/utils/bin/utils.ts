@@ -67,7 +67,7 @@ Type 'help' to see list of available commands.
 --
 Now the project is open-source 🎉 type 'repo' to check out the repository.
 --
-For a simplified version, click <a class="text-gruvboxlight-blue dark:text-gruvboxdark-blue underline" href="/gui">Here</a>.
+For a simplified version, click <a class="text-light-blue dark:text-dark-blue underline" href="/gui">Here</a>.
 --
 `;
 };

@@ -1,15 +1,16 @@
 import axios from 'axios';
+import config from '../../config.json';
 
 export const getProjects = async () => {
-  const { data } = await axios.get('https://api.github.com/users/m4tt72/repos');
+  const { data } = await axios.get(
+    `https://api.github.com/users/${config.githubUsername}/repos`,
+  );
 
   return data;
 };
 
 export const getBio = async () => {
-  const { data } = await axios.get(
-    'https://raw.githubusercontent.com/m4tt72/m4tt72/master/README.md',
-  );
+  const { data } = await axios.get(config.bioUrl);
 
   return data;
 };
