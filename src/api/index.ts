@@ -3,7 +3,7 @@ import config from '../../config.json';
 
 export const getProjects = async () => {
   const { data } = await axios.get(
-    `https://api.github.com/users/${config.githubUsername}/repos`,
+    `https://api.github.com/users/${config.social.github}/repos`,
   );
 
   return data;
