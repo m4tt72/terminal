@@ -1,4 +1,4 @@
-# [M4TT72 | Terminal](https://m4tt72.com)
+# [M4TT72 | Terminal](https://term.m4tt72.com)
 
 A terminal style website
 
