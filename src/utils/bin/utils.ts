@@ -20,7 +20,7 @@ export const date = async (args: string[]): Promise<string> => {
 };
 
 export const gui = async (args: string[]): Promise<string> => {
-  window.open('https://blog.m4tt72.com', '_self');
+  window.open('https://m4tt72.com', '_self');
 
   return 'Opening GUI version...';
 };
@@ -69,7 +69,7 @@ Type 'help' to see list of available commands.
 --
 Now the project is open-source 🎉 type 'repo' to check out the repository.
 --
-For a simplified version, click <a class="text-light-blue dark:text-dark-blue underline" href="https://blog.m4tt72.com">Here</a>.
+For a simplified version, click <a class="text-light-blue dark:text-dark-blue underline" href="https://m4tt72.com">Here</a>.
 --
 `;
 };
