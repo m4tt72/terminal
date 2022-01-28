@@ -1,12 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import { Input } from '../components/input';
-import { useHistory } from '../hooks/history';
-import { History } from '../components/history';
-import { NextPageContext } from 'next';
-import packageJson from '../../package.json';
-import { getQuote } from '../api';
-import { banner } from '../utils/bin';
+import React from "react";
+import Head from "next/head";
+import { Input } from "../components/input";
+import { useHistory } from "../hooks/history";
+import { History } from "../components/history";
+import { NextPageContext } from "next";
+import packageJson from "../../package.json";
+import { getQuote } from "../api";
+import { banner } from "../utils/bin";
 
 const IndexPage: React.FC<{ version: string; quote: string }> = ({
   version,
@@ -14,10 +14,17 @@ const IndexPage: React.FC<{ version: string; quote: string }> = ({
 }) => {
   const inputRef = React.useRef(null);
   const containerRef = React.useRef(null);
-  const { history, command, setCommand, setHistory, clearHistory } = useHistory(
-    [],
-  );
+  const {
+    history,
+    command,
+    lastCommandIndex,
+    setCommand,
+    setHistory,
+    clearHistory,
+    setLastCommandIndex,
+  } = useHistory([]);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const init = React.useCallback(() => setHistory(banner()), []);
 
   React.useEffect(() => {
@@ -45,8 +52,10 @@ const IndexPage: React.FC<{ version: string; quote: string }> = ({
             containerRef={containerRef}
             command={command}
             history={history}
+            lastCommandIndex={lastCommandIndex}
             setCommand={setCommand}
             setHistory={setHistory}
+            setLastCommandIndex={setLastCommandIndex}
             clearHistory={clearHistory}
           />
         </div>
