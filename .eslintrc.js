@@ -4,5 +4,6 @@ module.exports = {
   rules: {
     'no-console': 'error',
     'prettier/prettier': 'warn',
+    'react-hooks/exhaustive-deps': 'off',
   },
 };
