@@ -9,17 +9,25 @@ export const Input = ({
   containerRef,
   command,
   history,
+  lastCommandIndex,
   setCommand,
   setHistory,
+  setLastCommandIndex,
   clearHistory,
 }) => {
   const onSubmit = async (event: React.KeyboardEvent<HTMLInputElement>) => {
+    const commands: [string] = history
+      .map(({ command }) => command)
+      .filter((command: string) => command);
+
     if (event.key === 'c' && event.ctrlKey) {
       event.preventDefault();
 
       setCommand('');
 
       setHistory('');
+
+      setLastCommandIndex(0);
     }
 
     if (event.key === 'l' && event.ctrlKey) {
@@ -37,9 +45,44 @@ export const Input = ({
     if (event.key === 'Enter' || event.code === '13') {
       event.preventDefault();
 
+      setLastCommandIndex(0);
+
       await shell(history, command, setHistory, clearHistory, setCommand);
 
       containerRef.current.scrollTo(0, containerRef.current.scrollHeight);
+    }
+
+    if (event.key === 'ArrowUp') {
+      event.preventDefault();
+
+      if (!commands.length) {
+        return;
+      }
+
+      const index: number = lastCommandIndex + 1;
+
+      if (index <= commands.length) {
+        setLastCommandIndex(index);
+        setCommand(commands[commands.length - index]);
+      }
+    }
+
+    if (event.key === 'ArrowDown') {
+      event.preventDefault();
+
+      if (!commands.length) {
+        return;
+      }
+
+      const index: number = lastCommandIndex - 1;
+
+      if (index > 0) {
+        setLastCommandIndex(index);
+        setCommand(commands[commands.length - index]);
+      } else {
+        setLastCommandIndex(0);
+        setCommand('');
+      }
     }
   };
 
@@ -68,6 +111,7 @@ export const Input = ({
         onChange={onChange}
         autoFocus
         onKeyDown={onSubmit}
+        autoComplete="off"
       />
     </div>
   );

@@ -4,10 +4,12 @@ import { History } from '../interfaces/history';
 export const useHistory = (defaultValue: Array<History>) => {
   const [history, setHistory] = React.useState<Array<History>>(defaultValue);
   const [command, setCommand] = React.useState<string>('');
+  const [lastCommandIndex, setLastCommandIndex] = React.useState<number>(0);
 
   return {
     history,
     command,
+    lastCommandIndex,
     setHistory: (value: string) =>
       setHistory([
         ...history,
@@ -19,6 +21,7 @@ export const useHistory = (defaultValue: Array<History>) => {
         },
       ]),
     setCommand,
+    setLastCommandIndex,
     clearHistory: () => setHistory([]),
   };
 };

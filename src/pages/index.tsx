@@ -14,9 +14,15 @@ const IndexPage: React.FC<{ version: string; quote: string }> = ({
 }) => {
   const inputRef = React.useRef(null);
   const containerRef = React.useRef(null);
-  const { history, command, setCommand, setHistory, clearHistory } = useHistory(
-    [],
-  );
+  const {
+    history,
+    command,
+    lastCommandIndex,
+    setCommand,
+    setHistory,
+    clearHistory,
+    setLastCommandIndex,
+  } = useHistory([]);
 
   const init = React.useCallback(() => setHistory(banner()), []);
 
@@ -45,8 +51,10 @@ const IndexPage: React.FC<{ version: string; quote: string }> = ({
             containerRef={containerRef}
             command={command}
             history={history}
+            lastCommandIndex={lastCommandIndex}
             setCommand={setCommand}
             setHistory={setHistory}
+            setLastCommandIndex={setLastCommandIndex}
             clearHistory={clearHistory}
           />
         </div>
