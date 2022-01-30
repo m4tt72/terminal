@@ -1,12 +1,12 @@
-import React from "react";
-import Head from "next/head";
-import { Input } from "../components/input";
-import { useHistory } from "../hooks/history";
-import { History } from "../components/history";
-import { NextPageContext } from "next";
-import packageJson from "../../package.json";
-import { getQuote } from "../api";
-import { banner } from "../utils/bin";
+import React from 'react';
+import Head from 'next/head';
+import { Input } from '../components/input';
+import { useHistory } from '../hooks/history';
+import { History } from '../components/history';
+import { NextPageContext } from 'next';
+import packageJson from '../../package.json';
+import { getQuote } from '../api';
+import { banner } from '../utils/bin';
 
 const IndexPage: React.FC<{ version: string; quote: string }> = ({
   version,
@@ -24,7 +24,6 @@ const IndexPage: React.FC<{ version: string; quote: string }> = ({
     setLastCommandIndex,
   } = useHistory([]);
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   const init = React.useCallback(() => setHistory(banner()), []);
 
   React.useEffect(() => {

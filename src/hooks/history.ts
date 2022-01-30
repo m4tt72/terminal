@@ -9,7 +9,7 @@ export const useHistory = (defaultValue: Array<History>) => {
   return {
     history,
     command,
-		lastCommandIndex,
+    lastCommandIndex,
     setHistory: (value: string) =>
       setHistory([
         ...history,
@@ -21,7 +21,7 @@ export const useHistory = (defaultValue: Array<History>) => {
         },
       ]),
     setCommand,
-		setLastCommandIndex,
+    setLastCommandIndex,
     clearHistory: () => setHistory([]),
   };
 };
