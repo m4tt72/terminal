@@ -8,11 +8,13 @@ import packageJson from '../../package.json';
 import { getQuote } from '../api';
 import { banner } from '../utils/bin';
 
-const IndexPage: React.FC<{ version: string; quote: string }> = ({
-  version,
-  quote,
-}) => {
-  const inputRef = React.useRef(null);
+interface IndexPageProps {
+  version: string;
+  quote: string;
+  inputRef: React.MutableRefObject<HTMLInputElement>;
+}
+
+const IndexPage: React.FC<IndexPageProps> = ({ version, quote, inputRef }) => {
   const containerRef = React.useRef(null);
   const {
     history,
