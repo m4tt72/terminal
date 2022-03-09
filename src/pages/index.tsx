@@ -1,11 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import { Input } from '../components/input';
-import { useHistory } from '../hooks/history';
-import { History } from '../components/history';
+import { useMatomo } from '@datapunt/matomo-tracker-react';
 import { NextPageContext } from 'next';
+import Head from 'next/head';
+import React from 'react';
 import packageJson from '../../package.json';
 import { getQuote } from '../api';
+import { History } from '../components/history';
+import { Input } from '../components/input';
+import { useHistory } from '../hooks/history';
 import { banner } from '../utils/bin';
 
 interface IndexPageProps {
@@ -15,6 +16,8 @@ interface IndexPageProps {
 }
 
 const IndexPage: React.FC<IndexPageProps> = ({ version, quote, inputRef }) => {
+  const { trackPageView } = useMatomo();
+
   const containerRef = React.useRef(null);
   const {
     history,
@@ -27,6 +30,10 @@ const IndexPage: React.FC<IndexPageProps> = ({ version, quote, inputRef }) => {
   } = useHistory([]);
 
   const init = React.useCallback(() => setHistory(banner()), []);
+
+  React.useEffect(() => {
+    trackPageView({});
+  }, []);
 
   React.useEffect(() => {
     init();
