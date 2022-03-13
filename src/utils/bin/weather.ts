@@ -1,5 +1,5 @@
 import { getWeather } from '../../api';
-
+//weather function
 const weather = async (args: string[]): Promise<string> => {
   const city = args.join('+');
 
