@@ -6,8 +6,13 @@ import { MatomoProvider, createInstance } from '@datapunt/matomo-tracker-react';
 const App = ({ Component, pageProps }) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
   const instance = createInstance({
-    urlBase: 'https://analytics.m4tt72.xyz',
+    urlBase: 'https://a.m4tt72.xyz',
+    trackerUrl: 'https://a.m4tt72.xyz/js/',
+    srcUrl: 'https://a.m4tt72.xyz/js/',
     siteId: 1,
+    configurations: {
+      setRequestMethod: 'GET',
+    },
   });
 
   const onClickAnywhere = () => {
