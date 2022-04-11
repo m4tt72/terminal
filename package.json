@@ -17,28 +17,27 @@
   },
   "dependencies": {
     "@datapunt/matomo-tracker-react": "^0.5.1",
-    "axios": "^0.24.0",
-    "next": "^12.1.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-icons": "^4.3.1",
-    "react-markdown": "^7.1.0"
+    "axios": "^0.26.1",
+    "next": "^12.1.4",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-icons": "^4.3.1"
   },
   "devDependencies": {
-    "@types/node": "^17.0.14",
-    "@types/react": "^17.0.33",
-    "@typescript-eslint/eslint-plugin": "^5.3.1",
-    "@typescript-eslint/parser": "^5.3.1",
-    "autoprefixer": "^10.4.0",
-    "eslint": "<8.0.0",
-    "eslint-config-next": "^12.0.3",
+    "@types/node": "^17.0.23",
+    "@types/react": "^18.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.18.0",
+    "@typescript-eslint/parser": "^5.18.0",
+    "autoprefixer": "^10.4.4",
+    "eslint": "8.13.0",
+    "eslint-config-next": "^12.1.4",
     "eslint-plugin-next": "^0.0.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.27.0",
+    "eslint-plugin-react": "^7.29.4",
     "husky": "^7.0.4",
-    "postcss": "^8.4.4",
-    "prettier": "^2.5.1",
+    "postcss": "^8.4.12",
+    "prettier": "^2.6.2",
     "tailwindcss": "^3.0.0",
-    "typescript": "^4.4.4"
+    "typescript": "^4.6.3"
   }
 }
