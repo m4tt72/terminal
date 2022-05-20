@@ -1,4 +1,4 @@
-import { useMatomo } from '@datapunt/matomo-tracker-react';
+import { useMatomo } from '@m4tt72/matomo-tracker-react';
 import React from 'react';
 import { commandExists } from '../../utils/commandExists';
 import { shell } from '../../utils/shell';

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/global.css';
 import Head from 'next/head';
-import { MatomoProvider, createInstance } from '@datapunt/matomo-tracker-react';
+import { MatomoProvider, createInstance } from '@m4tt72/matomo-tracker-react';
 
 const App = ({ Component, pageProps }) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
