@@ -1,4 +1,4 @@
-import { useMatomo } from '@datapunt/matomo-tracker-react';
+import { useMatomo } from '@m4tt72/matomo-tracker-react';
 import { NextPageContext } from 'next';
 import Head from 'next/head';
 import React from 'react';
