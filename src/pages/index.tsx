@@ -10,12 +10,10 @@ import { useHistory } from '../hooks/history';
 import { banner } from '../utils/bin';
 
 interface IndexPageProps {
-  version: string;
-  quote: string;
   inputRef: React.MutableRefObject<HTMLInputElement>;
 }
 
-const IndexPage: React.FC<IndexPageProps> = ({ version, quote, inputRef }) => {
+const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
   const { trackPageView } = useMatomo();
 
   const containerRef = React.useRef(null);

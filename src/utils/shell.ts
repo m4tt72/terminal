@@ -1,10 +1,8 @@
 import React from 'react';
 import { History } from '../interfaces/history';
-
 import * as bin from './bin';
 
 export const shell = async (
-  history: Array<History>,
   command: string,
   setHistory: (value: string) => void,
   clearHistory: () => void,
