@@ -15,7 +15,6 @@ WORKDIR /app
 
 ENV NODE_ENV production
 
-COPY --from=builder /build/next.config.js ./
 COPY --from=builder /build/public ./public
 COPY --from=builder /build/.next ./.next
 COPY --from=builder /build/node_modules ./node_modules
