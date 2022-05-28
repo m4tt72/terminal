@@ -1,31 +1,37 @@
 import { useMatomo } from '@m4tt72/matomo-tracker-react';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { commandExists } from '../../utils/commandExists';
-import { shell } from '../../utils/shell';
+import { useShell } from '../../utils/shellProvider';
 import { handleTabCompletion } from '../../utils/tabCompletion';
+import { useTheme } from '../../utils/themeProvider';
 import { Ps1 } from '../ps1';
 
-export const Input = ({
-  inputRef,
-  containerRef,
-  command,
-  history,
-  lastCommandIndex,
-  setCommand,
-  setHistory,
-  setLastCommandIndex,
-  clearHistory,
-}) => {
+export const Input = ({ inputRef, containerRef }) => {
   const { trackEvent } = useMatomo();
+  const { theme } = useTheme();
+  const [value, setValue] = useState('');
+  const {
+    setCommand,
+    history,
+    lastCommandIndex,
+    setHistory,
+    setLastCommandIndex,
+    clearHistory,
+  } = useShell();
+
+  useEffect(() => {
+    containerRef.current.scrollTo(0, containerRef.current.scrollHeight);
+  }, [history]);
+
   const onSubmit = async (event: React.KeyboardEvent<HTMLInputElement>) => {
-    const commands: [string] = history
+    const commands: string[] = history
       .map(({ command }) => command)
-      .filter((command: string) => command);
+      .filter((value: string) => value);
 
     if (event.key === 'c' && event.ctrlKey) {
       event.preventDefault();
 
-      setCommand('');
+      setValue('');
 
       setHistory('');
 
@@ -41,7 +47,7 @@ export const Input = ({
     if (event.key === 'Tab') {
       event.preventDefault();
 
-      handleTabCompletion(command, setCommand);
+      handleTabCompletion(value, setValue);
     }
 
     if (event.key === 'Enter' || event.code === '13') {
@@ -49,11 +55,14 @@ export const Input = ({
 
       setLastCommandIndex(0);
 
-      await shell(history, command, setHistory, clearHistory, setCommand);
+      setCommand(value);
 
-      trackEvent({ category: 'Command Executed', action: command });
+      setValue('');
 
-      containerRef.current.scrollTo(0, containerRef.current.scrollHeight);
+      trackEvent({
+        category: 'Command Executed',
+        action: value || 'no command',
+      });
     }
 
     if (event.key === 'ArrowUp') {
@@ -67,7 +76,7 @@ export const Input = ({
 
       if (index <= commands.length) {
         setLastCommandIndex(index);
-        setCommand(commands[commands.length - index]);
+        setValue(commands[commands.length - index]);
       }
     }
 
@@ -82,18 +91,12 @@ export const Input = ({
 
       if (index > 0) {
         setLastCommandIndex(index);
-        setCommand(commands[commands.length - index]);
+        setValue(commands[commands.length - index]);
       } else {
         setLastCommandIndex(0);
-        setCommand('');
+        setValue('');
       }
     }
-  };
-
-  const onChange = ({
-    target: { value },
-  }: React.ChangeEvent<HTMLInputElement>) => {
-    setCommand(value);
   };
 
   return (
@@ -106,13 +109,14 @@ export const Input = ({
         ref={inputRef}
         id="prompt"
         type="text"
-        className={`bg-light-background dark:bg-dark-background focus:outline-none flex-grow ${
-          commandExists(command) || command === ''
-            ? 'text-dark-green'
-            : 'text-dark-red'
-        }`}
-        value={command}
-        onChange={onChange}
+        className="focus:outline-none flex-grow"
+        aria-label="prompt"
+        style={{
+          backgroundColor: theme.background,
+          color: commandExists(value) || value === '' ? theme.green : theme.red,
+        }}
+        value={value}
+        onChange={(event) => setValue(event.target.value)}
         autoFocus
         onKeyDown={onSubmit}
         autoComplete="off"

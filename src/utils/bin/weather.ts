@@ -1,6 +1,6 @@
 import { getWeather } from '../../api';
 
-const weather = async (args: string[]): Promise<string> => {
+export const weather = async (args: string[]): Promise<string> => {
   const city = args.join('+');
 
   if (!city) {
@@ -11,5 +11,3 @@ const weather = async (args: string[]): Promise<string> => {
 
   return weather;
 };
-
-export default weather;

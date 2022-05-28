@@ -1,8 +1,8 @@
 import React from 'react';
 import { History } from '../interfaces/history';
 
-export const useHistory = (defaultValue: Array<History>) => {
-  const [history, setHistory] = React.useState<Array<History>>(defaultValue);
+export const useHistory = () => {
+  const [history, setHistory] = React.useState<Array<History>>([]);
   const [command, setCommand] = React.useState<string>('');
   const [lastCommandIndex, setLastCommandIndex] = React.useState<number>(0);
 
