@@ -11,11 +11,17 @@ const Layout: React.FC<Props> = ({ children, onClick }) => {
 
   return (
     <div
-      className={`text-${theme}-foreground dark:text-${theme}-foreground min-w-max text-xs md:min-w-full md:text-base`}
+      className="min-w-max text-xs md:min-w-full md:text-base"
       onClick={onClick}
+      style={{
+        color: theme.foreground,
+      }}
     >
       <main
-        className={`${theme}-background dark:${theme}-background w-full h-full p-2`}
+        className="w-full h-full p-2"
+        style={{
+          background: theme.background,
+        }}
       >
         {children}
       </main>

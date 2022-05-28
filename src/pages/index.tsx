@@ -1,9 +1,6 @@
 import { useMatomo } from '@m4tt72/matomo-tracker-react';
-import { NextPageContext } from 'next';
 import Head from 'next/head';
 import React from 'react';
-import packageJson from '../../package.json';
-import { getQuote } from '../api';
 import { History } from '../components/history';
 import { Input } from '../components/input';
 import { useShell } from '../utils/shellProvider';
@@ -37,7 +34,10 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
       </Head>
 
       <div
-        className={`p-8 overflow-hidden h-full border-2 rounded border-${theme}-brightRed dark:border-${theme}-red`}
+        className="p-8 overflow-hidden h-full border-2 rounded"
+        style={{
+          borderColor: theme.yellow,
+        }}
       >
         <div ref={containerRef} className="overflow-y-auto h-full">
           <History history={history} />
@@ -48,17 +48,5 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
     </>
   );
 };
-
-export async function getStaticProps(context: NextPageContext) {
-  const { quote } = await getQuote();
-
-  return {
-    props: {
-      version: packageJson.version,
-      quote,
-    },
-    revalidate: true,
-  };
-}
 
 export default IndexPage;

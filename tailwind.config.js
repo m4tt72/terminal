@@ -1,21 +1,13 @@
-const Themes = require('./themes.json');
-
-const colors = Themes.reduce(
-  (acc, { name, ...theme }) => ({
-    ...acc,
-    [name.toLowerCase()]: theme,
-  }),
-  {},
-);
-
 const config = {
-  content: ['./src/**/*.{js,ts,jsx,tsx}'],
-  darkMode: 'media', // or 'media' or 'class'
+  content: [
+    './src/components/**/*.{js,ts,jsx,tsx}',
+    './src/pages/**/*.{js,ts,jsx,tsx}',
+  ],
+  darkMode: 'media',
   theme: {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      ...colors,
     },
     extend: {},
   },

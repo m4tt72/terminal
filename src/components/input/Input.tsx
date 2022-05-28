@@ -3,10 +3,12 @@ import React, { useEffect, useState } from 'react';
 import { commandExists } from '../../utils/commandExists';
 import { useShell } from '../../utils/shellProvider';
 import { handleTabCompletion } from '../../utils/tabCompletion';
+import { useTheme } from '../../utils/themeProvider';
 import { Ps1 } from '../ps1';
 
 export const Input = ({ inputRef, containerRef }) => {
   const { trackEvent } = useMatomo();
+  const { theme } = useTheme();
   const [value, setValue] = useState('');
   const {
     setCommand,
@@ -107,11 +109,11 @@ export const Input = ({ inputRef, containerRef }) => {
         ref={inputRef}
         id="prompt"
         type="text"
-        className={`bg-light-background dark:bg-dark-background focus:outline-none flex-grow ${
-          commandExists(value) || value === ''
-            ? 'text-dark-green'
-            : 'text-dark-red'
-        }`}
+        className="focus:outline-none flex-grow"
+        style={{
+          backgroundColor: theme.background,
+          color: commandExists(value) || value === '' ? theme.green : theme.red,
+        }}
         value={value}
         onChange={(event) => setValue(event.target.value)}
         autoFocus

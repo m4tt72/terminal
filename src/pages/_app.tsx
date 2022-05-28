@@ -4,7 +4,7 @@ import React from 'react';
 import { Layout } from '../components/layout';
 import '../styles/global.css';
 import { ShellProvider } from '../utils/shellProvider';
-import { ThemeProvider, useTheme } from '../utils/themeProvider';
+import { ThemeProvider } from '../utils/themeProvider';
 
 const App = ({ Component, pageProps }) => {
   const inputRef = React.useRef<HTMLInputElement>(null);

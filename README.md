@@ -60,28 +60,9 @@ Here's a sample of the `config.json` file:
     "github": "m4tt72",
     "linkedin": "yassinefathi"
   },
-  "colors": {
-    "light": {
-      "background": "#FBF1C9",
-      "foreground": "#3C3836",
-      "yellow": "#D79921",
-      "green": "#98971A",
-      "gray": "#7C6F64",
-      "blue": "#458588"
-    },
-    "dark": {
-      "background": "#262626",
-      "foreground": "#EBDBB2",
-      "yellow": "#D79921",
-      "green": "#98971A",
-      "gray": "#A89984",
-      "blue": "#458588"
-    }
-  }
+  "theme": "gruvboxdark" // list of themes available in themes.json
 }
 ```
-
-Feel free to change it as you see fit
 
 ## Contributing
 
