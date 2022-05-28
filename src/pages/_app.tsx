@@ -1,7 +1,10 @@
 import { createInstance, MatomoProvider } from '@m4tt72/matomo-tracker-react';
 import Head from 'next/head';
 import React from 'react';
+import { Layout } from '../components/layout';
 import '../styles/global.css';
+import { ShellProvider } from '../utils/shellProvider';
+import { ThemeProvider, useTheme } from '../utils/themeProvider';
 
 const App = ({ Component, pageProps }) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
@@ -11,24 +14,21 @@ const App = ({ Component, pageProps }) => {
   };
 
   return (
-    <>
-      <Head>
-        <meta
-          name="viewport"
-          content="initial-scale=1.0, width=device-width"
-          key="viewport"
-        />
-      </Head>
+    <ThemeProvider>
+      <ShellProvider>
+        <Head>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+            key="viewport"
+          />
+        </Head>
 
-      <div
-        className="text-light-foreground dark:text-dark-foreground min-w-max text-xs md:min-w-full md:text-base"
-        onClick={onClickAnywhere}
-      >
-        <main className="bg-light-background dark:bg-dark-background w-full h-full p-2">
+        <Layout onClick={onClickAnywhere}>
           <Component {...pageProps} inputRef={inputRef} />
-        </main>
-      </div>
-    </>
+        </Layout>
+      </ShellProvider>
+    </ThemeProvider>
   );
 };
 

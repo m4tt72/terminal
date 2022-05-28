@@ -1,10 +1,15 @@
-const { colors } = require('./config.json');
+const Themes = require('./themes.json');
 
-module.exports = {
-  content: [
-    './src/pages/**/*.{js,ts,jsx,tsx}',
-    './src/components/**/*.{js,ts,jsx,tsx}',
-  ],
+const colors = Themes.reduce(
+  (acc, { name, ...theme }) => ({
+    ...acc,
+    [name.toLowerCase()]: theme,
+  }),
+  {},
+);
+
+const config = {
+  content: ['./src/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     colors: {
@@ -19,3 +24,5 @@ module.exports = {
   },
   plugins: [],
 };
+
+module.exports = config;

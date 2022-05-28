@@ -1,6 +1,6 @@
 import { getProjects } from '../../api';
 
-const projects = async (args: string[]): Promise<string> => {
+export const projects = async (args: string[]): Promise<string> => {
   const projects = await getProjects();
 
   return projects
@@ -11,5 +11,3 @@ const projects = async (args: string[]): Promise<string> => {
     )
     .join('\n');
 };
-
-export default projects;
