@@ -64,6 +64,10 @@ Here's a sample of the `config.json` file:
 }
 ```
 
+## Themes
+
+[Here's](/docs/themes) a list of available themes.
+
 ## Contributing
 
 Please feel free to pull requests or log issues.
