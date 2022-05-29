@@ -2,901 +2,901 @@
 
 ## 3024Day
 
-![3024Day](/docs/themes/3024day.png)
+![3024Day](/docs/themes/screenshots/3024day.png)
 
 ## 3024Night
 
-![3024Night](/docs/themes/3024night.png)
+![3024Night](/docs/themes/screenshots/3024night.png)
 
 ## Aci
 
-![Aci](/docs/themes/aci.png)
+![Aci](/docs/themes/screenshots/aci.png)
 
 ## Aco
 
-![Aco](/docs/themes/aco.png)
+![Aco](/docs/themes/screenshots/aco.png)
 
 ## AdventureTime
 
-![AdventureTime](/docs/themes/adventuretime.png)
+![AdventureTime](/docs/themes/screenshots/adventuretime.png)
 
 ## Afterglow
 
-![Afterglow](/docs/themes/afterglow.png)
+![Afterglow](/docs/themes/screenshots/afterglow.png)
 
 ## AlienBlood
 
-![AlienBlood](/docs/themes/alienblood.png)
+![AlienBlood](/docs/themes/screenshots/alienblood.png)
 
 ## Argonaut
 
-![Argonaut](/docs/themes/argonaut.png)
+![Argonaut](/docs/themes/screenshots/argonaut.png)
 
 ## Arthur
 
-![Arthur](/docs/themes/arthur.png)
+![Arthur](/docs/themes/screenshots/arthur.png)
 
 ## Atom
 
-![Atom](/docs/themes/atom.png)
+![Atom](/docs/themes/screenshots/atom.png)
 
 ## Aura
 
-![Aura](/docs/themes/aura.png)
+![Aura](/docs/themes/screenshots/aura.png)
 
 ## AyuDark
 
-![AyuDark](/docs/themes/ayudark.png)
+![AyuDark](/docs/themes/screenshots/ayudark.png)
 
 ## AyuLight
 
-![AyuLight](/docs/themes/ayulight.png)
+![AyuLight](/docs/themes/screenshots/ayulight.png)
 
 ## AyuMirage
 
-![AyuMirage](/docs/themes/ayumirage.png)
+![AyuMirage](/docs/themes/screenshots/ayumirage.png)
 
 ## Azu
 
-![Azu](/docs/themes/azu.png)
+![Azu](/docs/themes/screenshots/azu.png)
 
 ## BelafonteDay
 
-![BelafonteDay](/docs/themes/belafonteday.png)
+![BelafonteDay](/docs/themes/screenshots/belafonteday.png)
 
 ## BelafonteNight
 
-![BelafonteNight](/docs/themes/belafontenight.png)
+![BelafonteNight](/docs/themes/screenshots/belafontenight.png)
 
 ## Bim
 
-![Bim](/docs/themes/bim.png)
+![Bim](/docs/themes/screenshots/bim.png)
 
 ## BirdsOfParadise
 
-![BirdsOfParadise](/docs/themes/birdsofparadise.png)
+![BirdsOfParadise](/docs/themes/screenshots/birdsofparadise.png)
 
 ## Blazer
 
-![Blazer](/docs/themes/blazer.png)
+![Blazer](/docs/themes/screenshots/blazer.png)
 
 ## BlulocoLight
 
-![BlulocoLight](/docs/themes/blulocolight.png)
+![BlulocoLight](/docs/themes/screenshots/blulocolight.png)
 
 ## BlulocoZshLight
 
-![BlulocoZshLight](/docs/themes/blulocozshlight.png)
+![BlulocoZshLight](/docs/themes/screenshots/blulocozshlight.png)
 
 ## Borland
 
-![Borland](/docs/themes/borland.png)
+![Borland](/docs/themes/screenshots/borland.png)
 
 ## Broadcast
 
-![Broadcast](/docs/themes/broadcast.png)
+![Broadcast](/docs/themes/screenshots/broadcast.png)
 
 ## Brogrammer
 
-![Brogrammer](/docs/themes/brogrammer.png)
+![Brogrammer](/docs/themes/screenshots/brogrammer.png)
 
 ## C64
 
-![C64](/docs/themes/c64.png)
+![C64](/docs/themes/screenshots/c64.png)
 
 ## Cai
 
-![Cai](/docs/themes/cai.png)
+![Cai](/docs/themes/screenshots/cai.png)
 
 ## Chalk
 
-![Chalk](/docs/themes/chalk.png)
+![Chalk](/docs/themes/screenshots/chalk.png)
 
 ## Chalkboard
 
-![Chalkboard](/docs/themes/chalkboard.png)
+![Chalkboard](/docs/themes/screenshots/chalkboard.png)
 
 ## Chameleon
 
-![Chameleon](/docs/themes/chameleon.png)
+![Chameleon](/docs/themes/screenshots/chameleon.png)
 
 ## Ciapre
 
-![Ciapre](/docs/themes/ciapre.png)
+![Ciapre](/docs/themes/screenshots/ciapre.png)
 
 ## CloneofUbuntu
 
-![CloneofUbuntu](/docs/themes/cloneofubuntu.png)
+![CloneofUbuntu](/docs/themes/screenshots/cloneofubuntu.png)
 
 ## CLRS
 
-![CLRS](/docs/themes/clrs.png)
+![CLRS](/docs/themes/screenshots/clrs.png)
 
 ## CobaltNeon
 
-![CobaltNeon](/docs/themes/cobaltneon.png)
+![CobaltNeon](/docs/themes/screenshots/cobaltneon.png)
 
 ## Cobalt2
 
-![Cobalt2](/docs/themes/cobalt2.png)
+![Cobalt2](/docs/themes/screenshots/cobalt2.png)
 
 ## Colorcli
 
-![Colorcli](/docs/themes/colorcli.png)
+![Colorcli](/docs/themes/screenshots/colorcli.png)
 
 ## CrayonPonyFish
 
-![CrayonPonyFish](/docs/themes/crayonponyfish.png)
+![CrayonPonyFish](/docs/themes/screenshots/crayonponyfish.png)
 
 ## DarkPastel
 
-![DarkPastel](/docs/themes/darkpastel.png)
+![DarkPastel](/docs/themes/screenshots/darkpastel.png)
 
 ## Darkside
 
-![Darkside](/docs/themes/darkside.png)
+![Darkside](/docs/themes/screenshots/darkside.png)
 
 ## DeHydration
 
-![DeHydration](/docs/themes/dehydration.png)
+![DeHydration](/docs/themes/screenshots/dehydration.png)
 
 ## Desert
 
-![Desert](/docs/themes/desert.png)
+![Desert](/docs/themes/screenshots/desert.png)
 
 ## DimmedMonokai
 
-![DimmedMonokai](/docs/themes/dimmedmonokai.png)
+![DimmedMonokai](/docs/themes/screenshots/dimmedmonokai.png)
 
 ## Dissonance
 
-![Dissonance](/docs/themes/dissonance.png)
+![Dissonance](/docs/themes/screenshots/dissonance.png)
 
 ## Dracula
 
-![Dracula](/docs/themes/dracula.png)
+![Dracula](/docs/themes/screenshots/dracula.png)
 
 ## Earthsong
 
-![Earthsong](/docs/themes/earthsong.png)
+![Earthsong](/docs/themes/screenshots/earthsong.png)
 
 ## Elemental
 
-![Elemental](/docs/themes/elemental.png)
+![Elemental](/docs/themes/screenshots/elemental.png)
 
 ## Elementary
 
-![Elementary](/docs/themes/elementary.png)
+![Elementary](/docs/themes/screenshots/elementary.png)
 
 ## Elic
 
-![Elic](/docs/themes/elic.png)
+![Elic](/docs/themes/screenshots/elic.png)
 
 ## Elio
 
-![Elio](/docs/themes/elio.png)
+![Elio](/docs/themes/screenshots/elio.png)
 
 ## EspressoLibre
 
-![EspressoLibre](/docs/themes/espressolibre.png)
+![EspressoLibre](/docs/themes/screenshots/espressolibre.png)
 
 ## Espresso
 
-![Espresso](/docs/themes/espresso.png)
+![Espresso](/docs/themes/screenshots/espresso.png)
 
 ## FairyFloss
 
-![FairyFloss](/docs/themes/fairyfloss.png)
+![FairyFloss](/docs/themes/screenshots/fairyfloss.png)
 
 ## FairyFlossDark
 
-![FairyFlossDark](/docs/themes/fairyflossdark.png)
+![FairyFlossDark](/docs/themes/screenshots/fairyflossdark.png)
 
 ## Fishtank
 
-![Fishtank](/docs/themes/fishtank.png)
+![Fishtank](/docs/themes/screenshots/fishtank.png)
 
 ## FlatRemix
 
-![FlatRemix](/docs/themes/flatremix.png)
+![FlatRemix](/docs/themes/screenshots/flatremix.png)
 
 ## Flat
 
-![Flat](/docs/themes/flat.png)
+![Flat](/docs/themes/screenshots/flat.png)
 
 ## Flatland
 
-![Flatland](/docs/themes/flatland.png)
+![Flatland](/docs/themes/screenshots/flatland.png)
 
 ## Foxnightly
 
-![Foxnightly](/docs/themes/foxnightly.png)
+![Foxnightly](/docs/themes/screenshots/foxnightly.png)
 
 ## Freya
 
-![Freya](/docs/themes/freya.png)
+![Freya](/docs/themes/screenshots/freya.png)
 
 ## FrontendDelight
 
-![FrontendDelight](/docs/themes/frontenddelight.png)
+![FrontendDelight](/docs/themes/screenshots/frontenddelight.png)
 
 ## FrontendFunForrest
 
-![FrontendFunForrest](/docs/themes/frontendfunforrest.png)
+![FrontendFunForrest](/docs/themes/screenshots/frontendfunforrest.png)
 
 ## FrontendGalaxy
 
-![FrontendGalaxy](/docs/themes/frontendgalaxy.png)
+![FrontendGalaxy](/docs/themes/screenshots/frontendgalaxy.png)
 
 ## GeoHot
 
-![GeoHot](/docs/themes/geohot.png)
+![GeoHot](/docs/themes/screenshots/geohot.png)
 
 ## Github
 
-![Github](/docs/themes/github.png)
+![Github](/docs/themes/screenshots/github.png)
 
 ## Gogh
 
-![Gogh](/docs/themes/gogh.png)
+![Gogh](/docs/themes/screenshots/gogh.png)
 
 ## gooey
 
-![gooey](/docs/themes/gooey.png)
+![gooey](/docs/themes/screenshots/gooey.png)
 
 ## GoogleDark
 
-![GoogleDark](/docs/themes/googledark.png)
+![GoogleDark](/docs/themes/screenshots/googledark.png)
 
 ## GoogleLight
 
-![GoogleLight](/docs/themes/googlelight.png)
+![GoogleLight](/docs/themes/screenshots/googlelight.png)
 
 ## gotham
 
-![gotham](/docs/themes/gotham.png)
+![gotham](/docs/themes/screenshots/gotham.png)
 
 ## Grape
 
-![Grape](/docs/themes/grape.png)
+![Grape](/docs/themes/screenshots/grape.png)
 
 ## Grass
 
-![Grass](/docs/themes/grass.png)
+![Grass](/docs/themes/screenshots/grass.png)
 
 ## GruvboxDark
 
-![GruvboxDark](/docs/themes/gruvboxdark.png)
+![GruvboxDark](/docs/themes/screenshots/gruvboxdark.png)
 
 ## Gruvbox
 
-![Gruvbox](/docs/themes/gruvbox.png)
+![Gruvbox](/docs/themes/screenshots/gruvbox.png)
 
 ## Hardcore
 
-![Hardcore](/docs/themes/hardcore.png)
+![Hardcore](/docs/themes/screenshots/hardcore.png)
 
 ## Harper
 
-![Harper](/docs/themes/harper.png)
+![Harper](/docs/themes/screenshots/harper.png)
 
 ## HemisuDark
 
-![HemisuDark](/docs/themes/hemisudark.png)
+![HemisuDark](/docs/themes/screenshots/hemisudark.png)
 
 ## HemisuLight
 
-![HemisuLight](/docs/themes/hemisulight.png)
+![HemisuLight](/docs/themes/screenshots/hemisulight.png)
 
 ## Highway
 
-![Highway](/docs/themes/highway.png)
+![Highway](/docs/themes/screenshots/highway.png)
 
 ## HipsterGreen
 
-![HipsterGreen](/docs/themes/hipstergreen.png)
+![HipsterGreen](/docs/themes/screenshots/hipstergreen.png)
 
 ## Homebrew
 
-![Homebrew](/docs/themes/homebrew.png)
+![Homebrew](/docs/themes/screenshots/homebrew.png)
 
 ## HorizonBright
 
-![HorizonBright](/docs/themes/horizonbright.png)
+![HorizonBright](/docs/themes/screenshots/horizonbright.png)
 
 ## HorizonDark
 
-![HorizonDark](/docs/themes/horizondark.png)
+![HorizonDark](/docs/themes/screenshots/horizondark.png)
 
 ## Hurtado
 
-![Hurtado](/docs/themes/hurtado.png)
+![Hurtado](/docs/themes/screenshots/hurtado.png)
 
 ## Hybrid
 
-![Hybrid](/docs/themes/hybrid.png)
+![Hybrid](/docs/themes/screenshots/hybrid.png)
 
 ## IBM3270(HighContrast)
 
-![IBM3270(HighContrast)](/docs/themes/ibm3270(highcontrast).png)
+![IBM3270(HighContrast)](/docs/themes/screenshots/ibm3270(highcontrast).png)
 
 ## ibm3270
 
-![ibm3270](/docs/themes/ibm3270.png)
+![ibm3270](/docs/themes/screenshots/ibm3270.png)
 
 ## ICGreenPPL
 
-![ICGreenPPL](/docs/themes/icgreenppl.png)
+![ICGreenPPL](/docs/themes/screenshots/icgreenppl.png)
 
 ## ICOrangePPL
 
-![ICOrangePPL](/docs/themes/icorangeppl.png)
+![ICOrangePPL](/docs/themes/screenshots/icorangeppl.png)
 
 ## IdleToes
 
-![IdleToes](/docs/themes/idletoes.png)
+![IdleToes](/docs/themes/screenshots/idletoes.png)
 
 ## IrBlack
 
-![IrBlack](/docs/themes/irblack.png)
+![IrBlack](/docs/themes/screenshots/irblack.png)
 
 ## JackieBrown
 
-![JackieBrown](/docs/themes/jackiebrown.png)
+![JackieBrown](/docs/themes/screenshots/jackiebrown.png)
 
 ## Japanesque
 
-![Japanesque](/docs/themes/japanesque.png)
+![Japanesque](/docs/themes/screenshots/japanesque.png)
 
 ## Jellybeans
 
-![Jellybeans](/docs/themes/jellybeans.png)
+![Jellybeans](/docs/themes/screenshots/jellybeans.png)
 
 ## Jup
 
-![Jup](/docs/themes/jup.png)
+![Jup](/docs/themes/screenshots/jup.png)
 
 ## Kibble
 
-![Kibble](/docs/themes/kibble.png)
+![Kibble](/docs/themes/screenshots/kibble.png)
 
 ## kokuban
 
-![kokuban](/docs/themes/kokuban.png)
+![kokuban](/docs/themes/screenshots/kokuban.png)
 
 ## laserwave
 
-![laserwave](/docs/themes/laserwave.png)
+![laserwave](/docs/themes/screenshots/laserwave.png)
 
 ## LaterThisEvening
 
-![LaterThisEvening](/docs/themes/laterthisevening.png)
+![LaterThisEvening](/docs/themes/screenshots/laterthisevening.png)
 
 ## Lavandula
 
-![Lavandula](/docs/themes/lavandula.png)
+![Lavandula](/docs/themes/screenshots/lavandula.png)
 
 ## LiquidCarbonTransparent
 
-![LiquidCarbonTransparent](/docs/themes/liquidcarbontransparent.png)
+![LiquidCarbonTransparent](/docs/themes/screenshots/liquidcarbontransparent.png)
 
 ## LiquidCarbon
 
-![LiquidCarbon](/docs/themes/liquidcarbon.png)
+![LiquidCarbon](/docs/themes/screenshots/liquidcarbon.png)
 
 ## LunariaDark
 
-![LunariaDark](/docs/themes/lunariadark.png)
+![LunariaDark](/docs/themes/screenshots/lunariadark.png)
 
 ## LunariaEclipse
 
-![LunariaEclipse](/docs/themes/lunariaeclipse.png)
+![LunariaEclipse](/docs/themes/screenshots/lunariaeclipse.png)
 
 ## LunariaLight
 
-![LunariaLight](/docs/themes/lunarialight.png)
+![LunariaLight](/docs/themes/screenshots/lunarialight.png)
 
 ## Maia
 
-![Maia](/docs/themes/maia.png)
+![Maia](/docs/themes/screenshots/maia.png)
 
 ## ManPage
 
-![ManPage](/docs/themes/manpage.png)
+![ManPage](/docs/themes/screenshots/manpage.png)
 
 ## Mar
 
-![Mar](/docs/themes/mar.png)
+![Mar](/docs/themes/screenshots/mar.png)
 
 ## Material
 
-![Material](/docs/themes/material.png)
+![Material](/docs/themes/screenshots/material.png)
 
 ## Mathias
 
-![Mathias](/docs/themes/mathias.png)
+![Mathias](/docs/themes/screenshots/mathias.png)
 
 ## Medallion
 
-![Medallion](/docs/themes/medallion.png)
+![Medallion](/docs/themes/screenshots/medallion.png)
 
 ## Misterioso
 
-![Misterioso](/docs/themes/misterioso.png)
+![Misterioso](/docs/themes/screenshots/misterioso.png)
 
 ## Miu
 
-![Miu](/docs/themes/miu.png)
+![Miu](/docs/themes/screenshots/miu.png)
 
 ## Molokai
 
-![Molokai](/docs/themes/molokai.png)
+![Molokai](/docs/themes/screenshots/molokai.png)
 
 ## MonaLisa
 
-![MonaLisa](/docs/themes/monalisa.png)
+![MonaLisa](/docs/themes/screenshots/monalisa.png)
 
 ## mono-amber
 
-![mono-amber](/docs/themes/mono-amber.png)
+![mono-amber](/docs/themes/screenshots/mono-amber.png)
 
 ## mono-cyan
 
-![mono-cyan](/docs/themes/mono-cyan.png)
+![mono-cyan](/docs/themes/screenshots/mono-cyan.png)
 
 ## mono-green
 
-![mono-green](/docs/themes/mono-green.png)
+![mono-green](/docs/themes/screenshots/mono-green.png)
 
 ## mono-red
 
-![mono-red](/docs/themes/mono-red.png)
+![mono-red](/docs/themes/screenshots/mono-red.png)
 
 ## mono-white
 
-![mono-white](/docs/themes/mono-white.png)
+![mono-white](/docs/themes/screenshots/mono-white.png)
 
 ## mono-yellow
 
-![mono-yellow](/docs/themes/mono-yellow.png)
+![mono-yellow](/docs/themes/screenshots/mono-yellow.png)
 
 ## MonokaiDark
 
-![MonokaiDark](/docs/themes/monokaidark.png)
+![MonokaiDark](/docs/themes/screenshots/monokaidark.png)
 
 ## MonokaiProRistretto
 
-![MonokaiProRistretto](/docs/themes/monokaiproristretto.png)
+![MonokaiProRistretto](/docs/themes/screenshots/monokaiproristretto.png)
 
 ## MonokaiPro
 
-![MonokaiPro](/docs/themes/monokaipro.png)
+![MonokaiPro](/docs/themes/screenshots/monokaipro.png)
 
 ## MonokaiSoda
 
-![MonokaiSoda](/docs/themes/monokaisoda.png)
+![MonokaiSoda](/docs/themes/screenshots/monokaisoda.png)
 
 ## Morada
 
-![Morada](/docs/themes/morada.png)
+![Morada](/docs/themes/screenshots/morada.png)
 
 ## N0tch2k
 
-![N0tch2k](/docs/themes/n0tch2k.png)
+![N0tch2k](/docs/themes/screenshots/n0tch2k.png)
 
 ## neon-night
 
-![neon-night](/docs/themes/neon-night.png)
+![neon-night](/docs/themes/screenshots/neon-night.png)
 
 ## Neopolitan
 
-![Neopolitan](/docs/themes/neopolitan.png)
+![Neopolitan](/docs/themes/screenshots/neopolitan.png)
 
 ## Nep
 
-![Nep](/docs/themes/nep.png)
+![Nep](/docs/themes/screenshots/nep.png)
 
 ## Neutron
 
-![Neutron](/docs/themes/neutron.png)
+![Neutron](/docs/themes/screenshots/neutron.png)
 
 ## NightOwl
 
-![NightOwl](/docs/themes/nightowl.png)
+![NightOwl](/docs/themes/screenshots/nightowl.png)
 
 ## NightlionV1
 
-![NightlionV1](/docs/themes/nightlionv1.png)
+![NightlionV1](/docs/themes/screenshots/nightlionv1.png)
 
 ## NightlionV2
 
-![NightlionV2](/docs/themes/nightlionv2.png)
+![NightlionV2](/docs/themes/screenshots/nightlionv2.png)
 
 ## nighty
 
-![nighty](/docs/themes/nighty.png)
+![nighty](/docs/themes/screenshots/nighty.png)
 
 ## NordLight
 
-![NordLight](/docs/themes/nordlight.png)
+![NordLight](/docs/themes/screenshots/nordlight.png)
 
 ## Nord
 
-![Nord](/docs/themes/nord.png)
+![Nord](/docs/themes/screenshots/nord.png)
 
 ## Novel
 
-![Novel](/docs/themes/novel.png)
+![Novel](/docs/themes/screenshots/novel.png)
 
 ## Obsidian
 
-![Obsidian](/docs/themes/obsidian.png)
+![Obsidian](/docs/themes/screenshots/obsidian.png)
 
 ## OceanDark
 
-![OceanDark](/docs/themes/oceandark.png)
+![OceanDark](/docs/themes/screenshots/oceandark.png)
 
 ## Ocean
 
-![Ocean](/docs/themes/ocean.png)
+![Ocean](/docs/themes/screenshots/ocean.png)
 
 ## OceanicNext
 
-![OceanicNext](/docs/themes/oceanicnext.png)
+![OceanicNext](/docs/themes/screenshots/oceanicnext.png)
 
 ## Ollie
 
-![Ollie](/docs/themes/ollie.png)
+![Ollie](/docs/themes/screenshots/ollie.png)
 
 ## Omni
 
-![Omni](/docs/themes/omni.png)
+![Omni](/docs/themes/screenshots/omni.png)
 
 ## OneDark
 
-![OneDark](/docs/themes/onedark.png)
+![OneDark](/docs/themes/screenshots/onedark.png)
 
 ## OneHalfBlack
 
-![OneHalfBlack](/docs/themes/onehalfblack.png)
+![OneHalfBlack](/docs/themes/screenshots/onehalfblack.png)
 
 ## OneLight
 
-![OneLight](/docs/themes/onelight.png)
+![OneLight](/docs/themes/screenshots/onelight.png)
 
 ## palenight
 
-![palenight](/docs/themes/palenight.png)
+![palenight](/docs/themes/screenshots/palenight.png)
 
 ## Pali
 
-![Pali](/docs/themes/pali.png)
+![Pali](/docs/themes/screenshots/pali.png)
 
 ## Panda
 
-![Panda](/docs/themes/panda.png)
+![Panda](/docs/themes/screenshots/panda.png)
 
 ## PaperColorDark
 
-![PaperColorDark](/docs/themes/papercolordark.png)
+![PaperColorDark](/docs/themes/screenshots/papercolordark.png)
 
 ## PaperColorLight
 
-![PaperColorLight](/docs/themes/papercolorlight.png)
+![PaperColorLight](/docs/themes/screenshots/papercolorlight.png)
 
 ## ParaisoDark
 
-![ParaisoDark](/docs/themes/paraisodark.png)
+![ParaisoDark](/docs/themes/screenshots/paraisodark.png)
 
 ## PaulMillr
 
-![PaulMillr](/docs/themes/paulmillr.png)
+![PaulMillr](/docs/themes/screenshots/paulmillr.png)
 
 ## PencilDark
 
-![PencilDark](/docs/themes/pencildark.png)
+![PencilDark](/docs/themes/screenshots/pencildark.png)
 
 ## PencilLight
 
-![PencilLight](/docs/themes/pencillight.png)
+![PencilLight](/docs/themes/screenshots/pencillight.png)
 
 ## Peppermint
 
-![Peppermint](/docs/themes/peppermint.png)
+![Peppermint](/docs/themes/screenshots/peppermint.png)
 
 ## Pixiefloss
 
-![Pixiefloss](/docs/themes/pixiefloss.png)
+![Pixiefloss](/docs/themes/screenshots/pixiefloss.png)
 
 ## Pnevma
 
-![Pnevma](/docs/themes/pnevma.png)
+![Pnevma](/docs/themes/screenshots/pnevma.png)
 
 ## PowerShell
 
-![PowerShell](/docs/themes/powershell.png)
+![PowerShell](/docs/themes/screenshots/powershell.png)
 
 ## Pro
 
-![Pro](/docs/themes/pro.png)
+![Pro](/docs/themes/screenshots/pro.png)
 
 ## PurplePeopleEater
 
-![PurplePeopleEater](/docs/themes/purplepeopleeater.png)
+![PurplePeopleEater](/docs/themes/screenshots/purplepeopleeater.png)
 
 ## RedAlert
 
-![RedAlert](/docs/themes/redalert.png)
+![RedAlert](/docs/themes/screenshots/redalert.png)
 
 ## RedSands
 
-![RedSands](/docs/themes/redsands.png)
+![RedSands](/docs/themes/screenshots/redsands.png)
 
 ## Relaxed
 
-![Relaxed](/docs/themes/relaxed.png)
+![Relaxed](/docs/themes/screenshots/relaxed.png)
 
 ## Rippedcasts
 
-![Rippedcasts](/docs/themes/rippedcasts.png)
+![Rippedcasts](/docs/themes/screenshots/rippedcasts.png)
 
 ## Royal
 
-![Royal](/docs/themes/royal.png)
+![Royal](/docs/themes/screenshots/royal.png)
 
 ## Sat
 
-![Sat](/docs/themes/sat.png)
+![Sat](/docs/themes/screenshots/sat.png)
 
 ## SeaShells
 
-![SeaShells](/docs/themes/seashells.png)
+![SeaShells](/docs/themes/screenshots/seashells.png)
 
 ## SeafoamPastel
 
-![SeafoamPastel](/docs/themes/seafoampastel.png)
+![SeafoamPastel](/docs/themes/screenshots/seafoampastel.png)
 
 ## Seti
 
-![Seti](/docs/themes/seti.png)
+![Seti](/docs/themes/screenshots/seti.png)
 
 ## Shaman
 
-![Shaman](/docs/themes/shaman.png)
+![Shaman](/docs/themes/screenshots/shaman.png)
 
 ## Shel
 
-![Shel](/docs/themes/shel.png)
+![Shel](/docs/themes/screenshots/shel.png)
 
 ## Slate
 
-![Slate](/docs/themes/slate.png)
+![Slate](/docs/themes/screenshots/slate.png)
 
 ## Smyck
 
-![Smyck](/docs/themes/smyck.png)
+![Smyck](/docs/themes/screenshots/smyck.png)
 
 ## Snazzy
 
-![Snazzy](/docs/themes/snazzy.png)
+![Snazzy](/docs/themes/screenshots/snazzy.png)
 
 ## SoftServer
 
-![SoftServer](/docs/themes/softserver.png)
+![SoftServer](/docs/themes/screenshots/softserver.png)
 
 ## SolarizedDarcula
 
-![SolarizedDarcula](/docs/themes/solarizeddarcula.png)
+![SolarizedDarcula](/docs/themes/screenshots/solarizeddarcula.png)
 
 ## SolarizedDarkHigherContrast
 
-![SolarizedDarkHigherContrast](/docs/themes/solarizeddarkhighercontrast.png)
+![SolarizedDarkHigherContrast](/docs/themes/screenshots/solarizeddarkhighercontrast.png)
 
 ## SolarizedDark
 
-![SolarizedDark](/docs/themes/solarizeddark.png)
+![SolarizedDark](/docs/themes/screenshots/solarizeddark.png)
 
 ## SolarizedLight
 
-![SolarizedLight](/docs/themes/solarizedlight.png)
+![SolarizedLight](/docs/themes/screenshots/solarizedlight.png)
 
 ## Sonokai
 
-![Sonokai](/docs/themes/sonokai.png)
+![Sonokai](/docs/themes/screenshots/sonokai.png)
 
 ## Spacedust
 
-![Spacedust](/docs/themes/spacedust.png)
+![Spacedust](/docs/themes/screenshots/spacedust.png)
 
 ## SpaceGrayEightiesDull
 
-![SpaceGrayEightiesDull](/docs/themes/spacegrayeightiesdull.png)
+![SpaceGrayEightiesDull](/docs/themes/screenshots/spacegrayeightiesdull.png)
 
 ## SpaceGrayEighties
 
-![SpaceGrayEighties](/docs/themes/spacegrayeighties.png)
+![SpaceGrayEighties](/docs/themes/screenshots/spacegrayeighties.png)
 
 ## SpaceGray
 
-![SpaceGray](/docs/themes/spacegray.png)
+![SpaceGray](/docs/themes/screenshots/spacegray.png)
 
 ## Spring
 
-![Spring](/docs/themes/spring.png)
+![Spring](/docs/themes/screenshots/spring.png)
 
 ## Square
 
-![Square](/docs/themes/square.png)
+![Square](/docs/themes/screenshots/square.png)
 
 ## Srcery
 
-![Srcery](/docs/themes/srcery.png)
+![Srcery](/docs/themes/screenshots/srcery.png)
 
 ## summer-pop
 
-![summer-pop](/docs/themes/summer-pop.png)
+![summer-pop](/docs/themes/screenshots/summer-pop.png)
 
 ## Sundried
 
-![Sundried](/docs/themes/sundried.png)
+![Sundried](/docs/themes/screenshots/sundried.png)
 
 ## sweet-eliverlara
 
-![sweet-eliverlara](/docs/themes/sweet-eliverlara.png)
+![sweet-eliverlara](/docs/themes/screenshots/sweet-eliverlara.png)
 
 ## SweetTerminal
 
-![SweetTerminal](/docs/themes/sweetterminal.png)
+![SweetTerminal](/docs/themes/screenshots/sweetterminal.png)
 
 ## Symphonic
 
-![Symphonic](/docs/themes/symphonic.png)
+![Symphonic](/docs/themes/screenshots/symphonic.png)
 
 ## SynthWave
 
-![SynthWave](/docs/themes/synthwave.png)
+![SynthWave](/docs/themes/screenshots/synthwave.png)
 
 ## Teerb
 
-![Teerb](/docs/themes/teerb.png)
+![Teerb](/docs/themes/screenshots/teerb.png)
 
 ## Tender
 
-![Tender](/docs/themes/tender.png)
+![Tender](/docs/themes/screenshots/tender.png)
 
 ## TerminalBasic
 
-![TerminalBasic](/docs/themes/terminalbasic.png)
+![TerminalBasic](/docs/themes/screenshots/terminalbasic.png)
 
 ## TerminixDark
 
-![TerminixDark](/docs/themes/terminixdark.png)
+![TerminixDark](/docs/themes/screenshots/terminixdark.png)
 
 ## ThayerBright
 
-![ThayerBright](/docs/themes/thayerbright.png)
+![ThayerBright](/docs/themes/screenshots/thayerbright.png)
 
 ## Tin
 
-![Tin](/docs/themes/tin.png)
+![Tin](/docs/themes/screenshots/tin.png)
 
 ## TokyoNightLight
 
-![TokyoNightLight](/docs/themes/tokyonightlight.png)
+![TokyoNightLight](/docs/themes/screenshots/tokyonightlight.png)
 
 ## TokyoNightStorm
 
-![TokyoNightStorm](/docs/themes/tokyonightstorm.png)
+![TokyoNightStorm](/docs/themes/screenshots/tokyonightstorm.png)
 
 ## TokyoNight
 
-![TokyoNight](/docs/themes/tokyonight.png)
+![TokyoNight](/docs/themes/screenshots/tokyonight.png)
 
 ## TomorrowNightBlue
 
-![TomorrowNightBlue](/docs/themes/tomorrownightblue.png)
+![TomorrowNightBlue](/docs/themes/screenshots/tomorrownightblue.png)
 
 ## TomorrowNightBright
 
-![TomorrowNightBright](/docs/themes/tomorrownightbright.png)
+![TomorrowNightBright](/docs/themes/screenshots/tomorrownightbright.png)
 
 ## TomorrowNightEighties
 
-![TomorrowNightEighties](/docs/themes/tomorrownighteighties.png)
+![TomorrowNightEighties](/docs/themes/screenshots/tomorrownighteighties.png)
 
 ## TomorrowNight
 
-![TomorrowNight](/docs/themes/tomorrownight.png)
+![TomorrowNight](/docs/themes/screenshots/tomorrownight.png)
 
 ## Tomorrow
 
-![Tomorrow](/docs/themes/tomorrow.png)
+![Tomorrow](/docs/themes/screenshots/tomorrow.png)
 
 ## ToyChest
 
-![ToyChest](/docs/themes/toychest.png)
+![ToyChest](/docs/themes/screenshots/toychest.png)
 
 ## Treehouse
 
-![Treehouse](/docs/themes/treehouse.png)
+![Treehouse](/docs/themes/screenshots/treehouse.png)
 
 ## Twilight
 
-![Twilight](/docs/themes/twilight.png)
+![Twilight](/docs/themes/screenshots/twilight.png)
 
 ## Ura
 
-![Ura](/docs/themes/ura.png)
+![Ura](/docs/themes/screenshots/ura.png)
 
 ## Urple
 
-![Urple](/docs/themes/urple.png)
+![Urple](/docs/themes/screenshots/urple.png)
 
 ## Vag
 
-![Vag](/docs/themes/vag.png)
+![Vag](/docs/themes/screenshots/vag.png)
 
 ## Vaughn
 
-![Vaughn](/docs/themes/vaughn.png)
+![Vaughn](/docs/themes/screenshots/vaughn.png)
 
 ## VibrantInk
 
-![VibrantInk](/docs/themes/vibrantink.png)
+![VibrantInk](/docs/themes/screenshots/vibrantink.png)
 
 ## VSCodeDark+
 
-![VSCodeDark+](/docs/themes/vscodedark+.png)
+![VSCodeDark+](/docs/themes/screenshots/vscodedark+.png)
 
 ## VSCodeLight+
 
-![VSCodeLight+](/docs/themes/vscodelight+.png)
+![VSCodeLight+](/docs/themes/screenshots/vscodelight+.png)
 
 ## WarmNeon
 
-![WarmNeon](/docs/themes/warmneon.png)
+![WarmNeon](/docs/themes/screenshots/warmneon.png)
 
 ## Wez
 
-![Wez](/docs/themes/wez.png)
+![Wez](/docs/themes/screenshots/wez.png)
 
 ## WildCherry
 
-![WildCherry](/docs/themes/wildcherry.png)
+![WildCherry](/docs/themes/screenshots/wildcherry.png)
 
 ## Wombat
 
-![Wombat](/docs/themes/wombat.png)
+![Wombat](/docs/themes/screenshots/wombat.png)
 
 ## Wryan
 
-![Wryan](/docs/themes/wryan.png)
+![Wryan](/docs/themes/screenshots/wryan.png)
 
 ## Wzoreck
 
-![Wzoreck](/docs/themes/wzoreck.png)
+![Wzoreck](/docs/themes/screenshots/wzoreck.png)
 
 ## Zenburn
 
-![Zenburn](/docs/themes/zenburn.png)
+![Zenburn](/docs/themes/screenshots/zenburn.png)
 
