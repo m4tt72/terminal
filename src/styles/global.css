@@ -29,3 +29,7 @@ div#__next > div {
 ::-webkit-scrollbar-thumb {
   border-radius: 5px;
 }
+
+a {
+  text-decoration: underline;
+}

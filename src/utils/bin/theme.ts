@@ -17,7 +17,11 @@ Example:
 
   switch (args[0]) {
     case 'ls':
-      return Themes.map((theme) => theme.name.toLowerCase()).join(', ');
+      let result = Themes.map((theme) => theme.name.toLowerCase()).join(', ');
+      result += '\n\n';
+      result += `You can preview all these themes <a href="https://github.com/m4tt72/terminal/tree/master/docs/themes">in the docs</a>`;
+
+      return result;
     case 'set':
       const selectedTheme = args[1];
 
