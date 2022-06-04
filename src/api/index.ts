@@ -16,7 +16,7 @@ export const getBio = async () => {
 };
 
 export const getWeather = async (city: string) => {
-  const { data } = await axios.get(`/api/weather/${city}`);
+  const { data } = await axios.get(`https://wttr.in/${city}?ATm`);
 
   return data;
 };
