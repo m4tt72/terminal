@@ -41,4 +41,4 @@ jspm_packages
 
 .env
 
-bin
+bin/
