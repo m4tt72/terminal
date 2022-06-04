@@ -66,7 +66,10 @@ Here's a sample of the `config.json` file:
 
 ## Themes
 
+![themes](/docs/screenshot.gif)
+
 [Here's](/docs/themes) a list of available themes.
+
 
 ## Contributing
 
