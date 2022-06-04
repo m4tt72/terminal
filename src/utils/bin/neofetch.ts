@@ -127,16 +127,7 @@ const getInfo = () => {
 
   let message = '';
 
-  message += `${hostname}\n`;
-  const line = `${message
-    .replace('\n', '')
-    .split('')
-    .map(() => '-')
-    .join('')}\n`;
-
-  message += `${line}\n`;
   message += `<span style="color: ${mainColor}">Host</span>: ${hostname}\n`;
-  message += `<span style="color: ${mainColor}">License</span>: ${packageJson.license}\n`;
   message += `<span style="color: ${mainColor}">OS</span>: ${os}\n`;
   message += `<span style="color: ${mainColor}">Packages</span>: ${
     packages.length + devPackages.length
@@ -144,6 +135,7 @@ const getInfo = () => {
   message += `<span style="color: ${mainColor}">Resolution</span>: ${resolution}\n`;
   message += `<span style="color: ${mainColor}">Shell</span>: m4tt72-web\n`;
   message += `<span style="color: ${mainColor}">Theme</span>: ${theme}\n`;
+  message += `<span style="color: ${mainColor}">License</span>: ${packageJson.license}\n`;
   message += `<span style="color: ${mainColor}">Version</span>: ${packageJson.version}\n`;
   message += `<span style="color: ${mainColor}">Repo</span>: <a href="${packageJson.repository.url}" target="_blank">${packageJson.repository.url}</a>\n`;
   message += `<span style="color: ${mainColor}">Uptime</span>: ${formatDistanceToNow(
