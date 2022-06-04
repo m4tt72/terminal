@@ -1,5 +1,5 @@
-import packageJson from '../../../package.json';
 import { formatDistanceToNow } from 'date-fns';
+import packageJson from '../../../package.json';
 
 const macos = `
                     'c.
