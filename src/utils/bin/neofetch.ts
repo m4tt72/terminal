@@ -1,5 +1,6 @@
 import { formatDistanceToNow } from 'date-fns';
 import packageJson from '../../../package.json';
+import themes from '../../../themes.json';
 
 const macos = `
                     'c.
@@ -83,15 +84,32 @@ const getPlatform = (): 'Unknown' | 'Windows' | 'MacOS' | 'Linux' => {
   return os;
 };
 
-const getArt = () => {
+const getMainColor = () => {
   const platform = getPlatform();
+  const themeName = localStorage.getItem('theme');
+  const theme = themes.find((theme) => theme.name.toLowerCase() === themeName);
+
   switch (platform) {
     case 'MacOS':
-      return macos;
+      return theme.cyan;
     case 'Windows':
-      return windows;
+      return theme.blue;
     case 'Linux':
-      return linux;
+      return theme.red;
+  }
+};
+
+const getArt = () => {
+  const platform = getPlatform();
+  const mainColor = getMainColor();
+
+  switch (platform) {
+    case 'MacOS':
+      return `<p style="color: ${mainColor}">${macos}</p>`;
+    case 'Windows':
+      return `<p style="color: ${mainColor}">${windows}</p>`;
+    case 'Linux':
+      return `<p style="color: ${mainColor}">${linux}</p>`;
   }
 };
 
@@ -105,6 +123,7 @@ const getInfo = () => {
   const resolution = `${window.screen.availWidth}x${window.screen.availHeight}`;
   const packages = Object.keys(packageJson.dependencies);
   const devPackages = Object.keys(packageJson.devDependencies);
+  const mainColor = getMainColor();
 
   let message = '';
 
@@ -116,18 +135,22 @@ const getInfo = () => {
     .join('')}\n`;
 
   message += `${line}\n`;
-  message += `Host: ${hostname}\n`;
-  message += `License: ${packageJson.license}\n`;
-  message += `OS: ${os}\n`;
-  message += `Packages: ${packages.length + devPackages.length} (npm)\n`;
-  message += `Resolution: ${resolution}\n`;
-  message += `Shell: m4tt72-web\n`;
-  message += `Theme: ${theme}\n`;
-  message += `Version: ${packageJson.version}\n`;
-  message += `Uptime: ${formatDistanceToNow(visitedAt)}\n`;
-  message += `${line}\n`;
-  message += `Author: ${packageJson.author.name} (${packageJson.author.email})\n`;
-  message += `Donate: <a href="https://paypal.me/y4ss1n3" target="_blank">Paypal</a>\n`;
+  message += `<span style="color: ${mainColor}">Host</span>: ${hostname}\n`;
+  message += `<span style="color: ${mainColor}">License</span>: ${packageJson.license}\n`;
+  message += `<span style="color: ${mainColor}">OS</span>: ${os}\n`;
+  message += `<span style="color: ${mainColor}">Packages</span>: ${
+    packages.length + devPackages.length
+  } (npm)\n`;
+  message += `<span style="color: ${mainColor}">Resolution</span>: ${resolution}\n`;
+  message += `<span style="color: ${mainColor}">Shell</span>: m4tt72-web\n`;
+  message += `<span style="color: ${mainColor}">Theme</span>: ${theme}\n`;
+  message += `<span style="color: ${mainColor}">Version</span>: ${packageJson.version}\n`;
+  message += `<span style="color: ${mainColor}">Repo</span>: <a href="${packageJson.repository.url}" target="_blank">${packageJson.repository.url}</a>\n`;
+  message += `<span style="color: ${mainColor}">Uptime</span>: ${formatDistanceToNow(
+    visitedAt,
+  )}\n`;
+  message += `<span style="color: ${mainColor}">Author</span>: ${packageJson.author.name} (${packageJson.author.email})\n`;
+  message += `<span style="color: ${mainColor}">Donate</span>: <a href="${packageJson.funding.url}" target="_blank">${packageJson.funding.type}</a>\n`;
 
   return message;
 };

@@ -7,6 +7,14 @@
     "url": "https://m4tt72.com",
     "email": "hi@m4tt72.com"
   },
+  "funding": {
+    "type": "Paypal",
+    "url": "https://paypal.me/y4ss1n3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m4tt72/terminal"
+  },
   "scripts": {
     "start": "next start",
     "build": "next build",
