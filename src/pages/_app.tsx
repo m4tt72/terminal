@@ -1,6 +1,6 @@
 import { createInstance, MatomoProvider } from '@m4tt72/matomo-tracker-react';
 import Head from 'next/head';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Layout } from '../components/layout';
 import '../styles/global.css';
 import { ShellProvider } from '../utils/shellProvider';
@@ -12,6 +12,10 @@ const App = ({ Component, pageProps }) => {
   const onClickAnywhere = () => {
     inputRef.current.focus();
   };
+
+  useEffect(() => {
+    localStorage.setItem('visitedAt', new Date().toString());
+  }, []);
 
   return (
     <ThemeProvider>
