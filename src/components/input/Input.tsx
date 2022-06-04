@@ -120,6 +120,8 @@ export const Input = ({ inputRef, containerRef }) => {
         autoFocus
         onKeyDown={onSubmit}
         autoComplete="off"
+        autoCorrect="off"
+        autoCapitalize="off"
       />
     </div>
   );
