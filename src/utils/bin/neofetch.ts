@@ -124,7 +124,7 @@ const getInfo = () => {
   message += `Shell: m4tt72-web\n`;
   message += `Theme: ${theme}\n`;
   message += `Version: ${packageJson.version}\n`;
-  message += `Visited: ${formatDistanceToNow(visitedAt)}\n`;
+  message += `Uptime: ${formatDistanceToNow(visitedAt)}\n`;
   message += `${line}\n`;
   message += `Author: ${packageJson.author.name} (${packageJson.author.email})\n`;
   message += `Donate: <a href="https://paypal.me/y4ss1n3" target="_blank">Paypal</a>\n`;
