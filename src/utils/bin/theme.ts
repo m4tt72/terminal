@@ -7,8 +7,9 @@ export const theme = async (
   if (args.length === 0) {
     return `Usage: theme [arg]
 Args:
-  - ls: List all themes
+  - ls: list all themes
   - set: set a theme
+  - random: set a random theme
 
 Example: 
   theme ls # to list all themes
@@ -26,5 +27,9 @@ Example:
       const selectedTheme = args[1];
 
       return callback(selectedTheme);
+    case 'random':
+      const randomTheme = Themes[Math.floor(Math.random() * Themes.length)];
+
+      return callback(randomTheme.name.toLowerCase());
   }
 };
