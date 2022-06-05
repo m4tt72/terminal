@@ -5,6 +5,7 @@ import { History } from '../components/history';
 import { Input } from '../components/input';
 import { useShell } from '../utils/shellProvider';
 import { useTheme } from '../utils/themeProvider';
+import config from '../../config.json';
 
 interface IndexPageProps {
   inputRef: React.MutableRefObject<HTMLInputElement>;
@@ -34,9 +35,11 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
       </Head>
 
       <div
-        className="p-8 overflow-hidden h-full border-2 rounded"
+        className="overflow-hidden h-full rounded"
         style={{
           borderColor: theme.yellow,
+          padding: config.border ? 16 : 8,
+          borderWidth: config.border ? 2 : 0,
         }}
       >
         <div ref={containerRef} className="overflow-y-auto h-full">
