@@ -3,9 +3,13 @@
   "version": "2.12.0",
   "license": "MIT",
   "author": {
-    "name": "Bram Boeckx",
-    "url": "https://bramboeckx.be/",
-    "email": "info@bramboeckx.be"
+    "name": "Yassine Fathi",
+    "url": "https://m4tt72.com",
+    "email": "hi@m4tt72.com"
+  },
+  "funding": {
+    "type": "Paypal",
+    "url": "https://paypal.me/y4ss1n3"
   },
   "repository": {
     "type": "git",
