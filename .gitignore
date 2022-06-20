@@ -42,3 +42,4 @@ jspm_packages
 .env
 
 bin/
+_static/
