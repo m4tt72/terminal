@@ -20,7 +20,7 @@
     "build": "next build",
     "dev": "next dev",
     "next": "next",
-    "export": "next build && next export -o _static/",
+    "export": "next build && next export",
     "lint": "eslint .",
     "prepare": "husky install"
   },

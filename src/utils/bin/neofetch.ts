@@ -142,6 +142,7 @@ const getInfo = () => {
     visitedAt,
   )}\n`;
   message += `<span style="color: ${mainColor}">Author</span>: ${packageJson.author.name} (${packageJson.author.email})\n`;
+  message += `<span style="color: ${mainColor}">Donate</span>: <a href="${packageJson.funding.url}" target="_blank">${packageJson.funding.type}</a>\n`;
 
   return message;
 };
