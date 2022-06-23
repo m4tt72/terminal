@@ -20,6 +20,7 @@
     "build": "next build",
     "dev": "next dev",
     "next": "next",
+    "preexport": "next build",
     "export": "next export",
     "lint": "eslint .",
     "prepare": "husky install"
@@ -27,6 +28,7 @@
   "dependencies": {
     "@m4tt72/matomo-tracker-react": "^0.6.2",
     "axios": "^0.27.2",
+    "cowsay-browser": "^1.1.8",
     "date-fns": "^2.28.0",
     "next": "^12.1.6",
     "react": "^18.1.0",
