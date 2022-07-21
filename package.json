@@ -2,6 +2,7 @@
   "name": "terminal",
   "version": "2.13.1",
   "license": "MIT",
+  "homepage": "https://amirh-khali.github.io",
   "author": {
     "name": "Yassine Fathi",
     "url": "https://m4tt72.com",
@@ -23,7 +24,9 @@
     "preexport": "next build",
     "export": "next export",
     "lint": "eslint .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@m4tt72/matomo-tracker-react": "^0.6.2",
@@ -46,6 +49,7 @@
     "eslint-plugin-next": "^0.0.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.30.1",
+    "gh-pages": "^4.0.0",
     "husky": "^8.0.1",
     "postcss": "^8.4.14",
     "prettier": "^2.6.2",
