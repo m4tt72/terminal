@@ -1,0 +1,38 @@
+name: Deploy to GitHub Pages
+
+
+on:
+  push:
+    branches: [master]
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+
+    steps:
+      - name: Get files
+        uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install packages
+        run: yarn ci
+      - name: Build project
+        run: yarn run build
+      - name: Export static files
+        run: yarn run export
+      - name: Add .nojekyll file
+        run: touch ./out/.nojekyll
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: gh-pages
+          folder: out
