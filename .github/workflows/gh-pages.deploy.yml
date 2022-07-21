@@ -1,20 +1,16 @@
 name: Deploy to GitHub Pages
 
-
 on:
   push:
     branches: [master]
-
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
-
     strategy:
       matrix:
         node-version: [14.x]
-
 
     steps:
       - name: Get files
@@ -24,7 +20,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install packages
-        run: yarn ci
+        run: yarn install --frozen-lockfile
       - name: Build project
         run: yarn run build
       - name: Export static files
