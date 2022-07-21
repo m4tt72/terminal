@@ -1,5 +1,27 @@
 [
   {
+    "name": "AmirH",
+    "black": "#000000",
+    "red": "#D1C5C0",
+    "green": "#FFF955",
+    "yellow": "#00D0DB",
+    "blue": "#85befd",
+    "purple": "#b9b6fc",
+    "cyan": "#85befd",
+    "white": "#CB1DCD",
+    "brightBlack": "#000000",
+    "brightRed": "#fd5ff1",
+    "brightGreen": "#94fa36",
+    "brightYellow": "#f5ffa8",
+    "brightBlue": "#96cbfe",
+    "brightPurple": "#b9b6fc",
+    "brightCyan": "#85befd",
+    "brightWhite": "#e0e0e0",
+    "foreground": "#c5c8c6",
+    "background": "#161719",
+    "cursorColor": "#c5c8c6"
+  },
+  {
     "name": "3024Day",
     "black": "#090300",
     "red": "#db2d20",

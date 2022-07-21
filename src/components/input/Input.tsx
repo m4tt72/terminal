@@ -113,7 +113,7 @@ export const Input = ({ inputRef, containerRef }) => {
         aria-label="prompt"
         style={{
           backgroundColor: theme.background,
-          color: commandExists(value) || value === '' ? theme.green : theme.red,
+          color: commandExists(value) || value === '' ? theme.yellow : theme.red,
         }}
         value={value}
         onChange={(event) => setValue(event.target.value)}
