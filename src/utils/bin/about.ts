@@ -1,7 +1,9 @@
 import { getBio } from '../../api';
 
-export const about = async (args: string[]): Promise<string> => {
-  const bio = await getBio();
+export const resume = async (args: string[]): Promise<string> => {
+  setTimeout(function () {
+    window.open('https://github.com/AmirH-KHALI/amirh-khali.github.io/blob/master/docs/AmirH_CV.pdf');
+  }, 1000);
 
-  return bio;
+  return 'Opening Resume...';
 };
