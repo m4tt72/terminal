@@ -4,7 +4,30 @@ import * as bin from './index';
 export const help = async (args: string[]): Promise<string> => {
   const commands = Object.keys(bin).sort().join(', ');
 
-  return `Available commands:\n${commands}\n\n[tab]\t trigger completion.\n[ctrl+l] clear terminal.\n[ctrl+c] cancel command.`;
+  return `Available commands:
+
+  cowsay    - configurable speaking cow
+  date      - print or set the system date and time
+  echo      - display a line of text
+  emacs     - GNU project Emacs editor
+  email     - you know what email is ;)
+  neofetch  - a fast, highly customizable system info script
+  projects  - list of my public projects on GitHub
+  repo      - the repository of this beauty :D
+  resume    - my CV in pdf
+  vim       - vi IMproved, a programmer's text editor
+  weather   - command-line tool to obtain weather conditions and forecasts
+  whoami    - print effective userid
+
+  github,
+  instagram,
+  linkedin,
+  telegram  - My personal pages on these social networks
+
+  [tab]     trigger completion
+  [ctrl+l]  clear terminal
+  [ctrl+c]  cancel command
+  `;
 };
 
 export const echo = async (args: string[]): Promise<string> => {
@@ -35,7 +58,7 @@ export const emacs = async (args?: string[]): Promise<string> => {
 
 export const koobs = async (args?: string[]): Promise<string> => {
   setTimeout(function () {
-    window.open('https://www.youtube.com/watch?v=_RoyqtW1Rvs');
+    window.open('https://youtu.be/yiLXNmPcEzw');
   }, 1000);
 
   return `Inas ke badeee:D`;
@@ -51,7 +74,17 @@ export const repo = async (args?: string[]): Promise<string> => {
 
 export const banner = (args?: string[]): string => {
   return `
-<p align="center"><a href="https://github.com/DenverCoder1/readme-typing-svg"><img src="https://readme-typing-svg.herokuapp.com?center=true&vCenter=true&lines=Hi%2C+I'm+AmirHossein+Ahmadi!%F0%9F%A4%98%F0%9F%8F%BF" width="700"></a></p>
+  ██╗  ██╗██╗██╗██╗
+  ██║  ██║██║██║██║
+  ███████║██║██║██║
+  ██╔══██║██║██║╚═╝
+  ██║  ██║██║██║██╗
+  ╚═╝  ╚═╝╚═╝╚═╝╚═╝
+
+- Who am I?
+Im Amirhossein Ahmadi, a former student of the Computer Olympiad, with a background as a Backend Developer (Spring, Django) and limited work in the field of Data Science.
+
+- How to work with this terminal?
 Type 'help' to see list of available commands.
 `;
 };

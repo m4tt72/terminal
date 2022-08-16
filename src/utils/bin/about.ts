@@ -1,4 +1,3 @@
-import { getBio } from '../../api';
 
 export const resume = async (args: string[]): Promise<string> => {
   setTimeout(function () {
