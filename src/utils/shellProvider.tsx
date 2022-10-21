@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { History } from '../interfaces/history';
 import * as bin from './bin';
 import { useTheme } from './themeProvider';
+import config from '../../config.json';
 
 interface ShellContextType {
   history: History[];
@@ -31,7 +32,9 @@ export const ShellProvider: React.FC<ShellProviderProps> = ({ children }) => {
   const { theme, setTheme } = useTheme();
 
   useEffect(() => {
-    setCommand('banner');
+    if (config.startWithBanner) {
+      setCommand('banner');
+    }
   }, []);
 
   useEffect(() => {
@@ -83,7 +86,7 @@ export const ShellProvider: React.FC<ShellProviderProps> = ({ children }) => {
         setHistory('');
         break;
       default: {
-        if (Object.keys(bin).indexOf(cmd) === -1) {
+        if (Object.keys(bin).indexOf(cmd) === -1 || config.hideCommands.indexOf(cmd) != -1) {
           setHistory(`Command not found: ${cmd}. Try 'help' to get started.`);
         } else {
           try {

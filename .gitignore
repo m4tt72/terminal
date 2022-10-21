@@ -45,3 +45,6 @@ bin/
 _static/
 
 .vscode/
+
+# NextJS export
+out/

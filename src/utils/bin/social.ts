@@ -1,19 +1,37 @@
 import config from '../../../config.json';
 
 export const instagram = async (args: string[]): Promise<string> => {
-  window.open(`https://www.instagram.com/${config.social.instagram}/`);
+  const username = (config.social as any).instagram;
 
-  return 'Opening instagram...';
+  if (username) {
+    window.open(`https://www.instagram.com/${username}/`);
+
+    return 'Opening instagram...';
+  }
+
+  return "Instagram profile not found.";
 };
 
 export const github = async (args: string[]): Promise<string> => {
-  window.open(`https://github.com/${config.social.github}/`);
+  const username = (config.social as any).github;
 
-  return 'Opening github...';
+  if (username) {
+    window.open(`https://github.com/${username}/`);
+
+    return 'Opening github...';
+  }
+
+  return "Github profile not found.";
 };
 
 export const linkedin = async (args: string[]): Promise<string> => {
-  window.open(`https://www.linkedin.com/in/${config.social.linkedin}/`);
+  const username = (config.social as any).linkedin;
 
-  return 'Opening linkedin...';
+  if (username) {
+    window.open(`https://www.linkedin.com/in/${username}/`);
+
+    return 'Opening linkedin...';
+  }
+
+  return "Linkedin profile not found.";
 };
