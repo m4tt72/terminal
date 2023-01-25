@@ -1848,6 +1848,28 @@
     "cursorColor": "#94a3a5"
   },
   {
+   "name": "hyper",
+   "black": "#000000",
+   "red": "#ff0000",
+   "green": "#33ff00",
+   "yellow": "#ffff00",
+   "blue": "#0066ff",
+   "purple": "#cc00ff",
+   "cyan": "#00ffff",
+   "white": "#d0d0d0",
+   "brightBlack": "#808080",
+   "brightRed": "#ff0000",
+   "brightGreen": "#33ff00",
+   "brightYellow": "#ffff00",
+   "brightBlue": "#0066ff",
+   "brightPurple": "#cc00ff",
+   "brightCyan": "#00ffff",
+   "brightWhite": "#ffffff",
+   "foreground": "#d0d0d0",
+   "background": "#000000",
+   "cursorColor": "#d0d0d0"
+  },
+  {
     "name": "IBM3270(HighContrast)",
     "black": "#000000",
     "red": "#FF0000",
