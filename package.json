@@ -1,9 +1,9 @@
 {
-  "name": "terminal",
-  "version": "2.14.1",
+  "name": "terminal-x",
+  "version": "1.0.0",
   "license": "MIT",
   "author": {
-    "name": "Yassine Fathi",
+    "name": "Miguel Gargallo",
     "url": "https://m4tt72.com",
     "email": "hi@m4tt72.com"
   },
