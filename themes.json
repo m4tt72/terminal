@@ -1867,7 +1867,7 @@
     "brightWhite": "#ffffff",
     "foreground": "#ffffff",
     "background": "#000000",
-    "cursorColor": "#ffffff",
+    "cursorColor": "#ffffff"
   },
   {
     "name": "IBM3270(HighContrast)",
