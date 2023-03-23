@@ -19,8 +19,30 @@ export const Input = ({ inputRef, containerRef }) => {
     clearHistory,
   } = useShell();
 
+  const [isTrex, setIsTrex] = useState(false);
+
+  useEffect(() => {
+    if (window.location.href.includes("#trex"))
+      setIsTrex(true);
+  }, [history])
+
   useEffect(() => {
     containerRef.current.scrollTo(0, containerRef.current.scrollHeight);
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === 'x' && event.ctrlKey && window.location.href.includes("#trex")) {
+        event.preventDefault();
+
+        // setValue('');
+
+        // setHistory('');
+
+        // setLastCommandIndex(0);
+        setIsTrex(false)
+        window.location.href = window.location.href.replace("#trex", "")
+      }
+    });
+
   }, [history]);
 
   const onSubmit = async (event: React.KeyboardEvent<HTMLInputElement>) => {
@@ -36,6 +58,7 @@ export const Input = ({ inputRef, containerRef }) => {
       setHistory('');
 
       setLastCommandIndex(0);
+      setIsTrex(false)
     }
 
     if (event.key === 'l' && event.ctrlKey) {
@@ -101,28 +124,30 @@ export const Input = ({ inputRef, containerRef }) => {
 
   return (
     <div className="flex flex-row space-x-2">
-      <label htmlFor="prompt" className="flex-shrink">
-        <Ps1 />
-      </label>
+      {!isTrex && <React.Fragment>
+        <label htmlFor="prompt" className="flex-shrink">
+          <Ps1 />
+        </label>
 
-      <input
-        ref={inputRef}
-        id="prompt"
-        type="text"
-        className="focus:outline-none flex-grow"
-        aria-label="prompt"
-        style={{
-          backgroundColor: theme.background,
-          color: commandExists(value) || value === '' ? theme.yellow : theme.red,
-        }}
-        value={value}
-        onChange={(event) => setValue(event.target.value)}
-        autoFocus
-        onKeyDown={onSubmit}
-        autoComplete="off"
-        autoCorrect="off"
-        autoCapitalize="off"
-      />
+        <input
+          ref={inputRef}
+          id="prompt"
+          type="text"
+          className="focus:outline-none flex-grow"
+          aria-label="prompt"
+          style={{
+            backgroundColor: theme.background,
+            color: commandExists(value) || value === '' ? theme.yellow : theme.red,
+          }}
+          value={value}
+          onChange={(event) => setValue(event.target.value)}
+          autoFocus
+          onKeyDown={onSubmit}
+          autoComplete="off"
+          autoCorrect="off"
+          autoCapitalize="off"
+        />
+      </React.Fragment>}
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { History } from '../interfaces/history';
 import * as bin from './bin';
+import { trex } from './bin';
 import { useTheme } from './themeProvider';
 
 interface ShellContextType {
@@ -29,10 +30,64 @@ export const ShellProvider: React.FC<ShellProviderProps> = ({ children }) => {
   const [command, _setCommand] = React.useState<string>('');
   const [lastCommandIndex, _setLastCommandIndex] = React.useState<number>(0);
   const { theme, setTheme } = useTheme();
+  const [isTrex, setIsTrex] = React.useState(false);
+  let score = 0;
 
   useEffect(() => {
     setCommand('banner');
   }, []);
+
+  let dino;
+  let cactus;
+  let scoreText;
+
+  function jump() {
+    if (dino.classList.value != "jump") {
+      dino.classList.add("jump");
+
+      setTimeout(function () {
+        dino.classList.remove("jump");
+      }, 300);
+    }
+  }
+
+  useEffect(() => {
+    if (isTrex) {
+
+      dino = document.getElementById("dino");
+      cactus = document.getElementById("cactus");
+      scoreText = document.getElementById("score");
+
+
+      let isAlive: any = setInterval(function () {
+        score += 1;
+        scoreText.innerHTML = score;
+        // get current dino Y position
+        let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
+
+        // get current cactus X position
+        let cactusLeft = parseInt(
+          window.getComputedStyle(cactus).getPropertyValue("left")
+        );
+
+        // detect collision
+        if (cactusLeft < 50 && cactusLeft > 0 && dinoTop >= 180) {
+          // collision
+          alert("Game Over! , Score : " + score);
+          score = 0;
+        }
+      }, 10);
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key == " " ||
+          event.code == "Space" ||
+          event.keyCode == 32)
+          jump();
+      });
+
+    }
+
+  }, [isTrex])
 
   useEffect(() => {
     if (!init) {
@@ -70,6 +125,11 @@ export const ShellProvider: React.FC<ShellProviderProps> = ({ children }) => {
     const [cmd, ...args] = command.split(' ').slice(1);
 
     switch (cmd) {
+      case 'trex':
+        setHistory(trex());
+        setIsTrex(true)
+        window.location.href = window.location.href + "#trex"
+        break;
       case 'theme':
         const output = await bin.theme(args, setTheme);
 

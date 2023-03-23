@@ -88,3 +88,14 @@ Im Amirhossein Ahmadi, a former student of the Computer Olympiad, with a backgro
 Type 'help' to see list of available commands.
 `;
 };
+
+
+export const trex = (args?: string[]): string => {
+  return `
+  <div class="game">
+    <div id="score"></div>
+    <div id="dino"></div>
+    <div id="cactus"></div>
+  </div>
+  `;
+};
