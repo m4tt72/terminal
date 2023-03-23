@@ -14,35 +14,14 @@ export const Input = ({ inputRef, containerRef }) => {
     setCommand,
     history,
     lastCommandIndex,
+    isTrex,
     setHistory,
     setLastCommandIndex,
     clearHistory,
   } = useShell();
 
-  const [isTrex, setIsTrex] = useState(false);
-
-  useEffect(() => {
-    if (window.location.href.includes("#trex"))
-      setIsTrex(true);
-  }, [history])
-
   useEffect(() => {
     containerRef.current.scrollTo(0, containerRef.current.scrollHeight);
-
-    document.addEventListener("keydown", function (event) {
-      if (event.key === 'x' && event.ctrlKey && window.location.href.includes("#trex")) {
-        event.preventDefault();
-
-        // setValue('');
-
-        // setHistory('');
-
-        // setLastCommandIndex(0);
-        setIsTrex(false)
-        window.location.href = window.location.href.replace("#trex", "")
-      }
-    });
-
   }, [history]);
 
   const onSubmit = async (event: React.KeyboardEvent<HTMLInputElement>) => {
@@ -58,7 +37,6 @@ export const Input = ({ inputRef, containerRef }) => {
       setHistory('');
 
       setLastCommandIndex(0);
-      setIsTrex(false)
     }
 
     if (event.key === 'l' && event.ctrlKey) {
