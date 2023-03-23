@@ -1,4 +1,3 @@
-import packageJson from '../../../package.json';
 import * as bin from './index';
 
 export const help = async (args: string[]): Promise<string> => {
@@ -12,12 +11,15 @@ export const help = async (args: string[]): Promise<string> => {
   emacs     - GNU project Emacs editor
   email     - you know what email is ;)
   neofetch  - a fast, highly customizable system info script
-  projects  - list of my public projects on GitHub
-  repo      - the repository of this beauty :D
-  resume    - my CV in pdf
   vim       - vi IMproved, a programmer's text editor
   weather   - command-line tool to obtain weather conditions and forecasts
   whoami    - print effective userid
+  projects  - list of my public projects on GitHub
+  repo      - the repository of this beauty :D
+  resume    - my CV in pdf
+  
+  theme [arg] - use wide range of themes
+  trex        - play t-rex without disconnection :D
 
   github,
   instagram,
@@ -87,15 +89,4 @@ Im Amirhossein Ahmadi, a former student of the Computer Olympiad, with a backgro
 - How to work with this terminal?
 Type 'help' to see list of available commands.
 `;
-};
-
-
-export const trex = (args?: string[]): string => {
-  return `
-  <div class="game">
-    <div id="score"></div>
-    <div id="dino"></div>
-    <div id="cactus"></div>
-  </div>
-  `;
 };

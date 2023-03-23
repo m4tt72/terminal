@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@m4tt72/matomo-tracker-react": "^0.6.2",
+    "@types/jquery": "^3.5.16",
     "axios": "^0.27.2",
     "cowsay-browser": "^1.1.8",
     "date-fns": "^2.28.0",

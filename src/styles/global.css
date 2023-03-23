@@ -37,10 +37,9 @@ a {
 .game {
   width: 600px;
   height: 300px;
-  border: 1px solid black;
+  border: 1px solid;
   margin: auto;
   position: relative;
-  background-color: whitesmoke;
 }
 
 #dino {
@@ -60,7 +59,6 @@ a {
   position: absolute;
   top: 16px;
   right: 16px;
-  color: darkgrey;
 }
 
 @keyframes jump {
@@ -94,7 +92,6 @@ a {
   background-image: url("/assets/img/cactus.png");
   background-size: 20px 40px;
   animation: block 1s infinite linear;
-
 }
 
 @keyframes block {
