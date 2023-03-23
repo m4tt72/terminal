@@ -3,13 +3,17 @@
   "version": "2.14.4",
   "license": "MIT",
   "author": {
-    "name": "AmirHossein Ahmadi",
-    "url": "https://amirh-khali.github.io",
-    "email": "amirh.khali@gmail.com"
+    "name": "Yassine Fathi",
+    "url": "https://m4tt72.com",
+    "email": "hi@m4tt72.com"
+  },
+  "funding": {
+    "type": "Paypal",
+    "url": "https://paypal.me/y4ss1n3"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/AmirH-KHALI/amirh-khali.github.io"
+    "url": "https://github.com/m4tt72/terminal"
   },
   "scripts": {
     "start": "next start",

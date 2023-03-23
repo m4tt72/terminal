@@ -154,7 +154,6 @@ export const ShellProvider: React.FC<ShellProviderProps> = ({ children }) => {
 
         break;
       case 'clear':
-      case 'cls':
         clearHistory();
         break;
       case '':

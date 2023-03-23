@@ -1,11 +1,10 @@
 {
-  "bioUrl": "https://raw.githubusercontent.com/AmirH-KHALI/AmirH-KHALI/main/README.md",
+  "bioUrl": "https://raw.githubusercontent.com/m4tt72/m4tt72/master/README.md",
   "social": {
-    "instagram": "khaaliofficial",
-    "github": "AmirH-KHALI",
-    "linkedin": "dloneswordsman",
-    "telegram": "DLoneSwordsman"
+    "instagram": "m4tt72",
+    "github": "m4tt72",
+    "linkedin": "yassinefathi"
   },
-  "theme": "amirh",
+  "theme": "gruvboxdark",
   "border": true
 }

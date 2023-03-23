@@ -36,7 +36,7 @@ export const Ps1 = () => {
       </span>
       <span
         style={{
-          color: theme.red,
+          color: theme.white,
         }}
       >
         :$ ~

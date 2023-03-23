@@ -31,7 +31,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
   return (
     <>
       <Head>
-        <title>Amirhossein Ahmadi</title>
+        <title>M4TT72 | Home</title>
       </Head>
 
       <div
