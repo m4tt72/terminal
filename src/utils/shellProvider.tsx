@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react';
 import { History } from '../interfaces/history';
 import * as bin from './bin';
+import { trex } from './bin';
 import { useTheme } from './themeProvider';
 
 interface ShellContextType {
   history: History[];
   command: string;
   lastCommandIndex: number;
+  isTrex: boolean;
 
   setHistory: (output: string) => void;
   setCommand: (command: string) => void;
@@ -28,11 +30,69 @@ export const ShellProvider: React.FC<ShellProviderProps> = ({ children }) => {
   const [history, _setHistory] = React.useState<History[]>([]);
   const [command, _setCommand] = React.useState<string>('');
   const [lastCommandIndex, _setLastCommandIndex] = React.useState<number>(0);
+  const [isTrex, setIsTrex] = React.useState<boolean>(false);
   const { theme, setTheme } = useTheme();
+  let score = 0;
 
   useEffect(() => {
     setCommand('banner');
   }, []);
+
+  let dino;
+  let cactus;
+  let scoreText;
+
+  function jump() {
+    if (dino.classList.value != "jump") {
+      dino.classList.add("jump");
+
+      setTimeout(function () {
+        dino.classList.remove("jump");
+      }, 300);
+    }
+  }
+
+  useEffect(() => {
+    if (isTrex) {
+
+      dino = document.getElementById("dino");
+      cactus = document.getElementById("cactus");
+      scoreText = document.getElementById("score");
+
+
+      setInterval(function () {
+        score += 1;
+        scoreText.innerHTML = score;
+        // get current dino Y position
+        let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
+
+        // get current cactus X position
+        let cactusLeft = parseInt(
+          window.getComputedStyle(cactus).getPropertyValue("left")
+        );
+
+        // detect collision
+        if (cactusLeft < 50 && cactusLeft > 0 && dinoTop >= 180) {
+          setIsTrex(false);
+          changeHistory("Game Over!, Score : " + score);
+        }
+      }, 10);
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key == " " || event.code == "Space" || event.keyCode == 32)
+          jump();
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === 'x' && event.ctrlKey && isTrex) {
+          setIsTrex(false);
+          changeHistory("Game Over!, Score : " + score);
+        }
+      });
+
+    }
+
+  }, [isTrex])
 
   useEffect(() => {
     if (!init) {
@@ -62,6 +122,19 @@ export const ShellProvider: React.FC<ShellProviderProps> = ({ children }) => {
     _setHistory([]);
   };
 
+  const changeHistory = (output: string) => {
+    let newHistory = history.slice(0, -1);
+    _setHistory([
+      ...newHistory,
+      {
+        id: history.length,
+        date: new Date(),
+        command: command.split(' ').slice(1).join(' '),
+        output,
+      },
+    ]);
+  };
+
   const setLastCommandIndex = (index: number) => {
     _setLastCommandIndex(index);
   };
@@ -70,6 +143,10 @@ export const ShellProvider: React.FC<ShellProviderProps> = ({ children }) => {
     const [cmd, ...args] = command.split(' ').slice(1);
 
     switch (cmd) {
+      case 'trex':
+        setHistory(trex());
+        setIsTrex(true)
+        break;
       case 'theme':
         const output = await bin.theme(args, setTheme);
 
@@ -104,6 +181,7 @@ export const ShellProvider: React.FC<ShellProviderProps> = ({ children }) => {
         history,
         command,
         lastCommandIndex,
+        isTrex,
         setHistory,
         setCommand,
         setLastCommandIndex,

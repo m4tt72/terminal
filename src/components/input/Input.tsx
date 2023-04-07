@@ -14,6 +14,7 @@ export const Input = ({ inputRef, containerRef }) => {
     setCommand,
     history,
     lastCommandIndex,
+    isTrex,
     setHistory,
     setLastCommandIndex,
     clearHistory,
@@ -101,28 +102,30 @@ export const Input = ({ inputRef, containerRef }) => {
 
   return (
     <div className="flex flex-row space-x-2">
-      <label htmlFor="prompt" className="flex-shrink">
-        <Ps1 />
-      </label>
+      {!isTrex && <React.Fragment>
+        <label htmlFor="prompt" className="flex-shrink">
+          <Ps1 />
+        </label>
 
-      <input
-        ref={inputRef}
-        id="prompt"
-        type="text"
-        className="focus:outline-none flex-grow"
-        aria-label="prompt"
-        style={{
-          backgroundColor: theme.background,
-          color: commandExists(value) || value === '' ? theme.green : theme.red,
-        }}
-        value={value}
-        onChange={(event) => setValue(event.target.value)}
-        autoFocus
-        onKeyDown={onSubmit}
-        autoComplete="off"
-        autoCorrect="off"
-        autoCapitalize="off"
-      />
+        <input
+          ref={inputRef}
+          id="prompt"
+          type="text"
+          className="focus:outline-none flex-grow"
+          aria-label="prompt"
+          style={{
+            backgroundColor: theme.background,
+            color: commandExists(value) || value === '' ? theme.yellow : theme.red,
+          }}
+          value={value}
+          onChange={(event) => setValue(event.target.value)}
+          autoFocus
+          onKeyDown={onSubmit}
+          autoComplete="off"
+          autoCorrect="off"
+          autoCapitalize="off"
+        />
+      </React.Fragment>}
     </div>
   );
 };

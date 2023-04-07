@@ -33,3 +33,73 @@ div#__next > div {
 a {
   text-decoration: underline;
 }
+
+.game {
+  width: 600px;
+  height: 300px;
+  border: 1px solid;
+  margin: auto;
+  position: relative;
+}
+
+#dino {
+  width: 50px;
+  height: 50px;
+  background-image: url("/assets/img/trex.png");
+  background-size: 50px 50px;
+  position: relative;
+  top: 190px;
+}
+
+.jump {
+  animation: jump 0.3s linear;
+}
+
+#score {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+@keyframes jump {
+  0% {
+    top: 190px;
+  }
+
+  30% {
+    top: 140px;
+  }
+
+  50% {
+    top: 60px;
+  }
+
+  80% {
+    top: 140px;
+  }
+
+  100% {
+    top: 190px;
+  }
+}
+
+#cactus {
+  width: 20px;
+  height: 40px;
+  position: relative;
+  top: 110px;
+  left: 580px;
+  background-image: url("/assets/img/cactus.png");
+  background-size: 20px 40px;
+  animation: block 1s infinite linear;
+}
+
+@keyframes block {
+  0% {
+    left: 580px;
+  }
+
+  100% {
+    left: 0px;
+  }
+}
