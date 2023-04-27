@@ -76,3 +76,7 @@ Here's a sample of the `config.json` file:
 Please feel free to pull requests or log issues.
 
 Thanks!
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=m4tt72/terminal&type=Date)](https://star-history.com/#m4tt72/terminal&Date)
