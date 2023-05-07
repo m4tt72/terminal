@@ -1,44 +1,36 @@
-import React, { useEffect } from 'react';
-import { History } from '../interfaces/history';
-import * as bin from './bin';
-import { useTheme } from './themeProvider';
+import React, { useEffect } from 'react'
+import type { History } from '../interfaces/history'
+import * as bin from './bin'
+import { useTheme } from './themeProvider'
 
 interface ShellContextType {
-  history: History[];
-  command: string;
-  lastCommandIndex: number;
+  history: History[]
+  command: string
+  lastCommandIndex: number
 
-  setHistory: (output: string) => void;
-  setCommand: (command: string) => void;
-  setLastCommandIndex: (index: number) => void;
-  execute: (command: string) => Promise<void>;
-  clearHistory: () => void;
+  setHistory: (output: string) => void
+  setCommand: (command: string) => void
+  setLastCommandIndex: (index: number) => void
+  execute: (command: string) => Promise<void>
+  clearHistory: () => void
 }
 
-const ShellContext = React.createContext<ShellContextType>(null);
+const ShellContext = React.createContext<ShellContextType>(null)
 
 interface ShellProviderProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
-export const useShell = () => React.useContext(ShellContext);
+interface BinType { [key: string]: ((args: unknown) => Promise<string>) }
+
+export const useShell = () => React.useContext(ShellContext)
 
 export const ShellProvider: React.FC<ShellProviderProps> = ({ children }) => {
-  const [init, setInit] = React.useState(true);
-  const [history, _setHistory] = React.useState<History[]>([]);
-  const [command, _setCommand] = React.useState<string>('');
-  const [lastCommandIndex, _setLastCommandIndex] = React.useState<number>(0);
-  const { theme, setTheme } = useTheme();
-
-  useEffect(() => {
-    setCommand('banner');
-  }, []);
-
-  useEffect(() => {
-    if (!init) {
-      execute();
-    }
-  }, [command, init]);
+  const [init, setInit] = React.useState(true)
+  const [history, _setHistory] = React.useState<History[]>([])
+  const [command, _setCommand] = React.useState<string>('')
+  const [lastCommandIndex, _setLastCommandIndex] = React.useState<number>(0)
+  const { setTheme } = useTheme()
 
   const setHistory = (output: string) => {
     _setHistory([
@@ -49,54 +41,60 @@ export const ShellProvider: React.FC<ShellProviderProps> = ({ children }) => {
         command: command.split(' ').slice(1).join(' '),
         output,
       },
-    ]);
-  };
+    ])
+  }
 
   const setCommand = (command: string) => {
-    _setCommand([Date.now(), command].join(' '));
+    _setCommand([Date.now(), command].join(' '))
 
-    setInit(false);
-  };
+    setInit(false)
+  }
 
   const clearHistory = () => {
-    _setHistory([]);
-  };
+    _setHistory([])
+  }
 
   const setLastCommandIndex = (index: number) => {
-    _setLastCommandIndex(index);
-  };
+    _setLastCommandIndex(index)
+  }
 
   const execute = async () => {
-    const [cmd, ...args] = command.split(' ').slice(1);
+    const [cmd, ...args] = command.split(' ').slice(1)
 
     switch (cmd) {
       case 'theme':
-        const output = await bin.theme(args, setTheme);
-
-        setHistory(output);
-
-        break;
-      case 'clear':
-        clearHistory();
-        break;
+        setHistory(await bin.theme(args, setTheme))
+        break
+      case 'ls':
+        clearHistory()
+        break
       case '':
-        setHistory('');
-        break;
+        setHistory('')
+        break
       default: {
-        if (Object.keys(bin).indexOf(cmd) === -1) {
-          setHistory(`Command not found: ${cmd}. Try 'help' to get started.`);
-        } else {
+        if (!Object.keys(bin).includes(cmd)) {
+          setHistory(`Command not found: ${cmd}. Try 'help' to get started.`)
+        }
+        else {
           try {
-            const output = await bin[cmd](args);
-
-            setHistory(output);
-          } catch (error) {
-            setHistory(error.message);
+            setHistory(await ((bin as unknown as BinType)[cmd](args))) // the type of `bin` cannot be inferred, so use a type assertion
+          }
+          catch (error) {
+            setHistory((error as Error).message)
           }
         }
       }
     }
-  };
+  }
+
+  useEffect(() => {
+    setCommand('banner')
+  }, [])
+
+  useEffect(() => {
+    if (!init)
+      execute().catch(console.error)
+  }, [command, init])
 
   return (
     <ShellContext.Provider
@@ -113,5 +111,5 @@ export const ShellProvider: React.FC<ShellProviderProps> = ({ children }) => {
     >
       {children}
     </ShellContext.Provider>
-  );
-};
+  )
+}

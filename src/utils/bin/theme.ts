@@ -1,9 +1,7 @@
-import Themes from '../../../themes.json';
+import Themes from '../../../themes.json'
 
-export const theme = async (
-  args: string[],
-  callback?: (value: string) => string,
-): Promise<string> => {
+export async function theme(args: string[],
+  callback?: (value: string) => string) {
   if (args.length === 0) {
     return `Usage: theme [arg]
 Args:
@@ -13,23 +11,15 @@ Args:
 
 Example: 
   theme ls # to list all themes
-  theme set Gruvbox # to set a theme`;
+  theme set Gruvbox # to set a theme`
   }
 
   switch (args[0]) {
     case 'ls':
-      let result = Themes.map((theme) => theme.name.toLowerCase()).join(', ');
-      result += '\n\n';
-      result += `You can preview all these themes <a href="https://github.com/m4tt72/terminal/tree/master/docs/themes">in the docs</a>`;
-
-      return result;
+      return `${Themes.map(theme => theme.name.toLowerCase()).join(', ')}\n\nYou can preview all these themes <a href="https://github.com/m4tt72/terminal/tree/master/docs/themes">in the docs</a>`
     case 'set':
-      const selectedTheme = args[1];
-
-      return callback(selectedTheme);
+      return callback(args[1])
     case 'random':
-      const randomTheme = Themes[Math.floor(Math.random() * Themes.length)];
-
-      return callback(randomTheme.name.toLowerCase());
+      return callback(Themes[Math.floor(Math.random() * Themes.length)].name.toLowerCase())
   }
-};
+}

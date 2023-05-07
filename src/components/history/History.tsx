@@ -1,16 +1,16 @@
-import React from 'react';
-import { History as HistoryInterface } from '../../interfaces/history';
-import { Ps1 } from '../ps1';
+import React from 'react'
+import type { History as HistoryInterface } from '../../interfaces/history'
+import { Ps1 } from '../ps1'
 
 interface Props {
-  history: Array<HistoryInterface>;
+  history: HistoryInterface[]
 }
 
 export const History: React.FC<Props> = ({ history }) => {
   return (
     <>
       {history.map((entry: HistoryInterface, index: number) => (
-        <div key={entry.command + index}>
+        <div key={entry.command + (String.raw`${index}`)}>
           <div className="flex flex-row space-x-2">
             <div className="flex-shrink">
               <Ps1 />
@@ -27,7 +27,7 @@ export const History: React.FC<Props> = ({ history }) => {
         </div>
       ))}
     </>
-  );
-};
+  )
+}
 
-export default History;
+export default History

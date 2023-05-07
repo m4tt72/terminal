@@ -1,30 +1,38 @@
-import axios from 'axios';
-import config from '../../config.json';
+import axios from 'axios'
+import type { ProjectsOfUser } from '../interfaces/project'
+import config from '../../config.json'
 
-export const getProjects = async () => {
-  const { data } = await axios.get(
-    `https://api.github.com/users/${config.social.github}/repos`,
-  );
+interface Quote {
+  _id: string
+  content: string
+  author: string
+  authorSlug: string
+  length: number
+  tags: string[]
+}
 
-  return data;
-};
+export async function getProjects() {
+  const { data } = await axios.get<ProjectsOfUser[]>(`https://api.github.com/users/${config.social.github}/repos`)
 
-export const getBio = async () => {
-  const { data } = await axios.get(config.bioUrl);
+  return data
+}
 
-  return data;
-};
+export async function getBio() {
+  const { data } = await axios.get<string>(config.bioUrl)
 
-export const getWeather = async (city: string) => {
-  const { data } = await axios.get(`https://wttr.in/${city}?ATm`);
+  return data
+}
 
-  return data;
-};
+export async function getWeather(city: string) {
+  const { data } = await axios.get<string>(`https://wttr.in/${city}?ATm`)
 
-export const getQuote = async () => {
-  const { data } = await axios.get('https://api.quotable.io/random');
+  return data
+}
+
+export async function getQuote() {
+  const { data } = await axios.get<Quote>('https://api.quotable.io/random')
 
   return {
     quote: `“${data.content}” — ${data.author}`,
-  };
-};
+  }
+}

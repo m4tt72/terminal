@@ -1,21 +1,21 @@
-import { createInstance, MatomoProvider } from '@m4tt72/matomo-tracker-react';
-import Head from 'next/head';
-import React, { useEffect } from 'react';
-import { Layout } from '../components/layout';
-import '../styles/global.css';
-import { ShellProvider } from '../utils/shellProvider';
-import { ThemeProvider } from '../utils/themeProvider';
+import { MatomoProvider, createInstance } from '@m4tt72/matomo-tracker-react'
+import Head from 'next/head'
+import React, { useEffect } from 'react'
+import { Layout } from '../components/layout'
+import '../styles/global.css'
+import { ShellProvider } from '../utils/shellProvider'
+import { ThemeProvider } from '../utils/themeProvider'
 
-const App = ({ Component, pageProps }) => {
-  const inputRef = React.useRef<HTMLInputElement>(null);
+function App({ Component, pageProps }) {
+  const inputRef = React.useRef<HTMLInputElement>(null)
 
   const onClickAnywhere = () => {
-    inputRef.current.focus();
-  };
+    inputRef.current.focus()
+  }
 
   useEffect(() => {
-    localStorage.setItem('visitedAt', new Date().toString());
-  }, []);
+    localStorage.setItem('visitedAt', new Date().toString())
+  }, [])
 
   return (
     <ThemeProvider>
@@ -33,15 +33,14 @@ const App = ({ Component, pageProps }) => {
         </Layout>
       </ShellProvider>
     </ThemeProvider>
-  );
-};
+  )
+}
 
 export default (props) => {
-  const ENABLE_TRACKING = Boolean(+process.env.NEXT_PUBLIC_ENABLE_TRACKING);
+  const ENABLE_TRACKING = Boolean(+process.env.NEXT_PUBLIC_ENABLE_TRACKING)
 
-  if (!ENABLE_TRACKING) {
-    return <App {...props} />;
-  }
+  if (!ENABLE_TRACKING)
+    return <App {...props} />
 
   const instance = createInstance({
     urlBase: process.env.NEXT_PUBLIC_TRACKING_URL,
@@ -51,11 +50,11 @@ export default (props) => {
     configurations: {
       setRequestMethod: 'GET',
     },
-  });
+  })
 
   return (
     <MatomoProvider value={instance}>
       <App {...props} />
     </MatomoProvider>
-  );
-};
+  )
+}

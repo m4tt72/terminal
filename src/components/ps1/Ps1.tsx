@@ -1,15 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { useTheme } from '../../utils/themeProvider';
+import React, { useEffect, useState } from 'react'
+import { useTheme } from '../../utils/themeProvider'
 
-export const Ps1 = () => {
-  const [hostname, setHostname] = useState('');
-  const { theme } = useTheme();
+export function Ps1() {
+  const [hostname, setHostname] = useState('')
+  const { theme } = useTheme()
 
   useEffect(() => {
-    if (typeof window !== undefined) {
-      setHostname(window.location.hostname);
-    }
-  }, []);
+    if (typeof window !== undefined)
+      setHostname(window.location.hostname)
+  }, [])
 
   return (
     <div>
@@ -42,7 +41,7 @@ export const Ps1 = () => {
         :$ ~
       </span>
     </div>
-  );
-};
+  )
+}
 
-export default Ps1;
+export default Ps1

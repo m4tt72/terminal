@@ -1,13 +1,13 @@
-import React from 'react';
-import { useTheme } from '../../utils/themeProvider';
+import React from 'react'
+import { useTheme } from '../../utils/themeProvider'
 
 interface Props {
-  children: React.ReactNode;
-  onClick: () => void;
+  children: React.ReactNode
+  onClick: () => void
 }
 
 const Layout: React.FC<Props> = ({ children, onClick }) => {
-  const { theme } = useTheme();
+  const { theme } = useTheme()
 
   return (
     <div
@@ -26,7 +26,7 @@ const Layout: React.FC<Props> = ({ children, onClick }) => {
         {children}
       </main>
     </div>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout
