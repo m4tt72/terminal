@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { History } from '../interfaces/history';
 import * as bin from './bin';
 import { useTheme } from './themeProvider';
+import { commandDispatcher } from './commandDispatcher';
 
 interface ShellContextType {
   history: History[];
@@ -30,17 +31,7 @@ export const ShellProvider: React.FC<ShellProviderProps> = ({ children }) => {
   const [history, _setHistory] = React.useState<History[]>([]);
   const [command, _setCommand] = React.useState<string>('');
   const [lastCommandIndex, _setLastCommandIndex] = React.useState<number>(0);
-  const { theme, setTheme } = useTheme();
-
-  useEffect(() => {
-    setCommand('banner');
-  }, []);
-
-  useEffect(() => {
-    if (!init) {
-      execute();
-    }
-  }, [command, init]);
+  const { setTheme } = useTheme();
 
   const setHistory = (output: string) => {
     _setHistory([
@@ -69,39 +60,27 @@ export const ShellProvider: React.FC<ShellProviderProps> = ({ children }) => {
   };
 
   const execute = async () => {
-    const [cmd, ...args] = command.split(' ').slice(1);
+    const [cmd] = command.split(' ').slice(1);
 
     switch (cmd) {
-      case 'theme':
-        const output = await bin.theme(args, setTheme);
-
-        setHistory(output);
-
-        break;
       case 'clear':
         clearHistory();
         break;
       case '':
         setHistory('');
         break;
-      default: {
-        if (Object.keys(bin).indexOf(cmd) === -1) {
-          setHistory(`Command not found: ${cmd}. Try 'help' to get started.`);
-        } else {
-          try {
-            interface Bin {
-              [key: string]: (args: string[]) => Promise<string>;
-            }
-            const output = await (bin as unknown as Bin)[cmd](args);
-
-            setHistory(output);
-          } catch (error) {
-            setHistory((error as Error).message);
-          }
-        }
-      }
+      default:
+        setHistory(await commandDispatcher(command, { setTheme }));
     }
   };
+
+  useEffect(() => {
+    setCommand('banner');
+  }, []);
+
+  useEffect(() => {
+    if (!init) execute();
+  }, [command, init]);
 
   return (
     <ShellContext.Provider

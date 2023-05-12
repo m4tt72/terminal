@@ -1,6 +1,8 @@
 import { formatDistanceToNow } from 'date-fns';
 import packageJson from '../../../package.json';
 import themes from '../../../themes.json';
+import { Command, CommandCallback } from '../../interfaces/command';
+import { generateCommandUsage } from '../generateCommandUsage';
 
 const macos = `
                     'c.
@@ -148,7 +150,7 @@ const getInfo = () => {
   return message;
 };
 
-export const neofetch = async (args?: string[]): Promise<string> => {
+const neofetch = async (args?: string[]): Promise<string> => {
   const art = getArt();
   const info = getInfo();
 
@@ -160,4 +162,14 @@ export const neofetch = async (args?: string[]): Promise<string> => {
     <tr>
   </table>
   `;
+};
+
+export const neoFetchCommand: Command = {
+  name: 'neofetch',
+  description: 'Displays system information',
+  usage: generateCommandUsage({ usage: ` neofetch` }),
+
+  execute() {
+    return neofetch();
+  },
 };
