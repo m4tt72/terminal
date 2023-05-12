@@ -1,19 +1,18 @@
 import Themes from '../../../themes.json';
+import { Command, CommandCallback } from '../../interfaces/command';
+import { generateCommandUsage } from '../generateCommandUsage';
+import { getArguments } from '../parseCommand';
 
-export const theme = async (
+const usage = generateCommandUsage({
+  usage: 'theme [arg]',
+  args: '[ls]: list all themes\n[set]: set a theme\n[random]: set a random theme',
+  example: 'theme ls # to list all themes\ntheme set Gruvbox # to set a theme',
+});
+
+const theme = async (
   args: string[],
   callback: (value: string) => string,
 ): Promise<string> => {
-  const noArgsNotice = `Usage: theme [arg]
-Args:
-  - ls: list all themes
-  - set: set a theme
-  - random: set a random theme
-
-Example: 
-  theme ls # to list all themes
-  theme set Gruvbox # to set a theme`;
-
   switch (args[0]) {
     case 'ls':
       let result = Themes.map((theme) => theme.name.toLowerCase()).join(', ');
@@ -30,6 +29,15 @@ Example:
 
       return callback(randomTheme.name.toLowerCase());
     default:
-      return noArgsNotice;
+      return usage;
   }
+};
+
+export const themeCommand: Command = {
+  name: 'theme',
+  description: 'To get a theme to set.',
+  usage,
+  execute(inputCmd: string, { setTheme }: CommandCallback) {
+    return theme(getArguments(inputCmd), setTheme);
+  },
 };

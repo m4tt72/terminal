@@ -1,19 +1,36 @@
 import config from '../../../config.json';
+import { Command } from '../../interfaces/command';
+import { Missing, MissingType } from '../errors/Missing';
+import { generateCommandUsage } from '../generateCommandUsage';
+import { getArguments } from '../parseCommand';
 
-export const instagram = async (args: string[]): Promise<string> => {
-  window.open(`https://www.instagram.com/${config.social.instagram}/`);
+export const socialCommand: Command = {
+  name: 'social',
+  description: 'Open social links',
+  usage: generateCommandUsage({
+    usage: 'social [arg]',
+    args: '[github]: open github\n[telegram]: open telegram',
+  }),
 
-  return 'Opening instagram...';
-};
+  async execute(inputCmd: string): Promise<string> {
+    const args = getArguments(inputCmd);
+    const social = args[0];
 
-export const github = async (args: string[]): Promise<string> => {
-  window.open(`https://github.com/${config.social.github}/`);
+    if (!social)
+      throw new Missing(MissingType.Arguments, 'social platform name');
 
-  return 'Opening github...';
-};
-
-export const linkedin = async (args: string[]): Promise<string> => {
-  window.open(`https://www.linkedin.com/in/${config.social.linkedin}/`);
-
-  return 'Opening linkedin...';
+    switch (social) {
+      case 'github':
+        window.open(`https://github.com/${config.social.github}`);
+        return 'Opening GitHub...';
+      case 'linkedin':
+        window.open(`https://www.linkedin.com/in/${config.social.linkedin}/`);
+        return 'Opening linkedin...';
+      case 'instagram':
+        window.open(`https://www.instagram.com/${config.social.instagram}/`);
+        return 'Opening instagram...';
+      default:
+        return `Unknown social platform: ${social}`;
+    }
+  },
 };

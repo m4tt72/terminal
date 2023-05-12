@@ -1,13 +1,27 @@
 import { getWeather } from '../../api';
+import type { Command } from '../../interfaces/command';
+import { Missing, MissingType } from '../errors/Missing';
+import { generateCommandUsage } from '../generateCommandUsage';
+import { getArguments } from '../parseCommand';
 
-export const weather = async (args: string[]): Promise<string> => {
-  const city = args.join('+');
+async function weather(inputCmd: string) {
+  const city = getArguments(inputCmd).join('+');
 
-  if (!city) {
-    return 'Usage: weather [city]. Example: weather casablanca';
-  }
+  if (!city) throw new Missing(MissingType.Options, 'city');
 
   const weather = await getWeather(city);
 
   return weather;
+}
+
+export const weatherCommand: Command = {
+  name: 'weather',
+  description: 'To get the weather of a city.',
+  usage: generateCommandUsage({
+    usage: 'weather [city]',
+    example: 'weather casablanca',
+  }),
+  execute(inputCmd: string) {
+    return weather(inputCmd);
+  },
 };
