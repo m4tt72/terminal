@@ -1,5 +1,6 @@
 import * as bin from './bin';
 
+
 export const handleTabCompletion = (
   command: string,
   setCommand: React.Dispatch<React.SetStateAction<string>>,

@@ -8,7 +8,7 @@ export interface ThemeContextType {
   theme: Theme;
 }
 
-const ThemeContext = React.createContext<ThemeContextType>(null);
+const ThemeContext = React.createContext<ThemeContextType>(null as unknown as ThemeContextType); // ignore the type error
 
 interface Props {
   children: React.ReactNode;
