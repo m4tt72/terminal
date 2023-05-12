@@ -8,7 +8,7 @@ import { useTheme } from '../utils/themeProvider';
 import config from '../../config.json';
 
 interface IndexPageProps {
-  inputRef: React.MutableRefObject<HTMLInputElement>;
+  inputRef: React.MutableRefObject<HTMLInputElement | null>;
 }
 
 const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
@@ -23,9 +23,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
   }, []);
 
   React.useEffect(() => {
-    if (inputRef.current) {
-      inputRef.current.focus();
-    }
+    inputRef.current && inputRef.current.focus();
   }, [history]);
 
   return (

@@ -6,7 +6,12 @@ import { handleTabCompletion } from '../../utils/tabCompletion';
 import { useTheme } from '../../utils/themeProvider';
 import { Ps1 } from '../ps1';
 
-export const Input = ({ inputRef, containerRef }) => {
+interface InputProps {
+  inputRef: React.MutableRefObject<HTMLInputElement | null>;
+  containerRef: React.MutableRefObject<HTMLDivElement | null>;
+}
+
+export const Input = ({ inputRef, containerRef }: InputProps) => {
   const { trackEvent } = useMatomo();
   const { theme } = useTheme();
   const [value, setValue] = useState('');
@@ -20,7 +25,8 @@ export const Input = ({ inputRef, containerRef }) => {
   } = useShell();
 
   useEffect(() => {
-    containerRef.current.scrollTo(0, containerRef.current.scrollHeight);
+    containerRef.current &&
+      containerRef.current.scrollTo(0, containerRef.current.scrollHeight);
   }, [history]);
 
   const onSubmit = async (event: React.KeyboardEvent<HTMLInputElement>) => {

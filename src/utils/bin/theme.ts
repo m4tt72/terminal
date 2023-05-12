@@ -2,10 +2,9 @@ import Themes from '../../../themes.json';
 
 export const theme = async (
   args: string[],
-  callback?: (value: string) => string,
+  callback: (value: string) => string,
 ): Promise<string> => {
-  if (args.length === 0) {
-    return `Usage: theme [arg]
+  const noArgsNotice = `Usage: theme [arg]
 Args:
   - ls: list all themes
   - set: set a theme
@@ -14,7 +13,6 @@ Args:
 Example: 
   theme ls # to list all themes
   theme set Gruvbox # to set a theme`;
-  }
 
   switch (args[0]) {
     case 'ls':
@@ -31,5 +29,7 @@ Example:
       const randomTheme = Themes[Math.floor(Math.random() * Themes.length)];
 
       return callback(randomTheme.name.toLowerCase());
+    default:
+      return noArgsNotice;
   }
 };

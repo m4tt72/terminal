@@ -6,11 +6,16 @@ import '../styles/global.css';
 import { ShellProvider } from '../utils/shellProvider';
 import { ThemeProvider } from '../utils/themeProvider';
 
-const App = ({ Component, pageProps }) => {
+interface AppProps {
+  Component: React.FC<any>;
+  pageProps: any;
+}
+
+const App = ({ Component, pageProps }: AppProps) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
 
   const onClickAnywhere = () => {
-    inputRef.current.focus();
+    inputRef?.current && inputRef.current.focus();
   };
 
   useEffect(() => {
@@ -36,18 +41,20 @@ const App = ({ Component, pageProps }) => {
   );
 };
 
-export default (props) => {
-  const ENABLE_TRACKING = Boolean(+process.env.NEXT_PUBLIC_ENABLE_TRACKING);
+export default (props: AppProps) => {
+  const ENABLE_TRACKING = Boolean(
+    +(process.env.NEXT_PUBLIC_ENABLE_TRACKING as string),
+  );
 
   if (!ENABLE_TRACKING) {
     return <App {...props} />;
   }
 
   const instance = createInstance({
-    urlBase: process.env.NEXT_PUBLIC_TRACKING_URL,
-    trackerUrl: `${process.env.NEXT_PUBLIC_TRACKING_URL}/js/`,
-    srcUrl: `${process.env.NEXT_PUBLIC_TRACKING_URL}/js/`,
-    siteId: +process.env.NEXT_PUBLIC_TRACKING_SITE_ID,
+    urlBase: process.env.NEXT_PUBLIC_TRACKING_URL as string,
+    trackerUrl: `${process.env.NEXT_PUBLIC_TRACKING_URL}/js/` as string,
+    srcUrl: `${process.env.NEXT_PUBLIC_TRACKING_URL}/js/` as string,
+    siteId: +(process.env.NEXT_PUBLIC_TRACKING_SITE_ID as string),
     configurations: {
       setRequestMethod: 'GET',
     },

@@ -87,7 +87,8 @@ const getPlatform = (): 'Unknown' | 'Windows' | 'MacOS' | 'Linux' => {
 const getMainColor = () => {
   const platform = getPlatform();
   const themeName = localStorage.getItem('theme');
-  const theme = themes.find((theme) => theme.name.toLowerCase() === themeName);
+  const theme =
+    themes.find((theme) => theme.name.toLowerCase() === themeName) || themes[0];
 
   switch (platform) {
     case 'MacOS':

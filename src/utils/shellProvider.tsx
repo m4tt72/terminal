@@ -15,7 +15,9 @@ interface ShellContextType {
   clearHistory: () => void;
 }
 
-const ShellContext = React.createContext<ShellContextType>(null);
+const ShellContext = React.createContext<ShellContextType>(
+  null as unknown as ShellContextType,
+);
 
 interface ShellProviderProps {
   children: React.ReactNode;
@@ -87,11 +89,14 @@ export const ShellProvider: React.FC<ShellProviderProps> = ({ children }) => {
           setHistory(`Command not found: ${cmd}. Try 'help' to get started.`);
         } else {
           try {
-            const output = await bin[cmd](args);
+            interface Bin {
+              [key: string]: (args: string[]) => Promise<string>;
+            }
+            const output = await (bin as unknown as Bin)[cmd](args);
 
             setHistory(output);
           } catch (error) {
-            setHistory(error.message);
+            setHistory((error as Error).message);
           }
         }
       }
