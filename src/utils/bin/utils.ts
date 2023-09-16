@@ -26,9 +26,9 @@ export const gui = async (args: string[]): Promise<string> => {
 };
 
 export const email = async (args: string[]): Promise<string> => {
-  window.open('mailto:hi@nm4tt72.com');
+  window.open('mailto:joeyflores74@gmail.com');
 
-  return 'Opening mailto:hi@m4tt72.com...';
+  return 'Opening mailto:joeyflores74@gmail.com...';
 };
 
 export const vi = async (args: string[]): Promise<string> => {
@@ -67,20 +67,15 @@ export const donate = async (args?: string[]): Promise<string> => {
 
 export const banner = (args?: string[]): string => {
   return `
-███╗   ███╗██╗  ██╗████████╗████████╗███████╗██████╗
-████╗ ████║██║  ██║╚══██╔══╝╚══██╔══╝╚════██║╚════██╗
-██╔████╔██║███████║   ██║      ██║       ██╔╝ █████╔╝
-██║╚██╔╝██║╚════██║   ██║      ██║      ██╔╝ ██╔═══╝
-██║ ╚═╝ ██║     ██║   ██║      ██║      ██║  ███████╗
-╚═╝     ╚═╝     ╚═╝   ╚═╝      ╚═╝      ╚═╝  ╚══════╝ v${packageJson.version}
+   d88b  .d88b.  d88888b db    db     d8888b. d88888b db    db 
+   '8P' .8P  Y8. 88'     '8b  d8'     88  '8D 88'     88    88 
+    88  88    88 88ooooo  '8bd8'      88   88 88ooooo Y8    8P 
+    88  88    88 88~~~~~    88        88   88 88~~~~~ '8b  d8' 
+db. 88  '8b  d8' 88.        88        88  .8D 88.      '8bd8'  
+Y8888P   'Y88P'  Y88888P    YP    VP  Y8888D' Y88888P    YP      
 
 Type 'help' to see list of available commands.
 
---
-The project is open-source 🎉 type 'repo' to check out the repository.
-
-New 🎉: Try out the new 'theme' command. See all available themes <a href="https://github.com/m4tt72/terminal/tree/master/docs/themes">in the docs</a>.
-New 🎉: New command 'neofetch', for you linux.
 --
 `;
 };
