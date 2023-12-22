@@ -6,6 +6,10 @@ import '../styles/global.css';
 import { ShellProvider } from '../utils/shellProvider';
 import { ThemeProvider } from '../utils/themeProvider';
 
+const isTrackingEnabled = process.env.NEXT_PUBLIC_ENABLE_TRACKING === 'true';
+const trackingUrl = process.env.NEXT_PUBLIC_TRACKING_URL;
+const trackingWebsiteId = process.env.NEXT_PUBLIC_TRACKING_SITE_ID;
+
 const App = ({ Component, pageProps }) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
 
@@ -26,6 +30,14 @@ const App = ({ Component, pageProps }) => {
             content="initial-scale=1.0, width=device-width"
             key="viewport"
           />
+
+          {isTrackingEnabled && (
+            <script
+              async
+              src={trackingUrl}
+              data-website-id={trackingWebsiteId}
+            ></script>
+          )}
         </Head>
 
         <Layout onClick={onClickAnywhere}>
