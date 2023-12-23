@@ -3,6 +3,16 @@ import { History } from '../interfaces/history';
 import * as bin from './bin';
 import { useTheme } from './themeProvider';
 
+const isTrackingEnabled = process.env.NEXT_PUBLIC_ENABLE_TRACKING === 'true';
+
+declare global {
+  interface Window {
+    umami: {
+      track: (event: string, data?: Record<string, unknown>) => Promise<void>;
+    };
+  }
+}
+
 interface ShellContextType {
   history: History[];
   command: string;
@@ -68,6 +78,13 @@ export const ShellProvider: React.FC<ShellProviderProps> = ({ children }) => {
 
   const execute = async () => {
     const [cmd, ...args] = command.split(' ').slice(1);
+
+    if (isTrackingEnabled) {
+      window.umami.track('command', {
+        command: cmd,
+        args: args.join(' '),
+      });
+    }
 
     switch (cmd) {
       case 'theme':
