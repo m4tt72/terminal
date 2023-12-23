@@ -80,8 +80,7 @@ export const ShellProvider: React.FC<ShellProviderProps> = ({ children }) => {
     const [cmd, ...args] = command.split(' ').slice(1);
 
     if (isTrackingEnabled) {
-      window.umami.track('command', {
-        command: cmd,
+      window.umami.track(`command - ${cmd}`, {
         args: args.join(' '),
       });
     }
