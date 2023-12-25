@@ -1,11 +1,16 @@
 module.exports = {
-  plugins: ['prettier'],
-  extends: ['next/core-web-vitals'],
+  root: true,
+  env: { browser: true, es2020: true },
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:@next/next/recommended',
+  ],
+  ignorePatterns: ['dist', '.eslintrc.js'],
+  parser: '@typescript-eslint/parser',
+  plugins: ['react-refresh'],
   rules: {
-    'no-console': 'error',
-    'prettier/prettier': 'warn',
-    'react-hooks/exhaustive-deps': 'off',
-    'react/display-name': 'off',
-    'import/no-anonymous-default-export': 'off',
+    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
   },
 };

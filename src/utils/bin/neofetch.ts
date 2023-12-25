@@ -9,17 +9,17 @@ const macos = `
                OMMM0,
      .;loddo:' loolloddol;.
    cKMMMMMMMMMMNWMMMMMMMMMM0:
- .KMMMMMMMMMMMMMMMMMMMMMMMWd.    
- XMMMMMMMMMMMMMMMMMMMMMMMX.      
-;MMMMMMMMMMMMMMMMMMMMMMMM:       
-:MMMMMMMMMMMMMMMMMMMMMMMM:       
-.MMMMMMMMMMMMMMMMMMMMMMMMX.      
- kMMMMMMMMMMMMMMMMMMMMMMMMWd.    
- .XMMMMMMMMMMMMMMMMMMMMMMMMMMk   
-  .XMMMMMMMMMMMMMMMMMMMMMMMMK.   
-    kMMMMMMMMMMMMMMMMMMMMMMd     
-     ;KMMMMMMMWXXWMMMMMMMk.      
-       .cooc,.    .,coo:.        
+ .KMMMMMMMMMMMMMMMMMMMMMMMWd.
+ XMMMMMMMMMMMMMMMMMMMMMMMX.
+;MMMMMMMMMMMMMMMMMMMMMMMM:
+:MMMMMMMMMMMMMMMMMMMMMMMM:
+.MMMMMMMMMMMMMMMMMMMMMMMMX.
+ kMMMMMMMMMMMMMMMMMMMMMMMMWd.
+ .XMMMMMMMMMMMMMMMMMMMMMMMMMMk
+  .XMMMMMMMMMMMMMMMMMMMMMMMMK.
+    kMMMMMMMMMMMMMMMMMMMMMMd
+     ;KMMMMMMMWXXWMMMMMMMk.
+       .cooc,.    .,coo:.
 `;
 
 const windows = `
@@ -32,34 +32,34 @@ llllllllllllll  lllllllllllllllllll
 llllllllllllll  lllllllllllllllllll
 llllllllllllll  lllllllllllllllllll
 llllllllllllll  lllllllllllllllllll
-                                      
+
 llllllllllllll  lllllllllllllllllll
 llllllllllllll  lllllllllllllllllll
 llllllllllllll  lllllllllllllllllll
 llllllllllllll  lllllllllllllllllll
 llllllllllllll  lllllllllllllllllll
 \`'ccllllllllll  lllllllllllllllllll
-       \`' \*::  :ccllllllllllllllll
+       \`' *::  :ccllllllllllllllll
                        \`\`\`\`''*::cll
 `;
 
 const linux = `
-            .-/+oossssoo+/-.               
-        \`:+ssssssssssssssssss+:\`           
-      -+ssssssssssssssssssyyssss+-         
-    .ossssssssssssssssssdMMMNysssso.       
-   /ssssssssssshdmmNNmmyNMMMMhssssss/      
-  +ssssssssshmydMMMMMMMNddddyssssssss+     
- /sssssssshNMMMyhhyyyyhmNMMMNhssssssss/    
-.ssssssssdMMMNhsssssssssshNMMMdssssssss.   
-+sssshhhyNMMNyssssssssssssyNMMMysssssss+   
-ossyNMMMNyMMhsssssssssssssshmmmhssssssso   
-ossyNMMMNyMMhsssssssssssssshmmmhssssssso   
-+sssshhhyNMMNyssssssssssssyNMMMysssssss+   
-.ssssssssdMMMNhsssssssssshNMMMdssssssss.   
- /sssssssshNMMMyhhyyyyhdNMMMNhssssssss/    
-  +sssssssssdmydMMMMMMMMddddyssssssss+     
-   /ssssssssssshdmNNNNmyNMMMMhssssss/      
+            .-/+oossssoo+/-.
+        \`:+ssssssssssssssssss+:\`
+      -+ssssssssssssssssssyyssss+-
+    .ossssssssssssssssssdMMMNysssso.
+   /ssssssssssshdmmNNmmyNMMMMhssssss/
+  +ssssssssshmydMMMMMMMNddddyssssssss+
+ /sssssssshNMMMyhhyyyyhmNMMMNhssssssss/
+.ssssssssdMMMNhsssssssssshNMMMdssssssss.
++sssshhhyNMMNyssssssssssssyNMMMysssssss+
+ossyNMMMNyMMhsssssssssssssshmmmhssssssso
+ossyNMMMNyMMhsssssssssssssshmmmhssssssso
++sssshhhyNMMNyssssssssssssyNMMMysssssss+
+.ssssssssdMMMNhsssssssssshNMMMdssssssss.
+ /sssssssshNMMMyhhyyyyhdNMMMNhssssssss/
+  +sssssssssdmydMMMMMMMMddddyssssssss+
+   /ssssssssssshdmNNNNmyNMMMMhssssss/
     .ossssssssssssssssssdMMMNysssso.
       -+sssssssssssssssssyyyssss+-
         \`:+ssssssssssssssssss+:\`
@@ -147,7 +147,7 @@ const getInfo = () => {
   return message;
 };
 
-export const neofetch = async (args?: string[]): Promise<string> => {
+export const neofetch = async (_args?: string[]): Promise<string> => {
   const art = getArt();
   const info = getInfo();
 

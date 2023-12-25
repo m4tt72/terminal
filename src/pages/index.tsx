@@ -1,4 +1,3 @@
-import { useMatomo } from '@m4tt72/matomo-tracker-react';
 import Head from 'next/head';
 import React from 'react';
 import { History } from '../components/history';
@@ -12,21 +11,16 @@ interface IndexPageProps {
 }
 
 const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
-  const { trackPageView } = useMatomo();
   const { history } = useShell();
   const { theme } = useTheme();
 
   const containerRef = React.useRef(null);
 
   React.useEffect(() => {
-    trackPageView({});
-  }, []);
-
-  React.useEffect(() => {
     if (inputRef.current) {
       inputRef.current.focus();
     }
-  }, [history]);
+  }, [history, inputRef]);
 
   return (
     <>

@@ -19,40 +19,37 @@
     "start": "next start",
     "build": "next build",
     "dev": "next dev",
-    "next": "next",
-    "preexport": "next build",
     "export": "next export",
-    "lint": "eslint .",
+    "lint": "next lint",
     "prepare": "husky install"
   },
   "dependencies": {
-    "@m4tt72/matomo-tracker-react": "^0.6.2",
-    "axios": "^1.6.0",
+    "axios": "^1.6.2",
     "cowsay-browser": "^1.1.8",
-    "date-fns": "^2.30.0",
-    "next": "^14.0.1",
+    "date-fns": "^3.0.6",
+    "next": "^14.0.4",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "react-icons": "^4.11.0"
+    "react-icons": "^4.12.0"
   },
   "devDependencies": {
-    "@types/node": "^20.8.10",
-    "@types/react": "^18.2.33",
-    "@typescript-eslint/eslint-plugin": "^6.9.1",
-    "@typescript-eslint/parser": "^6.9.1",
+    "@next/eslint-plugin-next": "^14.0.4",
+    "@types/node": "^20.10.5",
+    "@types/react": "^18.2.45",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
     "autoprefixer": "^10.4.16",
-    "eslint": "8.52.0",
-    "eslint-config-next": "^14.0.1",
-    "eslint-plugin-next": "^0.0.0",
-    "eslint-plugin-prettier": "^5.0.1",
-    "eslint-plugin-react": "^7.33.2",
+    "eslint": "^8",
+    "eslint-config-next": "^14.0.4",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
     "husky": "^8.0.3",
-    "postcss": "^8.4.31",
-    "prettier": "^3.0.3",
-    "tailwindcss": "^3.3.5",
-    "typescript": "^5.2.2"
+    "postcss": "^8.4.32",
+    "prettier": "^3.1.1",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5"
   },
   "engines": {
-    "node": ">=18.17.0"
+    "node": ">=20.10.0"
   }
 }

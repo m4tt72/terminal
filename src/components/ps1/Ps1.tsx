@@ -6,9 +6,7 @@ export const Ps1 = () => {
   const { theme } = useTheme();
 
   useEffect(() => {
-    if (typeof window !== undefined) {
-      setHostname(window.location.hostname);
-    }
+    setHostname(window.location.hostname);
   }, []);
 
   return (
