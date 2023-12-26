@@ -4,7 +4,6 @@ const help = `Usage: theme [arg]
 Args:
   - ls: list all themes
   - set: set a theme
-  - random: set a random theme
 
 Example:
   theme ls # to list all themes
@@ -31,12 +30,6 @@ export const theme = async (
       const selectedTheme = args[1];
 
       return callback(selectedTheme);
-    }
-
-    case 'random': {
-      const randomTheme = Themes[Math.floor(Math.random() * Themes.length)];
-
-      return callback(randomTheme.name.toLowerCase());
     }
 
     default:
