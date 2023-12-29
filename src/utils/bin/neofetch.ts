@@ -44,26 +44,19 @@ llllllllllllll  lllllllllllllllllll
 `;
 
 const linux = `
-            .-/+oossssoo+/-.
-        \`:+ssssssssssssssssss+:\`
-      -+ssssssssssssssssssyyssss+-
-    .ossssssssssssssssssdMMMNysssso.
-   /ssssssssssshdmmNNmmyNMMMMhssssss/
-  +ssssssssshmydMMMMMMMNddddyssssssss+
- /sssssssshNMMMyhhyyyyhmNMMMNhssssssss/
-.ssssssssdMMMNhsssssssssshNMMMdssssssss.
-+sssshhhyNMMNyssssssssssssyNMMMysssssss+
-ossyNMMMNyMMhsssssssssssssshmmmhssssssso
-ossyNMMMNyMMhsssssssssssssshmmmhssssssso
-+sssshhhyNMMNyssssssssssssyNMMMysssssss+
-.ssssssssdMMMNhsssssssssshNMMMdssssssss.
- /sssssssshNMMMyhhyyyyhdNMMMNhssssssss/
-  +sssssssssdmydMMMMMMMMddddyssssssss+
-   /ssssssssssshdmNNNNmyNMMMMhssssss/
-    .ossssssssssssssssssdMMMNysssso.
-      -+sssssssssssssssssyyyssss+-
-        \`:+ssssssssssssssssss+:\`
-            .-/+oossssoo+/-.
+\
+${c2}        #####
+${c2}       #######
+${c2}       ##${c1}O${c2}#${c1}O${c2}##
+${c2}       #${c3}#####${c2}#
+${c2}     ##${c1}##${c3}###${c1}##${c2}##
+${c2}    #${c1}##########${c2}##
+${c2}   #${c1}############${c2}##
+${c2}   #${c1}############${c2}###
+${c3}  ##${c2}#${c1}###########${c2}##${c3}#
+${c3}######${c2}#${c1}#######${c2}#${c3}######
+${c3}#######${c2}#${c1}#####${c2}#${c3}#######
+${c3}  #####${c2}#######${c3}#####
 `;
 
 const getPlatform = (): 'Unknown' | 'Windows' | 'MacOS' | 'Linux' => {
