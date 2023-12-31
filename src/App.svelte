@@ -137,7 +137,10 @@
 
     <div class="input-container">
       <input
-        class="w-full px-3 bg-transparent outline-none caret-green-600"
+        id="command-input"
+        name="command-input"
+        aria-label="Command input"
+        class="w-full px-3 bg-transparent outline-none caret-green-600 selection:text-white"
         type="text"
         bind:value={command}
         on:keydown={handleKeyDown}
@@ -165,9 +168,9 @@
 
   .input-container .block-caret {
     position: absolute;
-    top: 4px; /* Add this line */
+    top: 2px; /* Add this line */
     width: 10px;
-    height: 1em;
+    height: 1.2em;
     background-color: currentColor;
     animation: blink 1s infinite;
     margin-left: 14px;
