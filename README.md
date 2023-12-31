@@ -16,13 +16,6 @@ I wanted to have a terminal style website for a long time, and I finally decided
 docker run -d --name terminal -p 3000:3000 ghcr.io/m4tt72/terminal
 ```
 
-```bash
-docker run -d \
-  --name terminal \
-  -p 3000:3000 \
-  ghcr.io/m4tt72/terminal
-```
-
 ### Using npm/yarn
 
 1. Install dependencies:
