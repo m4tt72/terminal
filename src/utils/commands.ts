@@ -20,10 +20,14 @@ export const commands: Record<string, (args: string[]) => Promise<string> | stri
     return `Permission denied: unable to run the command '${args[0]}' as root.`;
   },
   theme: (args: string[]) => {
-    const usage = `Usage: theme [theme]. Example: theme [...args]
+    const usage = `Usage: theme [args].
     [args]:
       ls: list all available themes
-      set: set theme to [args]
+      set: set theme to [theme]
+
+    [Examples]:
+      theme ls
+      theme set gruvboxdark
     `;
     if (args.length === 0) {
       return usage;
