@@ -1,7 +1,7 @@
 {
   "name": "svelterm",
   "private": true,
-  "version": "3.0.0-alpha",
+  "version": "3.0.0",
   "type": "module",
   "license": "MIT",
   "author": {
