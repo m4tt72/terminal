@@ -1,7 +1,7 @@
 <script lang="ts">
-  import Ps1 from './lib/Ps1.svelte';
-  import Input from './lib/Input.svelte';
-  import History from './lib/History.svelte';
+  import Ps1 from './components/Ps1.svelte';
+  import Input from './components/Input.svelte';
+  import History from './components/History.svelte';
 </script>
 
 <main class="h-full border-2 rounded-md border-green-600 p-4 overflow-auto">
