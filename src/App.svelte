@@ -10,7 +10,7 @@
     <script
       async
       defer
-      data-website-id={import.meta.env.VITE_TRACKING_WEBSITE_ID}
+      data-website-id={import.meta.env.VITE_TRACKING_SITE_ID}
       src={import.meta.env.VITE_TRACKING_URL}
     ></script>
   {/if}
