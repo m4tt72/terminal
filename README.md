@@ -33,16 +33,10 @@ docker run -d \
 yarn install
 ```
 
-2. Build the project:
-
-```bash
-yarn build
-```
-
 3. Run the server:
 
 ```bash
-yarn start
+yarn dev
 ```
 
 ## Themes
