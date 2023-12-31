@@ -27,7 +27,6 @@ export const commands: Record<string, (args: string[]) => Promise<string> | stri
 
     return '';
   },
-
   email: () => {
     window.open(`mailto:${packageJson.author.email}`);
 
