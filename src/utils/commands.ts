@@ -83,7 +83,7 @@ export const commands: Record<string, (args: string[]) => Promise<string> | stri
     const city = args.join('+');
 
     if (!city) {
-      return 'Usage: weather [city]. Example: weather casablanca';
+      return 'Usage: weather [city]. Example: weather Brussels';
     }
 
     const weather = await fetch(`https://wttr.in/${city}?ATm`);
