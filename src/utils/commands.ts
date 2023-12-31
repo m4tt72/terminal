@@ -1,14 +1,11 @@
 import { history } from '../stores/history';
+import packageJson from '../../package.json';
 
 const hostname = window.location.hostname;
 
-export const commands: Record<
-  string,
-  (args: string[]) => Promise<string> | string
-> = {
+export const commands: Record<string, (args: string[]) => Promise<string> | string> = {
   help: () => 'Available commands: ' + Object.keys(commands).join(', '),
   hostname: () => hostname,
-  pwd: () => '/home/guest',
   whoami: () => 'guest',
   clear: () => {
     history.set([]);
@@ -32,4 +29,18 @@ export const commands: Record<
       return `curl: could not fetch URL ${url}. Details: ${error}`;
     }
   },
+  banner: () => `
+███╗   ███╗██╗  ██╗████████╗████████╗███████╗██████╗
+████╗ ████║██║  ██║╚══██╔══╝╚══██╔══╝╚════██║╚════██╗
+██╔████╔██║███████║   ██║      ██║       ██╔╝ █████╔╝
+██║╚██╔╝██║╚════██║   ██║      ██║      ██╔╝ ██╔═══╝
+██║ ╚═╝ ██║     ██║   ██║      ██║      ██║  ███████╗
+╚═╝     ╚═╝     ╚═╝   ╚═╝      ╚═╝      ╚═╝  ╚══════╝ v${packageJson.version}
+
+Type 'help' to see list of available commands.
+
+--
+The project is open-source 🎉 type 'repo' to check out the repository.
+--
+`,
 };
