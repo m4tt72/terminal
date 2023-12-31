@@ -19,6 +19,16 @@
 
   onMount(() => {
     input.focus();
+
+    if ($history.length === 0) {
+      const command = commands['banner'] as () => string;
+
+      if (command) {
+        const output = command();
+
+        $history = [...$history, { command: 'banner', outputs: [output] }];
+      }
+    }
   });
 
   afterUpdate(() => {
