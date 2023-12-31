@@ -3,9 +3,9 @@
   import { history } from '../stores/history';
   import { commands } from '../utils/commands';
 
-let command = '';
+  let command = '';
   let isFocused = false;
-  let historyIndex = -1
+  let historyIndex = -1;
 
   let input: HTMLInputElement;
 
@@ -76,6 +76,9 @@ let command = '';
       if (autoCompleteCommand) {
         command = autoCompleteCommand;
       }
+    } else if (event.ctrlKey && event.key === 'l') {
+      event.preventDefault(); // Prevent the default browser action
+      $history = []; // Clear the terminal
     }
   };
 </script>
@@ -111,7 +114,7 @@ let command = '';
 
   .input-container .block-caret {
     position: absolute;
-    top: 2px; /* Add this line */
+    top: 2px;
     width: 10px;
     height: 1.2em;
     background-color: currentColor;
