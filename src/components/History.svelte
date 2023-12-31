@@ -1,5 +1,6 @@
 <script lang="ts">
   import { history } from '../stores/history';
+  import { theme } from '../stores/theme';
   import Ps1 from './Ps1.svelte';
 </script>
 
@@ -8,11 +9,13 @@
     <div class="flex flex-row">
       <Ps1 />
 
-      <p class="text-white px-3">{command}</p>
+      <p style={`color: ${$theme.foreground}`} class="px-3">{command}</p>
     </div>
 
     {#each outputs as output}
-      <p class="text-white whitespace-pre-wrap">{output}</p>
+      <p style={`color: ${$theme.foreground}`} class="whitespace-pre-wrap">
+        {output}
+      </p>
     {/each}
   </div>
 {/each}

@@ -1,6 +1,7 @@
 <script lang="ts">
   import { afterUpdate, onMount } from 'svelte';
   import { history } from '../stores/history';
+  import { theme } from '../stores/theme';
   import { commands } from '../utils/commands';
 
   let command = '';
@@ -100,8 +101,9 @@
     id="command-input"
     name="command-input"
     aria-label="Command input"
-    class="w-full px-3 bg-transparent outline-none caret-green-600 selection:text-white"
+    class="w-full px-3 bg-transparent outline-none"
     type="text"
+    style={`color: ${$theme.foreground}`}
     bind:value={command}
     on:keydown={handleKeyDown}
     bind:this={input}
