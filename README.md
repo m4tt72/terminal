@@ -4,9 +4,15 @@ A terminal style website
 
 ![screenshot](/docs/screenshot.png)
 
-## why?
+## IMPORTANT
 
-I wanted to have a terminal style website for a long time, and I finally decided to build one.
+This is a new version of [m4tt72/terminal](https://github.com/m4tt72/terminal), which is built with [Svelte](https://svelte.dev/).
+
+If you are looking for the old version, please check out the [v2 branch](https://github.com/m4tt72/terminal/tree/v2).
+
+The old version is built with [React](https://reactjs.org/), and it is no longer maintained.
+
+Thanks!
 
 ## Quick Start
 
