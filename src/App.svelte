@@ -17,12 +17,12 @@
 </svelte:head>
 
 <main
-  class="h-full border-2 rounded-md p-4 overflow-auto"
+  class="h-full border-2 rounded-md p-4 overflow-auto text-xs sm:text-sm md:text-base"
   style={`background-color: ${$theme.background}; color: ${$theme.foreground}; border-color: ${$theme.green};`}
 >
   <History />
 
-  <div class="flex flex-row">
+  <div class="flex flex-col md:flex-row">
     <Ps1 />
 
     <Input />

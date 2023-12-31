@@ -6,18 +6,9 @@
   import { track } from '../utils/tracking';
 
   let command = '';
-  let isFocused = false;
   let historyIndex = -1;
 
   let input: HTMLInputElement;
-
-  const handleFocus = () => {
-    isFocused = true;
-  };
-
-  const handleBlur = () => {
-    isFocused = false;
-  };
 
   onMount(() => {
     input.focus();
@@ -98,53 +89,21 @@
 <svelte:window
   on:click={() => {
     input.focus();
-    isFocused = true;
   }}
 />
 
-<div class="input-container">
+<div class="flex">
+  <p class="visible md:hidden">❯</p>
+
   <input
     id="command-input"
     name="command-input"
     aria-label="Command input"
-    class="w-full px-3 bg-transparent outline-none"
+    class="w-full px-2 bg-transparent outline-none"
     type="text"
     style={`color: ${$theme.foreground}`}
     bind:value={command}
     on:keydown={handleKeyDown}
     bind:this={input}
-    on:focus={handleFocus}
-    on:blur={handleBlur}
   />
-
-  {#if isFocused}
-    <div class="block-caret" style="left: {command.length}ch"></div>
-  {/if}
 </div>
-
-<style>
-  .input-container {
-    position: relative;
-    width: 100%;
-  }
-
-  .input-container input {
-    caret-color: transparent;
-  }
-
-  .input-container .block-caret {
-    position: absolute;
-    top: 2px;
-    width: 10px;
-    height: 1.2em;
-    background-color: currentColor;
-    animation: blink 1s infinite;
-    margin-left: 14px;
-  }
-
-  @keyframes blink {
-    50% {
-      opacity: 0;
-    }
-  }
-</style>
