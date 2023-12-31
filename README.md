@@ -1,47 +1,79 @@
-# Svelte + TS + Vite
+# [M4TT72 | Terminal](https://term.m4tt72.com)
 
-This template should help get you started developing with Svelte and TypeScript in Vite.
+A terminal style website
 
-## Recommended IDE Setup
+![screenshot](/docs/screenshot.png)
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+## why?
 
-## Need an official Svelte framework?
+I wanted to have a terminal style website for a long time, and I finally decided to build one.
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+## Quick Start
 
-## Technical considerations
+### Using docker (recommended)
 
-**Why use this over SvelteKit?**
-
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
-
-This template contains as little as possible to get started with Vite + TypeScript + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
-
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
-
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
-
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
-
-**Why include `.vscode/extensions.json`?**
-
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
-
-**Why enable `allowJs` in the TS template?**
-
-While `allowJs: false` would indeed prevent the use of `.js` files in the project, it does not prevent the use of JavaScript syntax in `.svelte` files. In addition, it would force `checkJs: false`, bringing the worst of both worlds: not being able to guarantee the entire codebase is TypeScript, and also having worse typechecking for the existing JavaScript. In addition, there are valid use cases in which a mixed codebase may be relevant.
-
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```ts
-// store.ts
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
+```bash
+docker run -d --name terminal -p 3000:3000 m4tt72/terminal
 ```
+
+If you want to run with custom configuration, make sure you have a copy of `config.json` then mount in the container:
+
+```bash
+docker run -d \
+  --name terminal \
+  -p 3000:3000 \
+  m4tt72/terminal
+```
+
+### Using npm/yarn
+
+1. Install dependencies:
+
+```bash
+yarn install
+```
+
+2. Build the project:
+
+```bash
+yarn build
+```
+
+3. Run the server:
+
+```bash
+yarn start
+```
+
+## Configuration
+
+Here's a sample of the `config.json` file:
+
+```json
+{
+  "bioUrl": "https://raw.githubusercontent.com/m4tt72/m4tt72/master/README.md",
+  "social": {
+    "instagram": "m4tt72",
+    "github": "m4tt72",
+    "linkedin": "yassinefathi"
+  },
+  "theme": "gruvboxdark" // list of themes available in themes.json
+}
+```
+
+## Themes
+
+![themes](/docs/screenshot.gif)
+
+[Here's](/docs/themes) a list of available themes.
+
+
+## Contributing
+
+Please feel free to pull requests or log issues.
+
+Thanks!
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=m4tt72/terminal&type=Date)](https://star-history.com/#m4tt72/terminal&Date)
