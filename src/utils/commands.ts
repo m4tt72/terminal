@@ -48,6 +48,9 @@ export const commands: Record<string, (args: string[]) => Promise<string> | stri
 
     return weather.text();
   },
+  exit: () => {
+    return 'Please close the tab to exit.';
+  },
   curl: async (args: string[]) => {
     if (args.length === 0) {
       return 'curl: no URL provided';
