@@ -3,6 +3,7 @@
   import { history } from '../stores/history';
   import { theme } from '../stores/theme';
   import { commands } from '../utils/commands';
+  import { track } from '../utils/tracking';
 
   let command = '';
   let isFocused = false;
@@ -39,6 +40,11 @@
   const handleKeyDown = async (event: KeyboardEvent) => {
     if (event.key === 'Enter') {
       const [commandName, ...args] = command.split(' ');
+
+      if (import.meta.env.VITE_TRACKING_ENABLED === 'true') {
+        track(commandName, ...args);
+      }
+
       const commandFunction = commands[commandName];
 
       if (commandFunction) {
