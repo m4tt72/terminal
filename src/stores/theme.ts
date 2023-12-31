@@ -2,12 +2,14 @@ import { writable } from 'svelte/store';
 import themes from '../../themes.json';
 import type { Theme } from '../interfaces/theme';
 
-const defaultTheme: Theme = themes.find((t) => t.name === 'GruvboxDark')!;
+const defaultColorscheme: Theme = themes.find((t) => t.name === 'GruvboxDark')!;
 
 export const theme = writable<Theme>(
-  JSON.parse(localStorage.getItem('theme') || JSON.stringify(defaultTheme)),
+  JSON.parse(
+    localStorage.getItem('colorscheme') || JSON.stringify(defaultColorscheme),
+  ),
 );
 
 theme.subscribe((value) => {
-  localStorage.setItem('theme', JSON.stringify(value));
+  localStorage.setItem('colorscheme', JSON.stringify(value));
 });
