@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { afterUpdate, onDestroy, onMount } from 'svelte';
+  import { afterUpdate, onMount } from 'svelte';
   import { history } from '../stores/history';
   import { commands } from '../utils/commands';
 
@@ -19,16 +19,10 @@
 
   onMount(() => {
     input.focus();
-
-    window.addEventListener('click', () => input.focus());
   });
 
   afterUpdate(() => {
     input.scrollIntoView({ behavior: 'smooth', block: 'end' });
-  });
-
-  onDestroy(() => {
-    window.removeEventListener('click', () => input.focus());
   });
 
   const handleKeyDown = async (event: KeyboardEvent) => {
@@ -77,11 +71,19 @@
         command = autoCompleteCommand;
       }
     } else if (event.ctrlKey && event.key === 'l') {
-      event.preventDefault(); // Prevent the default browser action
-      $history = []; // Clear the terminal
+      event.preventDefault();
+
+      $history = [];
     }
   };
 </script>
+
+<svelte:window
+  on:click={() => {
+    input.focus();
+    isFocused = true;
+  }}
+/>
 
 <div class="input-container">
   <input
