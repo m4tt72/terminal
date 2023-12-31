@@ -2,10 +2,10 @@ name: Docker Publish
 
 on:
   push:
-    branches: [ "main", "svelte" ]
+    branches: [ "main" ]
     tags: [ 'v*.*.*' ]
   pull_request:
-    branches: [ "main", "svelte" ]
+    branches: [ "main" ]
 
 env:
   REGISTRY: ghcr.io
