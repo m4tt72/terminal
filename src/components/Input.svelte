@@ -14,12 +14,12 @@
     input.focus();
 
     if ($history.length === 0) {
-      const command = commands['banner'] as () => string;
+      const command = commands['home'] as () => string;
 
       if (command) {
         const output = command();
 
-        $history = [...$history, { command: 'banner', outputs: [output] }];
+        $history = [...$history, { command: 'home', outputs: [output] }];
       }
     }
   });

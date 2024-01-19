@@ -7,81 +7,33 @@ const hostname = window.location.hostname;
 
 export const commands: Record<string, (args: string[]) => Promise<string> | string> = {
   help: () => 'Available commands: ' + Object.keys(commands).join(', '),
-  hostname: () => hostname,
-  whoami: () => 'guest',
-  date: () => new Date().toLocaleString(),
-  vi: () => `why use vi? try 'emacs'`,
-  vim: () => `why use vim? try 'emacs'`,
-  emacs: () => `why use emacs? try 'vim'`,
-  echo: (args: string[]) => args.join(' '),
-  sudo: (args: string[]) => {
-    window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+  about: () => `why use vi? try 'emacs'`,
+  utilities: () => `why use vim? try 'emacs'`,
+  tokenomics: () => `why use emacs? try 'vim'`,
+  whitepaper: (args: string[]) => {
+    window.open('/whitepaper.pdf');
 
-    return `Permission denied: unable to run the command '${args[0]}' as root.`;
+    return `File Integrity Checksum MD5 Hash '${args[0]}' sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==" VERIFIED`;
   },
-  theme: (args: string[]) => {
-    const usage = `Usage: theme [args].
-    [args]:
-      ls: list all available themes
-      set: set theme to [theme]
+  buy: () => {
+    window.open('https://uniswap.com', '_blank');
 
-    [Examples]:
-      theme ls
-      theme set gruvboxdark
-    `;
-    if (args.length === 0) {
-      return usage;
-    }
-
-    switch (args[0]) {
-      case 'ls': {
-        let result = themes.map((t) => t.name.toLowerCase()).join(', ');
-        result += `You can preview all these themes here: ${packageJson.repository.url}/tree/master/docs/themes`;
-
-        return result;
-      }
-
-      case 'set': {
-        if (args.length !== 2) {
-          return usage;
-        }
-
-        const selectedTheme = args[1];
-        const t = themes.find((t) => t.name.toLowerCase() === selectedTheme);
-
-        if (!t) {
-          return `Theme '${selectedTheme}' not found. Try 'theme ls' to see all available themes.`;
-        }
-
-        theme.set(t);
-
-        return `Theme set to ${selectedTheme}`;
-      }
-
-      default: {
-        return usage;
-      }
-    }
-  },
-  repo: () => {
-    window.open(packageJson.repository.url, '_blank');
-
-    return 'Opening repository...';
+    return 'Swap Protocol Launched...';
   },
   clear: () => {
     history.set([]);
 
     return '';
   },
-  email: () => {
-    window.open(`mailto:${packageJson.author.email}`);
+  support: () => {
+    window.open(`mailto:anonymous@broscams`);
 
     return `Opening mailto:${packageJson.author.email}...`;
   },
-  donate: () => {
+  discord: () => {
     window.open(packageJson.funding.url, '_blank');
 
-    return 'Opening donation url...';
+    return 'Discord Launch...';
   },
   weather: async (args: string[]) => {
     const city = args.join('+');
@@ -97,30 +49,15 @@ export const commands: Record<string, (args: string[]) => Promise<string> | stri
   exit: () => {
     return 'Please close the tab to exit.';
   },
-  curl: async (args: string[]) => {
-    if (args.length === 0) {
-      return 'curl: no URL provided';
-    }
+  home: () => `
 
-    const url = args[0];
+  ██████╗░██████╗░░█████╗░░██████╗░█████╗░░█████╗░███╗░░░███╗░██████╗
+  ██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔══██╗██╔══██╗████╗░████║██╔════╝
+  ██████╦╝██████╔╝██║░░██║╚█████╗░██║░░╚═╝███████║██╔████╔██║╚█████╗░
+  ██╔══██╗██╔══██╗██║░░██║░╚═══██╗██║░░██╗██╔══██║██║╚██╔╝██║░╚═══██╗
+  ██████╦╝██║░░██║╚█████╔╝██████╔╝╚█████╔╝██║░░██║██║░╚═╝░██║██████╔╝
+  ╚═════╝░╚═╝░░╚═╝░╚════╝░╚═════╝░░╚════╝░╚═╝░░╚═╝╚═╝░░░░░╚═╝╚═════╝░ v${packageJson.version}
 
-    try {
-      const response = await fetch(url);
-      const data = await response.text();
-
-      return data;
-    } catch (error) {
-      return `curl: could not fetch URL ${url}. Details: ${error}`;
-    }
-  },
-  banner: () => `
-███╗   ███╗██╗  ██╗████████╗████████╗███████╗██████╗
-████╗ ████║██║  ██║╚══██╔══╝╚══██╔══╝╚════██║╚════██╗
-██╔████╔██║███████║   ██║      ██║       ██╔╝ █████╔╝
-██║╚██╔╝██║╚════██║   ██║      ██║      ██╔╝ ██╔═══╝
-██║ ╚═╝ ██║     ██║   ██║      ██║      ██║  ███████╗
-╚═╝     ╚═╝     ╚═╝   ╚═╝      ╚═╝      ╚═╝  ╚══════╝ v${packageJson.version}
-
-Type 'help' to see list of available commands.
+Type 'help' to see list of all the commands.
 `,
 };
