@@ -1,0 +1,66 @@
+{
+  "age": "34",
+  "education": [
+    {
+      "EQF": "5",
+      "course": "Computer Technician",
+      "institution": "FAETEC",
+      "status": "Graduated",
+      "year": "2005/2007"
+    },
+    {
+      "EQF": "6",
+      "course": "Computer Science",
+      "institution": "UERJ",
+      "status": "Uncompleted",
+      "year": "2014/-"
+    }
+  ],
+  "languages": [
+    {
+      "language": "Portuguese",
+      "level": "Native"
+    },
+    {
+      "language": "English",
+      "level": "C2 Proficient"
+    }
+  ],
+  "name": "Alan",
+  "others": [
+    {
+      "EQN": "https://europa.eu/europass/en/description-eight-eqf-levels"
+    }
+  ],
+  "specialties": [
+    "System Administration (Linux Certified)",
+    "Cloud Computing (AWS Certified)",
+    "Site Reliability",
+    "Automation",
+    "DevOps",
+    "Infrastructure as Code",
+    "Performance & Tuning",
+    "Project Implementation",
+    "Integration and System Virtualization",
+    "Software development and life cycle monitoring"
+  ],
+  "surname": "Pereira",
+  "tooling": [],
+  "work_experience": [
+    {
+      "company": "McKinsey & Company",
+      "role": "Senior Site Reliability Engineer",
+      "year": "2022/-"
+    },
+    {
+      "company": "OutSystems",
+      "role": "Senior Site Reliability Engineer",
+      "year": "2020/2022"
+    },
+    {
+      "company": "M4U",
+      "role": "Senior Systems Analyst",
+      "year": "2015/2020"
+    }
+  ]
+}

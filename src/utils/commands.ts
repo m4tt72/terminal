@@ -1,4 +1,5 @@
 import packageJson from '../../package.json';
+import aboutMe from '../../aboutme.json'
 import themes from '../../themes.json';
 import { history } from '../stores/history';
 import { theme } from '../stores/theme';
@@ -8,14 +9,12 @@ const hostname = window.location.hostname;
 export const commands: Record<string, (args: string[]) => Promise<string> | string> = {
   help: () => 'Available commands: ' + Object.keys(commands).join(', '),
   hostname: () => hostname,
-  whoami: () => 'guest',
+  whoami: () => JSON.stringify(aboutMe, null, 2),
   date: () => new Date().toLocaleString(),
-  vi: () => `why use vi? try 'emacs'`,
-  vim: () => `why use vim? try 'emacs'`,
   emacs: () => `why use emacs? try 'vim'`,
   echo: (args: string[]) => args.join(' '),
   sudo: (args: string[]) => {
-    window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+    window.open(packageJson.social.url);
 
     return `Permission denied: unable to run the command '${args[0]}' as root.`;
   },
@@ -97,29 +96,13 @@ export const commands: Record<string, (args: string[]) => Promise<string> | stri
   exit: () => {
     return 'Please close the tab to exit.';
   },
-  curl: async (args: string[]) => {
-    if (args.length === 0) {
-      return 'curl: no URL provided';
-    }
-
-    const url = args[0];
-
-    try {
-      const response = await fetch(url);
-      const data = await response.text();
-
-      return data;
-    } catch (error) {
-      return `curl: could not fetch URL ${url}. Details: ${error}`;
-    }
-  },
   banner: () => `
-███╗   ███╗██╗  ██╗████████╗████████╗███████╗██████╗
-████╗ ████║██║  ██║╚══██╔══╝╚══██╔══╝╚════██║╚════██╗
-██╔████╔██║███████║   ██║      ██║       ██╔╝ █████╔╝
-██║╚██╔╝██║╚════██║   ██║      ██║      ██╔╝ ██╔═══╝
-██║ ╚═╝ ██║     ██║   ██║      ██║      ██║  ███████╗
-╚═╝     ╚═╝     ╚═╝   ╚═╝      ╚═╝      ╚═╝  ╚══════╝ v${packageJson.version}
+   █████╗ ██╗      █████╗ ███╗   ██╗    ██████╗ ███████╗██████╗ ███████╗██╗██████╗  █████╗
+  ██╔══██╗██║     ██╔══██╗████╗  ██║    ██╔══██╗██╔════╝██╔══██╗██╔════╝██║██╔══██╗██╔══██╗
+  ███████║██║     ███████║██╔██╗ ██║    ██████╔╝█████╗  ██████╔╝█████╗  ██║██████╔╝███████║
+  ██╔══██║██║     ██╔══██║██║╚██╗██║    ██╔═══╝ ██╔══╝  ██╔══██╗██╔══╝  ██║██╔══██╗██╔══██║
+  ██║  ██║███████╗██║  ██║██║ ╚████║    ██║     ███████╗██║  ██║███████╗██║██║  ██║██║  ██║
+  ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝    ╚═╝     ╚══════╝╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═╝╚═╝  ╚═ v${packageJson.version}
 
 Type 'help' to see list of available commands.
 `,

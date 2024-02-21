@@ -1,27 +1,8 @@
 {
-  "name": "terminal",
-  "private": true,
-  "version": "3.3.1",
-  "type": "module",
-  "license": "MIT",
   "author": {
-    "name": "Yassine Fathi",
-    "url": "https://fathi.me",
-    "email": "yassine@fathi.me"
-  },
-  "funding": {
-    "type": "Paypal",
-    "url": "https://paypal.me/yfthi"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/m4tt72/terminal"
-  },
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
+    "email": "alan.pereira.brasil@gmail.com",
+    "name": "Alan Pereira",
+    "url": "https://ans.person.com"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^3.0.1",
@@ -37,5 +18,28 @@
   },
   "engines": {
     "node": ">=18.17.0"
-  }
+  },
+  "funding": {
+    "type": "Paypal",
+    "url": "https://paypal.me/ansperson"
+  },
+  "license": "MIT",
+  "name": "terminal",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anspereira-mck/myself_term"
+  },
+  "scripts": {
+    "build": "vite build",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "dev": "vite",
+    "preview": "vite preview"
+  },
+  "social": {
+    "type": "Linkedin",
+    "url": "https://www.linkedin.com/in/ansperson/"
+  },
+  "type": "module",
+  "version": "0.3.4"
 }
