@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   terminal:
     #image: ghcr.io/m4tt72/terminal:svelte
