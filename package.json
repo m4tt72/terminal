@@ -1,7 +1,7 @@
 {
   "name": "terminal",
   "private": true,
-  "version": "3.3.1",
+  "version": "3.3.2",
   "type": "module",
   "license": "MIT",
   "author": {
