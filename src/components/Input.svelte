@@ -1,16 +1,16 @@
 <script lang="ts">
-  import { afterUpdate, onMount } from 'svelte';
   import { history } from '../stores/history';
   import { theme } from '../stores/theme';
   import { commands } from '../utils/commands';
   import { track } from '../utils/tracking';
 
-  let command = '';
-  let historyIndex = -1;
+  let command = $state('');
+  let historyIndex = $state(-1);
 
   let input: HTMLInputElement;
 
-  onMount(() => {
+  $effect(() => {
+    if (!input) return;
     input.focus();
 
     if ($history.length === 0) {
@@ -24,7 +24,8 @@
     }
   });
 
-  afterUpdate(() => {
+  $effect(() => {
+    if (!input) return;
     input.scrollIntoView({ behavior: 'smooth', block: 'end' });
   });
 
@@ -84,13 +85,14 @@
       $history = [];
     }
   };
+
+  function handleWindowClick(){
+    input.focus();
+  }
+
 </script>
 
-<svelte:window
-  on:click={() => {
-    input.focus();
-  }}
-/>
+<svelte:window onclick={handleWindowClick} />
 
 <div class="flex w-full">
   <p class="visible md:hidden">❯</p>
@@ -103,7 +105,7 @@
     type="text"
     style={`color: ${$theme.foreground}`}
     bind:value={command}
-    on:keydown={handleKeyDown}
+    onkeydown={handleKeyDown}
     bind:this={input}
   />
 </div>
