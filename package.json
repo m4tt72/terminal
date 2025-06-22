@@ -39,6 +39,6 @@
     "node": ">=18.17.0"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.7"
+    "@tailwindcss/vite": "^4.1.8"
   }
 }
