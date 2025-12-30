@@ -4,6 +4,10 @@ services:
     build: .
     container_name: terminal
     restart: unless-stopped
+    user: 1000:1000
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
     ports:
       - 3000:3000
     healthcheck:
