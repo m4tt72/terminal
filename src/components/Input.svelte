@@ -32,6 +32,10 @@
     if (event.key === 'Enter') {
       const [commandName, ...args] = command.split(' ');
 
+      if (!commandName) {
+        return;
+      }
+
       if (import.meta.env.VITE_TRACKING_ENABLED === 'true') {
         track(commandName, ...args);
       }
