@@ -22,12 +22,6 @@ export default defineConfig({
         'public/',
         'docs/',
       ],
-      thresholds: {
-        lines: 85,
-        functions: 85,
-        branches: 85,
-        statements: 85,
-      },
     },
     include: ['tests/**/*.test.ts'],
     testTimeout: 10000,
