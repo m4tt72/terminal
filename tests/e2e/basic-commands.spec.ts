@@ -3,9 +3,13 @@ import { test, expect } from '@playwright/test';
 test.describe('Basic Commands', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/');
+    await page.locator('#command-input').fill('clear');
+    await page.keyboard.press('Enter');
+    await page.waitForTimeout(100);
   });
 
   test('should display banner on load', async ({ page }) => {
+    await page.goto('/');
     const banner = await page.locator('main').textContent();
     expect(banner).toContain('Type \'help\' to see list of available commands.');
   });

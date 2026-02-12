@@ -3,8 +3,9 @@ import { test, expect } from '@playwright/test';
 test.describe('Todo Flows', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/');
-    await page.locator('#command-input').fill('todo clear');
+    await page.locator('#command-input').fill('clear');
     await page.keyboard.press('Enter');
+    await page.waitForTimeout(100);
   });
 
   test('should add a new todo', async ({ page }) => {
@@ -36,6 +37,9 @@ test.describe('Todo Flows', () => {
     await page.keyboard.press('Enter');
     await page.locator('#command-input').fill('todo done 1');
     await page.keyboard.press('Enter');
+    await page.locator('#command-input').fill('clear');
+    await page.keyboard.press('Enter');
+    await page.waitForTimeout(100);
 
     await page.locator('#command-input').fill('todo ls pending');
     await page.keyboard.press('Enter');
@@ -93,6 +97,9 @@ test.describe('Todo Flows', () => {
     await page.keyboard.press('Enter');
     await page.locator('#command-input').fill('todo add Task 2');
     await page.keyboard.press('Enter');
+    await page.locator('#command-input').fill('clear');
+    await page.keyboard.press('Enter');
+    await page.waitForTimeout(100);
 
     await page.locator('#command-input').fill('todo clear');
     await page.keyboard.press('Enter');
@@ -113,6 +120,9 @@ test.describe('Todo Flows', () => {
     await page.keyboard.press('Enter');
     await page.locator('#command-input').fill('todo done 1');
     await page.keyboard.press('Enter');
+    await page.locator('#command-input').fill('clear');
+    await page.keyboard.press('Enter');
+    await page.waitForTimeout(100);
 
     await page.locator('#command-input').fill('todo clear completed');
     await page.keyboard.press('Enter');
