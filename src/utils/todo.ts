@@ -6,7 +6,7 @@ interface Todo {
   completedAt?: Date;
 }
 
-class TodoManager {
+export class TodoManager {
   private todos: Todo[] = [];
   private nextId: number = 1;
   private readonly storageKey = "terminal-todos";
