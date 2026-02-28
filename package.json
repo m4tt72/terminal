@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.58.2",
-    "@sveltejs/vite-plugin-svelte": "^3.1.1",
+    "@sveltejs/vite-plugin-svelte": "^6.2.4",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/svelte": "^5.3.1",
     "@testing-library/user-event": "^14.6.1",
@@ -47,7 +47,7 @@
     "jsdom": "^28.0.0",
     "lint-staged": "^16.2.7",
     "postcss": "^8.4.41",
-    "svelte": "^4.2.19",
+    "svelte": "^5.53.6",
     "svelte-check": "^3.8.5",
     "tailwindcss": "^3.4.10",
     "tslib": "^2.6.3",
