@@ -40,8 +40,8 @@
     "@testing-library/user-event": "^14.6.1",
     "@tsconfig/svelte": "^5.0.4",
     "@types/node": "^25.2.3",
-    "@vitest/coverage-v8": "^4.0.18",
-    "@vitest/ui": "^4.0.18",
+    "@vitest/coverage-v8": "^4.1.8",
+    "@vitest/ui": "^4.1.8",
     "autoprefixer": "^10.4.20",
     "husky": "^9.1.7",
     "jsdom": "^28.0.0",
@@ -53,7 +53,7 @@
     "tslib": "^2.6.3",
     "typescript": "^5.5.4",
     "vite": "^5.4.21",
-    "vitest": "^4.0.18"
+    "vitest": "^4.1.8"
   },
   "engines": {
     "node": ">=18.17.0"
